@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════════════════════════════════
+   מנוע כלי הנגישות — כל האפקטים מוחלים דרך data-attributes על <html>
+   ומשתני CSS. התוכן עטוף ב-#a11y-root כדי שפילטרים לא ישברו את
+   ה-position:fixed של הווידג'ט עצמו (פילטר על אב יוצר containing block).
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── גודל טקסט ──
+   מוחל על html כך שכל יחידות ה-rem (Tailwind) מתעדכנות יחד. */
+html {
+  font-size: calc(100% * var(--a11y-font-scale, 1));
+}
+
+/* ── ריווח מילים ואותיות ── (תכונות מורשות — עוברות לכל הצאצאים) */
+#a11y-root {
+  word-spacing: var(--a11y-ws, normal);
+  letter-spacing: var(--a11y-ls, normal);
+}
+
+/* ── ניגודיות גבוהה ── */
+html[data-a11y-contrast="high"] #a11y-root {
+  filter: contrast(1.25) saturate(1.05);
+}
+
+/* ── ניגודיות הפוכה ── */
+html[data-a11y-contrast="invert"] #a11y-root {
+  filter: invert(1) hue-rotate(180deg);
+  background: #000;
+}
+
+/* ── גווני אפור ── */
+html[data-a11y-contrast="gray"] #a11y-root {
+  filter: grayscale(1);
+}
+
+/* ── שחור-לבן (צבעים כפויים: רקע לבן, טקסט שחור) ── */
+html[data-a11y-contrast="bw"] #a11y-root,
+html[data-a11y-contrast="bw"] #a11y-root * {
+  background-color: #fff !important;
+  background-image: none !important;
+  color: #000 !important;
+  border-color: #000 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+html[data-a11y-contrast="bw"] #a11y-root img,
+html[data-a11y-contrast="bw"] #a11y-root video {
+  filter: grayscale(1) contrast(1.2);
+}
+
+/* ── הדגשת קישורים ── */
+html[data-a11y-links] #a11y-root a {
+  background-color: #fde047 !important;
+  color: #0f172a !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 2px;
+}
+
+/* ── הדגשת כותרות ── */
+html[data-a11y-titles] #a11y-root h1,
+html[data-a11y-titles] #a11y-root h2,
+html[data-a11y-titles] #a11y-root h3,
+html[data-a11y-titles] #a11y-root h4,
+html[data-a11y-titles] #a11y-root h5,
+html[data-a11y-titles] #a11y-root h6 {
+  background-color: #fef9c3 !important;
+  color: #0f172a !important;
+  outline: 2px dashed #b45309;
+  outline-offset: 3px;
+}
+
+/* ── גופן קריא ── */
+html[data-a11y-readable] #a11y-root,
+html[data-a11y-readable] #a11y-root * {
+  font-family: Arial, "Segoe UI", Tahoma, sans-serif !important;
+}
+
+/* ── הסתרת תמונות ── */
+html[data-a11y-noimg] #a11y-root img,
+html[data-a11y-noimg] #a11y-root picture,
+html[data-a11y-noimg] #a11y-root video,
+html[data-a11y-noimg] #a11y-root figure svg {
+  visibility: hidden !important;
+}
+html[data-a11y-noimg] #a11y-root * {
+  background-image: none !important;
+}
+
+/* ── סמן גדול (כהה / בהיר) ── */
+html[data-a11y-cursor="black"] #a11y-root,
+html[data-a11y-cursor="black"] #a11y-root * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'><path d='M5.5 3.2v17.6c0 .45.54.67.86.35l4.86-4.86a.5.5 0 0 1 .35-.14h6.87c.45 0 .67-.54.35-.86L6.35 2.85a.5.5 0 0 0-.85.35Z' fill='%23111' stroke='%23fff' stroke-width='1.4'/></svg>")
+      6 4,
+    auto !important;
+}
+html[data-a11y-cursor="white"] #a11y-root,
+html[data-a11y-cursor="white"] #a11y-root * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 24 24'><path d='M5.5 3.2v17.6c0 .45.54.67.86.35l4.86-4.86a.5.5 0 0 1 .35-.14h6.87c.45 0 .67-.54.35-.86L6.35 2.85a.5.5 0 0 0-.85.35Z' fill='%23fff' stroke='%23111' stroke-width='1.4'/></svg>")
+      6 4,
+    auto !important;
+}
+
+/* ── ביטול אנימציות ── */
+html[data-a11y-noanim] {
+  scroll-behavior: auto !important;
+}
+html[data-a11y-noanim] #a11y-root *,
+html[data-a11y-noanim] #a11y-root *::before,
+html[data-a11y-noanim] #a11y-root *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* ── ניווט מקלדת מודגש (התאמה לקוראי מסך) ── */
+html[data-a11y-kbd] #a11y-root :focus {
+  outline: 3px solid #d97706 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.3) !important;
+  border-radius: 4px;
+}
+
+/* ── הקראת טקסט: הדגשת האלמנט המוקרא ── */
+.a11y-speaking {
+  outline: 3px solid #7c3aed !important;
+  outline-offset: 3px;
+  background-color: rgba(124, 58, 237, 0.08) !important;
+}
+
+/* ── אנימציית פתיחת הפאנל — מבוטלת תחת prefers-reduced-motion ו"ביטול אנימציות" ── */
+@keyframes a11y-pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.a11y-panel-in {
+  animation: a11y-pop 0.18s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .a11y-panel-in {
+    animation: none;
+  }
+}
+html[data-a11y-noanim] .a11y-panel-in {
+  animation: none;
+}
+
+/* ── קישור "דילוג לתוכן" — נסתר עד קבלת פוקוס במקלדת ── */
+.a11y-skip {
+  position: fixed;
+  top: -100px;
+  right: 16px;
+  z-index: 200;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #0c2438;
+  color: #fff;
+  font-weight: 700;
+  transition: top 0.15s ease;
+}
+.a11y-skip:focus {
+  top: 16px;
+  outline: 3px solid #fde047;
+}
