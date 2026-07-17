@@ -77,14 +77,10 @@ export default function Home() {
       </section>
 
       {/* ===== תחומי טיפול ===== */}
-      <section id="treatments" className="scroll-mt-4 py-20 sm:py-24">
+      <section id="treatments" className="scroll-mt-4 bg-teal-50/70 py-20 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">תחומי טיפול</h2>
-            <p className="mt-4 text-lg leading-8 text-slate-600">
-            
-
-            </p>
           </Reveal>
           <Treatments />
         </Container>
@@ -130,7 +126,7 @@ export default function Home() {
             {approachSteps.map((s, i) => (
               <Reveal key={s.step} delay={i * 90}>
                 <div className="h-full rounded-2xl border border-slate-200 bg-white p-6">
-                  <span className="text-4xl font-extrabold text-teal-100">{s.step}</span>
+                  <span className="text-4xl font-extrabold text-teal-500">{s.step}</span>
                   <h3 className="mt-2 text-xl font-bold text-slate-900">{s.title}</h3>
                   <p className="mt-2 text-slate-600">{s.text}</p>
                 </div>
@@ -141,7 +137,7 @@ export default function Home() {
       </section>
 
       {/* ===== קצת עליי ===== */}
-      <section id="about" className="scroll-mt-4 bg-slate-50/80 py-20 sm:py-24">
+      <section id="about" className="scroll-mt-4 bg-teal-50/70 py-20 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">קצת עליי</h2>
@@ -158,7 +154,7 @@ export default function Home() {
       <Testimonials />
 
       {/* ===== שאלות נפוצות ===== */}
-      <section id="faq" className="scroll-mt-4 py-20 sm:py-24">
+      <section id="faq" className="scroll-mt-4 bg-teal-50/70 py-20 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">שאלות נפוצות</h2>
@@ -170,7 +166,7 @@ export default function Home() {
       </section>
 
       {/* ===== יצירת קשר ===== */}
-      <section id="contact" className="scroll-mt-4 bg-slate-50/80 py-20 sm:py-24">
+      <section id="contact" className="scroll-mt-4 py-20 sm:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2">
             <Reveal>

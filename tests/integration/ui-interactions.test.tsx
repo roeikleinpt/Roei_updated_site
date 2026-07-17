@@ -11,6 +11,7 @@ vi.mock("next/navigation", () => ({ usePathname: vi.fn(() => "/") }));
 describe("interactive UI components", () => {
   beforeEach(() => {
     document.body.style.overflow = "";
+    localStorage.clear();
   });
 
   it("opens and closes the mobile navigation with Escape", async () => {
@@ -70,5 +71,20 @@ describe("interactive UI components", () => {
     await waitFor(() =>
       expect(document.documentElement).not.toHaveAttribute("data-a11y-contrast"),
     );
+  });
+
+  it("restores accessibility preferences without overwriting them with defaults", async () => {
+    localStorage.setItem(
+      "rk_a11y_v1",
+      JSON.stringify({ font: 1.2, contrast: "high", links: true }),
+    );
+
+    render(<AccessibilityWidget />);
+
+    await waitFor(() =>
+      expect(document.documentElement).toHaveAttribute("data-a11y-contrast", "high"),
+    );
+    expect(document.documentElement).toHaveAttribute("data-a11y-links", "1");
+    expect(localStorage.getItem("rk_a11y_v1")).toContain('"font":1.2');
   });
 });

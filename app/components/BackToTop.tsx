@@ -35,6 +35,8 @@ export default function BackToTop() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="חזרה לראש העמוד"
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
       className={`fixed bottom-5 left-5 z-40 flex h-12 w-12 items-center justify-center rounded-full border-2 border-teal-500 bg-teal-700 text-white shadow-lg transition duration-300 hover:bg-teal-600 active:scale-95 lg:hidden ${
         visible
           ? "translate-y-0 opacity-100"

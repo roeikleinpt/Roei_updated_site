@@ -2,12 +2,16 @@ import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
 test("all public routes render with one main heading and no horizontal overflow", async ({ page }) => {
-  const routes = ["/", "/professional-info/"];
+  const routes = ["/", "/professional-info/", "/accessibility/"];
 
   for (const route of routes) {
     await page.goto(route);
     await expect(page.locator("main")).toBeVisible();
     await expect(page.locator("h1")).toHaveCount(1);
+    const sectionsWithoutHeadings = await page.locator("section").evaluateAll((sections) =>
+      sections.filter((section) => !section.querySelector("h1,h2,h3,h4,h5,h6")).length,
+    );
+    expect(sectionsWithoutHeadings).toBe(0);
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
@@ -61,7 +65,7 @@ test("contact validation is announced and prevents an unconfigured submission", 
   await page.goto("/#contact");
   await page.getByRole("button", { name: "שליחת פרטים" }).click();
 
-  const name = page.getByRole("textbox", { name: "שם" });
+  const name = page.getByRole("textbox", { name: /שם/ });
   await expect(name).toBeFocused();
   await expect(name).toHaveAttribute("aria-invalid", "true");
   await expect(name).toHaveAttribute("aria-describedby", "name-error");
@@ -93,10 +97,47 @@ test("accessibility widget uses touch-sized controls and keeps the page within t
   ).toBe(true);
 });
 
-test("home page has no automatically detectable WCAG A/AA violations", async ({ page }) => {
+test("all public routes have no automatically detectable WCAG 2.0 A/AA violations", async ({ page }) => {
+  for (const route of ["/", "/professional-info/", "/accessibility/"]) {
+    await page.goto(route);
+    const results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze();
+    expect(results.violations, `${route}: ${JSON.stringify(results.violations, null, 2)}`).toEqual([]);
+  }
+});
+
+test("interactive states remain free of detectable WCAG 2.0 A/AA violations", async ({ page }) => {
   await page.goto("/");
-  const results = await new AxeBuilder({ page })
-    .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
-    .analyze();
+
+  await page.locator("#treatments button").first().click();
+  let results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze();
   expect(results.violations).toEqual([]);
+  await page.keyboard.press("Escape");
+
+  await page.getByRole("button", { name: "איך אדע אם פיזיותרפיה יכולה לעזור לי?" }).click();
+  await page.getByRole("button", { name: "פתיחת תפריט נגישות" }).click();
+  await expect(page.getByRole("dialog", { name: "כלי נגישות" })).toHaveCSS("opacity", "1");
+  results = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(results.violations).toEqual([]);
+});
+
+test("hidden back-to-top control is removed from keyboard navigation", async ({ page }) => {
+  await page.goto("/");
+  const backToTop = page.getByRole("button", { name: "חזרה לראש העמוד", includeHidden: true });
+  await expect(backToTop).toHaveAttribute("tabindex", "-1");
+  await expect(backToTop).toHaveAttribute("aria-hidden", "true");
+});
+
+test("content remains usable when text is enlarged to 200 percent", async ({ page }) => {
+  for (const route of ["/", "/professional-info/", "/accessibility/"]) {
+    await page.goto(route);
+    await page.evaluate(() => document.documentElement.style.setProperty("font-size", "200%"));
+    await expect(page.locator("h1")).toBeVisible();
+    await expect(page.getByRole("contentinfo")).toBeVisible();
+    await expect(page.getByRole("button", { name: "פתיחת תפריט נגישות" })).toBeVisible();
+  }
+});
+
+test("accessibility statement is linked from the persistent footer", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("contentinfo").getByRole("link", { name: "הצהרת נגישות" })).toBeVisible();
 });

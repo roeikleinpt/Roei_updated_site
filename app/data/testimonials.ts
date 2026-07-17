@@ -1,23 +1,6 @@
-// TODO: Replace with real MedReviews profile URL.
-// כל עוד הערך הוא "#", כפתור "לכל חוות הדעת ב־MedReviews" מוצג כלא-פעיל.
-export const medReviewsUrl = "#";
+// פרופיל MedReviews הרשמי של רועי קליין.
+export const medReviewsUrl = "https://www.medreviews.co.il/provider/klein-roei";
 
-// TODO: Replace with real, verified reviews from MedReviews.
-// חוות דעת זמניות בלבד — לא לשאוב אוטומטית / לא לבצע scraping.
-export const testimonials = [
-  {
-    quote:
-      "הגעתי עם כאב שהפריע לי הרבה זמן, וכבר מהפגישה הראשונה הרגשתי שיש הקשבה, סדר ותוכנית ברורה להמשך.",
-    author: "מטופל/ת",
-  },
-  {
-    quote:
-      "הטיפול היה מקצועי, נעים ולא שיפוטי. קיבלתי הסבר ברור וכלים שיכולתי ליישם גם בבית.",
-    author: "מטופל/ת",
-  },
-  {
-    quote:
-      "רועי עזר לי להבין מה מקור הבעיה ולחזור לפעילות בצורה הדרגתית ובטוחה.",
-    author: "מטופל/ת",
-  },
-];
+// כתובת ה-widget המוטמע (iframe) של חוות הדעת המאומתות מ-MedReviews.
+export const medReviewsWidgetUrl =
+  "https://www.medreviews.co.il/provider/klein-roei/reviews-widget?show-header=false&slide-switch-interval=4500&bg=ffffff&controls-color=&r-text-color=&date-color=&main-text=&only-favorite=&logo=";

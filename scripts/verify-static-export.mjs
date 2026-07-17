@@ -9,7 +9,15 @@ const expectedSiteUrl =
   "https://idoo25.github.io/roei2";
 const failures = [];
 
-for (const required of ["index.html", "professional-info/index.html", "robots.txt", "sitemap.xml"]) {
+for (const required of [
+  "index.html",
+  "professional-info/index.html",
+  "accessibility/index.html",
+  "terms/index.html",
+  "privacy/index.html",
+  "robots.txt",
+  "sitemap.xml",
+]) {
   if (!existsSync(join(outputRoot, required))) failures.push(`Missing ${required}`);
 }
 

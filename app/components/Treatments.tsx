@@ -12,22 +12,22 @@ import type { Treatment } from "../data/content";
 // צ'יפ תסמין (ירוק מרווה) — לפריטים קצרים.
 function Chip({ text }: { text: string }) {
   return (
-    <span
+    <li
       className="inline-flex items-center rounded-full border px-3.5 py-1.5 text-sm"
       style={{ background: "#edf4ef", borderColor: "#c6dccd", color: "#1d4165" }}
     >
       {text}
-    </span>
+    </li>
   );
 }
 
 // פריט רשימה (וי + טקסט) — לפריטים ארוכים.
 function ListItem({ text }: { text: string }) {
   return (
-    <div className="flex items-start gap-2 py-1 text-sm leading-6 text-slate-700">
+    <li className="flex items-start gap-2 py-1 text-sm leading-6 text-slate-700">
       <Icon name="check" className="mt-1 h-4 w-4 shrink-0" style={{ color: "#5b9e7f" }} />
       <span>{text}</span>
-    </div>
+    </li>
   );
 }
 
@@ -160,36 +160,39 @@ export default function Treatments() {
             {active.symptomGroups
               ? active.symptomGroups.map((g) => (
                   <div key={g.category}>
-                    <p className="mb-2 mt-4 flex items-center gap-2 text-xs font-medium text-teal-500">
+                    <h4 className="mb-2 mt-4 flex items-center gap-2 text-xs font-medium text-teal-500">
                       {g.category}
-                      <span className="h-px flex-1 bg-slate-100" />
-                    </p>
+                      <span aria-hidden="true" className="h-px flex-1 bg-slate-100" />
+                    </h4>
                     {active.popupStyle === "list" ? (
-                      <div>
+                      <ul>
                         {g.items.map((s) => (
                           <ListItem key={s} text={s} />
                         ))}
-                      </div>
+                      </ul>
                     ) : (
-                      <div className="flex flex-wrap gap-2">
+                      <ul className="flex flex-wrap gap-2">
                         {g.items.map((s) => (
                           <Chip key={s} text={s} />
                         ))}
-                      </div>
+                      </ul>
                     )}
                   </div>
                 ))
               : active.symptoms && (
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <ul className="mt-3 flex flex-wrap gap-2">
                     {active.symptoms.map((s) => (
                       <Chip key={s} text={s} />
                     ))}
-                  </div>
+                  </ul>
                 )}
 
             <a
               href="#contact"
-              onClick={() => closeDialog(false)}
+              onClick={() => {
+                closeDialog(false);
+                window.requestAnimationFrame(() => document.getElementById("name")?.focus());
+              }}
               className="btn-press mt-6 block rounded-full bg-teal-700 px-6 py-3 text-center font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
             >
               לקביעת פגישת אבחון

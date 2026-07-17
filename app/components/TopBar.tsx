@@ -12,6 +12,7 @@ export default function TopBar() {
             href={site.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`פתיחת שיחה בוואטסאפ עם רועי קליין, ${site.phone}`}
             className="flex min-h-11 items-center gap-2 hover:text-teal-200"
           >
             <Icon name="whatsapp" className="h-4 w-4" />

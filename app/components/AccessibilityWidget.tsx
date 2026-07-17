@@ -203,9 +203,10 @@ function Stepper({
         <button
           type="button"
           onClick={onReset}
-          aria-label={`איפוס ${label}`}
+          aria-label={`${label}: ${display}. איפוס לערך ברירת המחדל`}
+          aria-live="polite"
           className={`min-h-11 w-14 rounded-lg px-1 py-1.5 text-center text-[12px] font-semibold tabular-nums ${
-            value !== 0 && display !== "100%" ? "bg-teal-600 text-white" : "text-slate-500"
+            value !== 0 && display !== "100%" ? "bg-teal-600 text-white" : "text-slate-600"
           }`}
         >
           {display}
@@ -228,6 +229,7 @@ export default function AccessibilityWidget() {
   const [open, setOpen] = useState(false);
   const [s, setS] = useState<A11yState>(DEF);
   const [guideY, setGuideY] = useState(300);
+  const [storageReady, setStorageReady] = useState(false);
   // קול עברי במכשיר: null=עדיין לא ידוע, false=אין, אחרת הקול עצמו
   const [heVoice, setHeVoice] = useState<SpeechSynthesisVoice | false | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -263,8 +265,9 @@ export default function AccessibilityWidget() {
         // Accessibility preferences are optional when storage is unavailable.
       }
       setGuideY(Math.round(window.innerHeight / 2));
+      setStorageReady(true);
     }, 0);
-    return () => clearTimeout(timer);
+    return () => window.clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -275,6 +278,7 @@ export default function AccessibilityWidget() {
 
   /* החלת המצב על <html> + שמירה */
   useEffect(() => {
+    if (!storageReady) return;
     const de = document.documentElement;
     de.style.setProperty("--a11y-font-scale", String(s.font));
     de.style.setProperty("--a11y-ws", s.ws ? `${s.ws}px` : "normal");
@@ -292,35 +296,56 @@ export default function AccessibilityWidget() {
     try {
       localStorage.setItem(KEY, JSON.stringify(s));
     } catch {}
-  }, [s]);
+  }, [s, storageReady]);
 
-  /* מדריך קריאה — הפס עוקב אחרי העכבר/מגע */
+  /* מדריך קריאה — הפס עוקב אחרי העכבר/מגע, וניתן להזזה גם במקלדת */
   useEffect(() => {
     if (!s.guide) return;
     const onMove = (e: PointerEvent) => setGuideY(e.clientY);
+    const onKey = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.matches("input, textarea, select, [contenteditable='true']")) return;
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        setGuideY((current) =>
+          clamp(current + (e.key === "ArrowUp" ? -20 : 20), 24, window.innerHeight - 24),
+        );
+      }
+    };
     window.addEventListener("pointermove", onMove, { passive: true });
-    return () => window.removeEventListener("pointermove", onMove);
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("keydown", onKey);
+    };
   }, [s.guide]);
 
-  /* הקראת טקסט — לחיצה על אלמנט מקריאה אותו (Web Speech API) */
+  /* הקראת טקסט — הכלי מקריא את התוכן העיקרי בהפעלה, וכל אלמנט בלחיצה עליו */
   useEffect(() => {
     if (!s.tts) return;
+    const synth = window.speechSynthesis;
+    if (!synth) return;
+    const speak = (el: HTMLElement) => {
+      if (!el.innerText?.trim()) return;
+      synth.cancel();
+      document.querySelectorAll(".a11y-speaking").forEach((n) => n.classList.remove("a11y-speaking"));
+      const u = new SpeechSynthesisUtterance(el.innerText.trim().slice(0, 5000));
+      u.lang = "he-IL";
+      u.rate = 0.95;
+      if (heVoice) u.voice = heVoice;
+      el.classList.add("a11y-speaking");
+      u.onend = u.onerror = () => el.classList.remove("a11y-speaking");
+      synth.speak(u);
+    };
+    const main = document.querySelector<HTMLElement>("main");
+    if (main) speak(main);
     const onClick = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
       if (t.closest("[data-a11y-widget]")) return; // לא מקריאים את הווידג'ט עצמו
       const el = t.closest<HTMLElement>(
         "h1,h2,h3,h4,h5,h6,p,li,a,button,blockquote,label,summary,figcaption,td,th,dt,dd,legend,span,strong",
       );
-      if (!el || !el.innerText?.trim()) return;
-      window.speechSynthesis.cancel();
-      document.querySelectorAll(".a11y-speaking").forEach((n) => n.classList.remove("a11y-speaking"));
-      const u = new SpeechSynthesisUtterance(el.innerText.trim().slice(0, 1000));
-      u.lang = "he-IL";
-      u.rate = 0.95;
-      if (heVoice) u.voice = heVoice; // קול עברי מפורש כשקיים — איכות טובה יותר
-      el.classList.add("a11y-speaking");
-      u.onend = u.onerror = () => el.classList.remove("a11y-speaking");
-      window.speechSynthesis.speak(u);
+      if (el) speak(el);
     };
     document.addEventListener("click", onClick, true);
     return () => {
@@ -453,7 +478,7 @@ export default function AccessibilityWidget() {
             </div>
 
             <div className="flex-1 space-y-1.5 overflow-y-auto overscroll-contain bg-teal-50 p-3">
-              <p className="px-1 pb-0.5 text-[11px] font-bold tracking-wide text-teal-500">טקסט</p>
+              <h3 className="px-1 pb-0.5 text-[11px] font-bold tracking-wide text-teal-600">טקסט</h3>
               <Stepper
                 label="גודל טקסט"
                 value={s.font - 1}
@@ -491,9 +516,9 @@ export default function AccessibilityWidget() {
                 <Tile icon="heading" label="הדגשת כותרות" active={s.titles} onClick={() => patch({ titles: !s.titles })} />
               </div>
 
-              <p className="px-1 pt-2 pb-0.5 text-[11px] font-bold tracking-wide text-teal-500">
+              <h3 className="px-1 pt-2 pb-0.5 text-[11px] font-bold tracking-wide text-teal-600">
                 צבע ותצוגה
-              </p>
+              </h3>
               <div className="grid grid-cols-3 gap-1.5">
                 <Tile icon="contrast" label="ניגודיות גבוהה" active={s.contrast === "high"} onClick={() => patch({ contrast: s.contrast === "high" ? "none" : "high" })} />
                 <Tile icon="invert" label="ניגודיות הפוכה" active={s.contrast === "invert"} onClick={() => patch({ contrast: s.contrast === "invert" ? "none" : "invert" })} />
@@ -503,9 +528,9 @@ export default function AccessibilityWidget() {
                 <Tile icon="noanim" label="ביטול אנימציות" active={s.noanim} onClick={() => patch({ noanim: !s.noanim })} />
               </div>
 
-              <p className="px-1 pt-2 pb-0.5 text-[11px] font-bold tracking-wide text-teal-500">
+              <h3 className="px-1 pt-2 pb-0.5 text-[11px] font-bold tracking-wide text-teal-600">
                 קריאה וניווט
-              </p>
+              </h3>
               <div className="grid grid-cols-3 gap-1.5">
                 <Tile icon="tts" label="הקראת טקסט" active={s.tts} onClick={() => patch({ tts: !s.tts })} />
                 <Tile icon="guide" label="מדריך קריאה" active={s.guide} onClick={() => patch({ guide: !s.guide })} />
@@ -514,9 +539,15 @@ export default function AccessibilityWidget() {
                 <Tile icon="cursorW" label="סמן גדול בהיר" active={s.cursor === "white"} onClick={() => patch({ cursor: s.cursor === "white" ? "none" : "white" })} />
               </div>
 
+              {s.guide && (
+                <p role="status" className="rounded-lg bg-white px-3 py-2 text-[11px] leading-4 text-slate-700">
+                  אפשר להזיז את מדריך הקריאה גם באמצעות מקשי החץ למעלה ולמטה.
+                </p>
+              )}
+
               {/* פולבק: אין קול עברי במכשיר — מיידעים במקום לשתוק */}
               {s.tts && heVoice === false && (
-                <p className="rounded-lg bg-amber-50 px-3 py-2 text-[11px] leading-4 text-amber-800">
+                <p role="status" className="rounded-lg bg-amber-50 px-3 py-2 text-[11px] leading-4 text-amber-800">
                   לא נמצא קול עברית במכשיר זה, וייתכן שההקראה לא תפעל. בטלפונים אפשר להתקין קול
                   עברית בהגדרות הנגישות של המכשיר.
                 </p>

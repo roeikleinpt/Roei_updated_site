@@ -28,3 +28,10 @@ export type PageLink = { href: string; label: string };
 export const pageLinks: PageLink[] = [
   { href: "/professional-info", label: "מידע מקצועי" },
 ];
+
+// קישורי מדיניות/משפט — מוצגים אך ורק בפוטר ונפתחים בלשונית חדשה (target="_blank").
+export const footerLegalLinks: PageLink[] = [
+  { href: "/terms", label: "תנאי שימוש" },
+  { href: "/privacy", label: "מדיניות פרטיות" },
+  { href: "/accessibility", label: "הצהרת נגישות" },
+];

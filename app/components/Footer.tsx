@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Icon } from "./Icon";
 import Container from "./Container";
 import HexPattern from "./HexPattern";
-import { homeNavLinks, pageLinks } from "../data/nav";
+import { homeNavLinks, pageLinks, footerLegalLinks } from "../data/nav";
 import { site } from "../data/site";
 import { asset } from "../basePath";
 
@@ -36,7 +36,7 @@ export default function Footer() {
             />
           </Link>
 
-          <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <nav aria-label="ניווט תחתון" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
             {homeNavLinks.map((link) => (
               <Link
                 key={link.id}
@@ -81,7 +81,21 @@ export default function Footer() {
             </span>
           </div>
 
-          <p className="border-t border-white/10 pt-6 text-sm text-teal-100/80">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-white/10 pt-6">
+            {footerLegalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center text-sm text-teal-100/80 hover:text-white"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          <p className="text-sm text-teal-100/80">
             © {new Date().getFullYear()} {site.shortName} — {site.credential}. כל הזכויות שמורות.
           </p>
         </div>

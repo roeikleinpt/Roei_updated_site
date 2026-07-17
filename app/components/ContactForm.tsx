@@ -49,7 +49,7 @@ function readDraft(raw: string): SavedDraft | null {
 }
 
 const fieldBase =
-  "w-full rounded-xl border bg-white px-4 py-2.5 text-base text-slate-900 outline-none transition-colors placeholder:text-slate-400 focus:ring-2 focus:ring-teal-100";
+  "w-full rounded-xl border bg-white px-4 py-2.5 text-base text-slate-900 outline-none transition-colors placeholder:text-slate-500 focus:ring-2 focus:ring-teal-100";
 const fieldClass = (error?: string) =>
   `${fieldBase} ${error ? "border-red-400 focus:border-red-500" : "border-slate-300 focus:border-teal-500"}`;
 
@@ -62,7 +62,6 @@ export default function ContactForm({
   const [errors, setErrors] = useState<ContactErrors>({});
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [submissionError, setSubmissionError] = useState("");
-  const expiryTimerRef = useRef<number | null>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -74,10 +73,6 @@ export default function ContactForm({
       sessionStorage.removeItem(STORAGE_KEY);
     } catch {
       // Storage may be blocked by the browser; the form still works without draft recovery.
-    }
-    if (expiryTimerRef.current) {
-      clearTimeout(expiryTimerRef.current);
-      expiryTimerRef.current = null;
     }
   }, []);
 
@@ -100,17 +95,12 @@ export default function ContactForm({
       restoreTimer = window.setTimeout(() => {
         setForm({ ...EMPTY_CONTACT_FORM, ...saved.data });
       }, 0);
-      expiryTimerRef.current = window.setTimeout(() => {
-        clearDraft();
-        setForm(EMPTY_CONTACT_FORM);
-      }, TTL_MS - elapsed);
     } catch {
       // Ignore unavailable or malformed storage.
     }
 
     return () => {
       if (restoreTimer) clearTimeout(restoreTimer);
-      if (expiryTimerRef.current) clearTimeout(expiryTimerRef.current);
     };
   }, [clearDraft]);
 
@@ -132,12 +122,6 @@ export default function ContactForm({
         },
       };
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-      if (!expiryTimerRef.current) {
-        expiryTimerRef.current = window.setTimeout(() => {
-          clearDraft();
-          setForm(EMPTY_CONTACT_FORM);
-        }, TTL_MS);
-      }
     } catch {
       // Draft recovery is optional.
     }
@@ -265,7 +249,13 @@ export default function ContactForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate aria-busy={status === "sending"} className="space-y-4">
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      aria-busy={status === "sending"}
+      aria-describedby="contact-form-instructions"
+      className="space-y-4"
+    >
       <input
         type="checkbox"
         name="botcheck"
@@ -275,15 +265,20 @@ export default function ContactForm({
         className="hidden"
       />
 
+      <p id="contact-form-instructions" className="text-sm leading-6 text-slate-600">
+        שדות המסומנים כחובה חייבים במילוי. בנוסף, יש למלא לפחות אחד: טלפון או דואר אלקטרוני.
+      </p>
+
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-slate-700">
-          שם
+          שם <span className="font-normal">(חובה)</span>
         </label>
         <input
           id="name"
           ref={nameRef}
           name="name"
           type="text"
+          required
           autoComplete="name"
           maxLength={80}
           aria-required="true"
@@ -304,7 +299,7 @@ export default function ContactForm({
 
       <div>
         <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-slate-700">
-          טלפון <span className="font-normal text-slate-400">(לא חובה)</span>
+          טלפון
         </label>
         <input
           id="phone"
@@ -315,7 +310,7 @@ export default function ContactForm({
           inputMode="tel"
           autoComplete="tel"
           aria-invalid={Boolean(errors.phone)}
-          aria-describedby={errors.phone ? "phone-error" : undefined}
+          aria-describedby={`contact-form-instructions${errors.phone ? " phone-error" : ""}`}
           value={form.phone}
           onChange={(event) => update("phone", formatPhone(event.target.value))}
           onBlur={() => checkField("phone")}
@@ -331,7 +326,7 @@ export default function ContactForm({
 
       <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-slate-700">
-          דואר אלקטרוני <span className="font-normal text-slate-400">(לא חובה)</span>
+          דואר אלקטרוני
         </label>
         <input
           id="email"
@@ -343,7 +338,7 @@ export default function ContactForm({
           inputMode="email"
           maxLength={254}
           aria-invalid={Boolean(errors.email)}
-          aria-describedby={errors.email ? "email-error" : undefined}
+          aria-describedby={`contact-form-instructions${errors.email ? " email-error" : ""}`}
           value={form.email}
           onChange={(event) => update("email", cleanEmail(event.target.value))}
           onBlur={() => checkField("email")}
@@ -367,7 +362,7 @@ export default function ContactForm({
             return (
               <label
                 key={method}
-                className={`flex min-h-11 items-center rounded-xl border px-4 py-2 text-sm transition-colors ${
+                className={`flex min-h-11 items-center rounded-xl border px-4 py-2 text-sm transition-colors focus-within:outline focus-within:outline-3 focus-within:outline-offset-2 focus-within:outline-amber-600 ${
                   !enabled
                     ? "cursor-not-allowed border-slate-200 text-slate-300"
                     : form.contactMethod === method
@@ -393,7 +388,7 @@ export default function ContactForm({
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-slate-700">
-          סיבת הפנייה <span className="font-normal text-slate-400">(לא חובה)</span>
+          סיבת הפנייה <span className="font-normal text-slate-500">(לא חובה)</span>
         </label>
         <textarea
           id="message"
