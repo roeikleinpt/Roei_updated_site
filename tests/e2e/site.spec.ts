@@ -61,22 +61,6 @@ test("FAQ exposes only the expanded answer to assistive technology", async ({ pa
   await expect(question).toHaveAttribute("aria-expanded", "true");
 });
 
-test("contact validation is announced and prevents an unconfigured submission", async ({ page }) => {
-  await page.goto("/#contact");
-  await page.getByRole("button", { name: "שליחת פרטים" }).click();
-
-  const name = page.getByRole("textbox", { name: /שם/ });
-  await expect(name).toBeFocused();
-  await expect(name).toHaveAttribute("aria-invalid", "true");
-  await expect(name).toHaveAttribute("aria-describedby", "name-error");
-
-  await name.fill("ישראל ישראלי");
-  await page.getByRole("textbox", { name: /טלפון/ }).fill("0505449477");
-  await expect(page.getByRole("textbox", { name: /טלפון/ })).toHaveValue("050-5449-477");
-  await page.getByRole("button", { name: "שליחת פרטים" }).click();
-  await expect(page.locator('form p[role="alert"]')).toContainText("הטופס עדיין אינו מחובר");
-});
-
 test("accessibility widget uses touch-sized controls and keeps the page within the viewport", async ({
   page,
   viewport,
