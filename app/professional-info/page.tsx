@@ -2,30 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
+import { articles } from "../data/articles";
 
 export const metadata: Metadata = {
   title: "מידע מקצועי",
   description:
-    "מידע מקצועי ומאמרים עתידיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",
+    "מאמרים והסברים מקצועיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",
   alternates: { canonical: "/professional-info" },
   openGraph: {
     title: "מידע מקצועי | רועי קליין פיזיותרפיה",
     description:
-      "מידע מקצועי ומאמרים עתידיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",
+      "מאמרים והסברים מקצועיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",
     url: "/professional-info",
   },
 };
-
-// כרטיסי הכנה בלבד — עדיין אין עמודי מאמר. לא לחיצים, עם תגית "בקרוב".
-// TODO: כשייכתב מאמר אמיתי, להפוך את הכרטיס הרלוונטי לקישור לעמוד המאמר.
-const topics = [
-  "כאב אגן כרוני בגברים / CPPS",
-  "פיזיותרפיה לרצפת האגן לגברים",
-  "שברי מאמץ וכאבי שוקיים",
-  "שיקום לאחר ניתוחים",
-  "פציעות ספורט ועומס",
-  "כאבי גב וצוואר",
-];
 
 export default function ProfessionalInfoPage() {
   return (
@@ -33,32 +23,47 @@ export default function ProfessionalInfoPage() {
       <section className="scroll-mt-4 py-16 sm:py-20">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
-            <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-              מידע מקצועי
-            </h1>
+            <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">מידע מקצועי</h1>
             <p className="mt-4 text-lg leading-8 text-slate-600">
-              מאמרים והסברים מקצועיים יתווספו כאן בהמשך.
+              הסברים מקצועיים בנושאי פיזיותרפיה בספורט, בריאות הגבר, רצפת האגן, כאב ושיקום.
             </p>
           </Reveal>
-
           <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {topics.map((topic, i) => (
-              <Reveal key={topic} delay={i * 70}>
-                <article className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6">
-                  <span className="inline-flex w-fit items-center rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-600 ring-1 ring-inset ring-teal-200">
-                    בקרוב
-                  </span>
-                  <h2 className="mt-3 text-lg font-bold text-slate-900">
-                    {topic}
+            {articles.map((article, i) => (
+              <Reveal key={article.slug} delay={i * 70}>
+                <Link
+                  href={`/professional-info/${article.slug}`}
+                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg hover:shadow-teal-100/50"
+                >
+                  <span className="text-xs font-semibold text-teal-600">{article.date}</span>
+                  <h2 className="mt-2 text-lg font-bold leading-7 text-slate-900">
+                    {article.title}
                   </h2>
-                </article>
+                  <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">
+                    {article.excerpt}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700">
+                    להסבר המלא
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      className="h-4 w-4 transition-transform group-hover:-translate-x-1"
+                    >
+                      <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                  </span>
+                </Link>
               </Reveal>
             ))}
           </div>
         </Container>
       </section>
-
-      {/* CTA — רלוונטי גם בזמן שהתוכן עדיין "בקרוב" */}
+      {/* CTA — רלוונטי גם בזמן שהתוכן עדיין מתרחב */}
       <section className="bg-slate-50/80 py-16 sm:py-20">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
