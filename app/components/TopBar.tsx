@@ -1,6 +1,8 @@
+import Image from "next/image";
 import { Icon } from "./Icon";
 import Container from "./Container";
 import { site } from "../data/site";
+import { asset } from "../basePath";
 
 // פס עליון כהה עם פרטי קשר — כמו ב-danrixphysio.com
 export default function TopBar() {
@@ -27,7 +29,13 @@ export default function TopBar() {
           </a>
           {/* מיקומי הקליניקות — כל שם הוא קישור ניווט ב-Waze */}
           <span className="flex items-center gap-2">
-            <Icon name="mapPin" className="h-4 w-4" />
+            <Image
+              src={asset("/icons/waze-icon.webp")}
+              alt=""
+              width={16}
+              height={16}
+              className="h-4 w-4 brightness-0 invert"
+            />
             <span>
               {"חיפה ("}
               {haifaClinics.map((clinic, i) => (

@@ -8,9 +8,6 @@ import { site } from "../data/site";
 import { asset } from "../basePath";
 
 export default function Footer() {
-  const haifaClinics = site.clinics.filter((clinic) => clinic.city === "חיפה");
-  const gvatClinic = site.clinics.find((clinic) => clinic.city === "קיבוץ גבת");
-
   return (
     <footer className="relative isolate mt-auto overflow-hidden bg-teal-700 text-white">
       {/* משושים מעל ה-footer (בהיר על הרקע הכהה), בצד שמאל, מאחורי התוכן */}
@@ -78,40 +75,26 @@ export default function Footer() {
               <Icon name="whatsapp" className="h-4 w-4" />
               וואטסאפ
             </a>
-            {/* מיקומי הקליניקות — כל שם הוא קישור ניווט ב-Waze */}
-            <span className="flex items-center gap-2">
-              <Icon name="mapPin" className="h-4 w-4" />
-              <span>
-                {"חיפה ("}
-                {haifaClinics.map((clinic, i) => (
-                  <span key={clinic.name}>
-                    {i > 0 && ", "}
-                    <a
-                      href={clinic.wazeHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`ניווט ב-Waze אל ${clinic.name}`}
-                      className="hover:text-white"
-                    >
-                      {clinic.name}
-                    </a>
-                  </span>
-                ))}
-                {") · קיבוץ גבת ("}
-                {gvatClinic && (
-                  <a
-                    href={gvatClinic.wazeHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`ניווט ב-Waze אל ${gvatClinic.name}, קיבוץ גבת`}
-                    className="hover:text-white"
-                  >
-                    {gvatClinic.name}
-                  </a>
-                )}
-                {")"}
-              </span>
-            </span>
+            {/* מיקומי הקליניקות — כל מיקום הוא קישור ניווט מלא ב-Waze */}
+            {site.clinics.map((clinic) => (
+              <a
+                key={clinic.name}
+                href={clinic.wazeHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`ניווט ב-Waze אל ${clinic.name}, ${clinic.city}`}
+                className="flex min-h-11 items-center gap-2 hover:text-white"
+              >
+                <Image
+                  src={asset("/icons/waze-icon.webp")}
+                  alt=""
+                  width={16}
+                  height={16}
+                  className="h-4 w-4 brightness-0 invert"
+                />
+                {clinic.city} · {clinic.name}
+              </a>
+            ))}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-white/10 pt-6">
