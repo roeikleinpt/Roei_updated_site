@@ -8,6 +8,9 @@ import { site } from "../data/site";
 import { asset } from "../basePath";
 
 export default function Footer() {
+  const haifaClinics = site.clinics.filter((clinic) => clinic.city === "חיפה");
+  const gvatClinic = site.clinics.find((clinic) => clinic.city === "קיבוץ גבת");
+
   return (
     <footer className="relative isolate mt-auto overflow-hidden bg-teal-700 text-white">
       {/* משושים מעל ה-footer (בהיר על הרקע הכהה), בצד שמאל, מאחורי התוכן */}
@@ -75,9 +78,39 @@ export default function Footer() {
               <Icon name="whatsapp" className="h-4 w-4" />
               וואטסאפ
             </a>
+            {/* מיקומי הקליניקות — כל שם הוא קישור ניווט ב-Waze */}
             <span className="flex items-center gap-2">
               <Icon name="mapPin" className="h-4 w-4" />
-              {site.locations}
+              <span>
+                {"חיפה ("}
+                {haifaClinics.map((clinic, i) => (
+                  <span key={clinic.name}>
+                    {i > 0 && ", "}
+                    <a
+                      href={clinic.wazeHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`ניווט ב-Waze אל ${clinic.name}`}
+                      className="hover:text-white"
+                    >
+                      {clinic.name}
+                    </a>
+                  </span>
+                ))}
+                {") · קיבוץ גבת ("}
+                {gvatClinic && (
+                  <a
+                    href={gvatClinic.wazeHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`ניווט ב-Waze אל ${gvatClinic.name}, קיבוץ גבת`}
+                    className="hover:text-white"
+                  >
+                    {gvatClinic.name}
+                  </a>
+                )}
+                {")"}
+              </span>
             </span>
           </div>
 

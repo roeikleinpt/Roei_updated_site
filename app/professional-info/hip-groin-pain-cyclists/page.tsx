@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../../components/Container";
+import ArticleByline from "../../components/ArticleByline";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
+import AuthorBox from "../../components/AuthorBox";
+import { getArticle } from "../../data/articles";
 import { asset } from "../../basePath";
 
 export const metadata: Metadata = {
@@ -30,8 +34,11 @@ function Ref({ n }: { n: number }) {
 }
 
 export default function HipGroinPainCyclistsArticle() {
+  const article = getArticle("hip-groin-pain-cyclists");
+
   return (
     <article className="py-16 sm:py-20">
+      <ArticleJsonLd article={article} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <Link
@@ -55,7 +62,7 @@ export default function HipGroinPainCyclistsArticle() {
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
             כאבים בירך ובמפשעה אצל רוכבי אופניים
           </h1>
-          <p className="mt-3 text-sm text-slate-500">יולי 2026</p>
+          <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
             כאב בירך או במפשעה בזמן רכיבה יכול להופיע בהדרגה, לאחר עלייה בעומס או בעקבות פציעה.
             אצל חלק מהרוכבים הוא מופיע רק לאחר זמן ממושך על האופניים, ואצל אחרים הוא מורגש גם
@@ -179,9 +186,14 @@ export default function HipGroinPainCyclistsArticle() {
           </p>
           <p className={pClass}>
             בדיווח מקרה תואר רוכב מקצועי בן 32 שסבל מכאב בירך ובמפשעה בזמן רכיבה ובישיבה ממושכת
-            לאחר חבלה משמעותית בירך. טיפולים קודמים הביאו להקלה חלקית בלבד. לאחר הערכה של שרירי
-            ורקמות החיבור של רצפת האגן ושני טיפולים של Pelvic Floor Fascial Mobilization דווח
-            על החלמה מלאה.
+            לאחר חבלה משמעותית בירך. טיפולים קודמים הביאו להקלה חלקית בלבד. לאחר{" "}
+            <Link
+              href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              הערכה של שרירי ורקמות החיבור של רצפת האגן
+            </Link>{" "}
+            ושני טיפולים של Pelvic Floor Fascial Mobilization דווח על החלמה מלאה.
             <Ref n={5} />
           </p>
           <p className={pClass}>
@@ -191,7 +203,7 @@ export default function HipGroinPainCyclistsArticle() {
           </p>
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              אם את/ה חווה את הסימפטומים הללו, מומלץ להיבדק על ידי פיזיותרפיסט
+              כאב שנמשך מצדיק הערכה מסודרת. אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
             </p>
             <Link
               href="/#contact"
@@ -290,6 +302,7 @@ export default function HipGroinPainCyclistsArticle() {
           <p className="mt-8 border-t border-slate-200 pt-6 text-sm text-slate-500">
             המידע במאמר אינו מחליף הערכה רפואית או פיזיותרפית אישית.
           </p>
+          <AuthorBox />
         </div>
       </Container>
     </article>

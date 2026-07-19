@@ -6,7 +6,7 @@ const basePath =
   process.argv[3] ?? (process.env.GITHUB_PAGES === "true" ? "/roei2" : "");
 const expectedSiteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://idoo25.github.io/roei2";
+  "https://www.roeiklein.com";
 const failures = [];
 
 for (const required of [

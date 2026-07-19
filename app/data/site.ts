@@ -9,8 +9,12 @@ export const site = {
   phoneHref: "tel:+972526171312",
   whatsappHref: "https://wa.me/972526171312",
   email: "RoeiKleinPT@gmail.com",
-  locationsShort: "חיפה · גבת",
-  locations: "חיפה (מרכז רפואי קולוני, מדיקס) · קיבוץ גבת (סינרגיה פיזיותרפיה)",
+  // הקליניקות עם קישורי ניווט Waze — מקור יחיד לתצוגת המיקומים ב-TopBar וב-Footer.
+  clinics: [
+    { name: "מרכז רפואי קולוני", city: "חיפה", wazeHref: "https://waze.com/ul/hsvbfsr1yx" },
+    { name: "מדיקס", city: "חיפה", wazeHref: "https://waze.com/ul/hsvbfe859y" },
+    { name: "סינרגיה פיזיותרפיה", city: "קיבוץ גבת", wazeHref: "https://waze.com/ul/hsvc1chxzv" },
+  ],
   stats: [
     { value: "2,000+", label: "מטופלים בתחום האורתופדיה" },
     { value: "300+", label: "מטופלים בתחום רצפת האגן" },

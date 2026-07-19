@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteBaseUrl } from "./config/site";
+import { articles } from "./data/articles";
 
 // נדרש עם output: export כדי שהקובץ ייווצר סטטית בזמן build.
 export const dynamic = "force-static";
@@ -21,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    // עמודי המאמרים — נגזרים אוטומטית מרשימת המאמרים, כך שכל מאמר חדש נכנס לבד.
+    ...articles.map((article) => ({
+      url: `${siteBaseUrl}/professional-info/${article.slug}/`,
+      lastModified: new Date(article.dateISO),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
     {
       url: `${siteBaseUrl}/terms/`,
       lastModified: now,

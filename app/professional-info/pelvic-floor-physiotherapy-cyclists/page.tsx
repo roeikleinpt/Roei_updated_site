@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../../components/Container";
+import ArticleByline from "../../components/ArticleByline";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
+import AuthorBox from "../../components/AuthorBox";
+import { getArticle } from "../../data/articles";
 import { asset } from "../../basePath";
 
 export const metadata: Metadata = {
@@ -30,8 +34,11 @@ function Ref({ n }: { n: number }) {
 }
 
 export default function PelvicFloorPhysiotherapyCyclistsArticle() {
+  const article = getArticle("pelvic-floor-physiotherapy-cyclists");
+
   return (
     <article className="py-16 sm:py-20">
+      <ArticleJsonLd article={article} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <Link
@@ -55,11 +62,17 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
             פיזיותרפיה לרצפת האגן אצל רוכבי אופניים: מה כוללים ההערכה והטיפול?
           </h1>
-          <p className="mt-3 text-sm text-slate-500">יולי 2026</p>
+          <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
-            כאב או נימול באזור האוכף אינם נובעים תמיד רק מהאוכף. אצל חלק מהרוכבים קיימת מעורבות
-            של שרירי רצפת האגן, ולעיתים היא מתבטאת בכאב באגן או בפרינאום, קושי בישיבה, תסמיני
-            שתן או שינוי בתפקוד המיני.
+            <Link
+              href="/professional-info/saddle-area-pain-cyclists"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב או נימול באזור האוכף
+            </Link>{" "}
+            אינם נובעים תמיד רק מהאוכף. אצל חלק מהרוכבים קיימת מעורבות של שרירי רצפת האגן,
+            ולעיתים היא מתבטאת בכאב באגן או בפרינאום, קושי בישיבה, תסמיני שתן או שינוי בתפקוד
+            המיני.
           </p>
           <p className={pClass}>
             גם כאשר רצפת האגן מעורבת, אין פירוש הדבר שהיא בהכרח ״חלשה״. אצל גברים עם כאב אגן
@@ -133,7 +146,16 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
             <li>האם קיימים תסמינים במתן שתן.</li>
             <li>האם קיימת השפעה על התפקוד המיני.</li>
             <li>האם חלו שינויים בנפח הרכיבה, באוכף או בתנוחה.</li>
-            <li>האם קיימים כאבי גב, ירך או מפשעה.</li>
+            <li>
+              האם קיימים{" "}
+              <Link
+                href="/professional-info/hip-groin-pain-cyclists"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                כאבי גב, ירך או מפשעה
+              </Link>
+              .
+            </li>
           </ul>
           <p className={pClass}>
             לאחר מכן ניתן להעריך את הנשימה, הבטן, הגב, הירכיים, האגן ושרירי רצפת האגן. מטרת
@@ -195,17 +217,6 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
             זאת, כאשר בבדיקה נמצאים רגישות, מתח מוגבר, קושי בהרפיה או חוסר קואורדינציה של רצפת
             האגן, ניתן להשתמש בעקרונות הטיפול הקיימים תוך התאמה לדרישות הרכיבה.
           </p>
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              במידה ואתם מזדהים עם הנאמר, צרו קשר ונראה כיצד עוזרים לכם בהקדם
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
           <figure className="mt-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -216,6 +227,17 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
               className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
             />
           </figure>
+          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
+            <p className="text-base font-semibold text-slate-900">
+              אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
+            </p>
+            <Link
+              href="/#contact"
+              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
+            >
+              לקביעת פגישת אבחון
+            </Link>
+          </div>
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>
             פיזיותרפיה לרצפת האגן אינה מסתכמת בתרגילי קיגל, ואינה מבוססת על טיפול פנימי לכל
@@ -290,6 +312,7 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           <p className="mt-8 border-t border-slate-200 pt-6 text-sm text-slate-500">
             המידע במאמר אינו מחליף הערכה רפואית או פיזיותרפית אישית.
           </p>
+          <AuthorBox />
         </div>
       </Container>
     </article>

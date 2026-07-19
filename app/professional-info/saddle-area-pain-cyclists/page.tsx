@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../../components/Container";
+import ArticleByline from "../../components/ArticleByline";
+import ArticleJsonLd from "../../components/ArticleJsonLd";
+import AuthorBox from "../../components/AuthorBox";
+import { getArticle } from "../../data/articles";
 import { asset } from "../../basePath";
 
 export const metadata: Metadata = {
@@ -30,8 +34,11 @@ function Ref({ n }: { n: number }) {
 }
 
 export default function SaddleAreaPainCyclistsArticle() {
+  const article = getArticle("saddle-area-pain-cyclists");
+
   return (
     <article className="py-16 sm:py-20">
+      <ArticleJsonLd article={article} />
       <Container>
         <div className="mx-auto max-w-3xl">
           <Link
@@ -55,7 +62,7 @@ export default function SaddleAreaPainCyclistsArticle() {
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
             כאב באזור האוכף ונימול באיבר המין אצל רוכבי אופניים: מה ידוע?
           </h1>
-          <p className="mt-3 text-sm text-slate-500">יולי 2026</p>
+          <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
             כאב, לחץ או נימול באזור האוכף (מפשעה, איבר המין, אשכים, פי הטבעת ועוד) הן תלונות
             שרוכבי אופניים רבים מכירים. לעיתים התחושה חולפת זמן קצר לאחר סיום הרכיבה, אך אצל
@@ -161,11 +168,19 @@ export default function SaddleAreaPainCyclistsArticle() {
           <p className={pClass}>
             הפחתה זמנית של העומס, שינוי תנוחה במהלך הרכיבה ובחינה של התאמת האוכף והאופניים
             עשויים להיות חלק מהפתרון. כאשר התסמין חוזר, נמשך גם לאחר הרכיבה או מלווה בתסמינים
-            נוספים, כדאי לבצע הערכה מקצועית ולא להסתפק בהחלפת אוכף באופן אקראי.
+            נוספים, כדאי לבצע{" "}
+            <Link
+              href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              הערכה מקצועית
+            </Link>{" "}
+            ולא להסתפק בהחלפת אוכף באופן אקראי.
           </p>
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              אם התסמינים לא חולפים או דועכים – מומלץ לגשת לבדיקה אצל פיזיותרפיסט רצפת אגן!
+              נימול שחוזר מרכיבה לרכיבה הוא סיבה טובה לבדיקה מסודרת. אם חלק מהתיאור מוכר לכם,
+              מומלץ לפנות לבירור.
             </p>
             <Link
               href="/#contact"
@@ -238,6 +253,7 @@ export default function SaddleAreaPainCyclistsArticle() {
           <p className="mt-8 border-t border-slate-200 pt-6 text-sm text-slate-500">
             המידע במאמר אינו מחליף הערכה רפואית או פיזיותרפית אישית.
           </p>
+          <AuthorBox />
         </div>
       </Container>
     </article>
