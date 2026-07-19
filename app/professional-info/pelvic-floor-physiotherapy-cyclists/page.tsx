@@ -5,14 +5,22 @@ import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
 import { getArticle } from "../../data/articles";
+import { siteConfig } from "../../config/site";
 import { asset } from "../../basePath";
+
+const article = getArticle("pelvic-floor-physiotherapy-cyclists");
 
 export const metadata: Metadata = {
   title: "פיזיותרפיה לרצפת האגן אצל רוכבי אופניים: מה כוללים ההערכה והטיפול?",
   description:
-    "מתי רצפת האגן מעורבת בכאב או בנימול אצל רוכבים, מה כוללת ההערכה הפיזיותרפית ומדוע הטיפול אינו מסתכם בתרגילי קיגל — לפי הנחיות איגוד האורולוגים האמריקאי 2025.",
+    "מתי רצפת האגן מעורבת בכאב או בנימול אצל רוכבים, מה כוללת הערכה פיזיותרפית של רצפת האגן אצל גברים, ומדוע הטיפול אינו מסתכם בתרגילי קיגל? על בסיס הנחיות איגוד האורולוגים האמריקאי 2025.",
   alternates: { canonical: "/professional-info/pelvic-floor-physiotherapy-cyclists" },
   openGraph: {
+    type: "article",
+    locale: "he_IL",
+    siteName: siteConfig.name,
+    publishedTime: article.dateISO,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "פיזיותרפיה לרצפת האגן אצל רוכבי אופניים | רועי קליין פיזיותרפיה",
     description: "מעורבות רצפת האגן בכאב אצל רוכבים — הערכה וטיפול מבוססי ראיות.",
     url: "/professional-info/pelvic-floor-physiotherapy-cyclists",
@@ -34,8 +42,6 @@ function Ref({ n }: { n: number }) {
 }
 
 export default function PelvicFloorPhysiotherapyCyclistsArticle() {
-  const article = getArticle("pelvic-floor-physiotherapy-cyclists");
-
   return (
     <article className="py-16 sm:py-20">
       <ArticleJsonLd article={article} />
@@ -129,9 +135,7 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           <figure className="mt-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={asset(
-                "/professional-info/Cycling_Pelvic_Biomechanics_and_Clinical_Care_(6)_-_Slide_9.png",
-              )}
+              src={asset("/professional-info/pelvic-floor-myalgia-muscles.webp")}
               alt="שרירי רצפת האגן ומיאלגיה של רצפת האגן (pelvic floor myalgia) — שקופית קלינית"
               className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
             />
@@ -220,9 +224,7 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           <figure className="mt-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={asset(
-                "/professional-info/Cycling_Pelvic_Biomechanics_and_Clinical_Care_(4)_-_Slide_13.png",
-              )}
+              src={asset("/professional-info/cycling-pelvic-clinical-care.webp")}
               alt="ביומכניקה של האגן ורצפת האגן ורצף הטיפול הקליני ברוכבי אופניים — שקופית קלינית"
               className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
             />

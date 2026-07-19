@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../components/Container";
+import { siteConfig } from "../config/site";
 
 export const metadata: Metadata = {
   title: "תנאי שימוש",
   description: "תנאי השימוש של אתר רועי קליין פיזיותרפיה.",
   alternates: { canonical: "/terms" },
   openGraph: {
+    type: "website",
+    locale: "he_IL",
+    siteName: siteConfig.name,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "תנאי שימוש | רועי קליין פיזיותרפיה",
     description: "תנאי השימוש של אתר רועי קליין פיזיותרפיה.",
     url: "/terms",

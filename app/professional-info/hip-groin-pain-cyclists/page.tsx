@@ -5,7 +5,10 @@ import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
 import { getArticle } from "../../data/articles";
+import { siteConfig } from "../../config/site";
 import { asset } from "../../basePath";
+
+const article = getArticle("hip-groin-pain-cyclists");
 
 export const metadata: Metadata = {
   title: "כאבים בירך ובמפשעה אצל רוכבי אופניים",
@@ -13,6 +16,11 @@ export const metadata: Metadata = {
     "כאב בירך או במפשעה אצל רוכבי אופניים — הגורמים האפשריים (מפרק הירך, מקרבים, עומס אימונים ורצפת האגן), מה כוללת הערכה פיזיותרפית וכיצד מטפלים.",
   alternates: { canonical: "/professional-info/hip-groin-pain-cyclists" },
   openGraph: {
+    type: "article",
+    locale: "he_IL",
+    siteName: siteConfig.name,
+    publishedTime: article.dateISO,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "כאבים בירך ובמפשעה אצל רוכבי אופניים | רועי קליין פיזיותרפיה",
     description: "כאב ירך ומפשעה אצל רוכבים — גורמים, הערכה וטיפול מבוסס ראיות.",
     url: "/professional-info/hip-groin-pain-cyclists",
@@ -34,8 +42,6 @@ function Ref({ n }: { n: number }) {
 }
 
 export default function HipGroinPainCyclistsArticle() {
-  const article = getArticle("hip-groin-pain-cyclists");
-
   return (
     <article className="py-16 sm:py-20">
       <ArticleJsonLd article={article} />
@@ -111,9 +117,7 @@ export default function HipGroinPainCyclistsArticle() {
           <figure className="mt-8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={asset(
-                "/professional-info/Cycling_Pelvic_Biomechanics_and_Clinical_Care_(4)_-_Slide_10.png",
-              )}
+              src={asset("/professional-info/groin-pain-cycling-biomechanics.webp")}
               alt="ביומכניקה של האגן ורצפת האגן ברכיבה על אופניים והקשר לכאב מפשעה — שקופית קלינית"
               className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
             />

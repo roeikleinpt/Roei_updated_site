@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
 import { articles } from "../data/articles";
+import { siteConfig } from "../config/site";
 
 export const metadata: Metadata = {
   title: "מידע מקצועי",
@@ -10,6 +11,10 @@ export const metadata: Metadata = {
     "מאמרים והסברים מקצועיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",
   alternates: { canonical: "/professional-info" },
   openGraph: {
+    type: "website",
+    locale: "he_IL",
+    siteName: siteConfig.name,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "מידע מקצועי | רועי קליין פיזיותרפיה",
     description:
       "מאמרים והסברים מקצועיים על פיזיותרפיה, בריאות הגבר, רצפת האגן, כאב ושיקום.",

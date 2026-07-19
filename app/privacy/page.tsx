@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../components/Container";
+import { siteConfig } from "../config/site";
 
 export const metadata: Metadata = {
   title: "מדיניות פרטיות",
   description: "מדיניות הפרטיות של אתר רועי קליין פיזיותרפיה.",
   alternates: { canonical: "/privacy" },
   openGraph: {
+    type: "website",
+    locale: "he_IL",
+    siteName: siteConfig.name,
+    images: [{ url: "/opengraph-image.png", width: 1200, height: 630 }],
     title: "מדיניות פרטיות | רועי קליין פיזיותרפיה",
     description: "מדיניות הפרטיות של אתר רועי קליין פיזיותרפיה.",
     url: "/privacy",

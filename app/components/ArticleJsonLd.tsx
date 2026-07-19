@@ -30,12 +30,34 @@ export default function ArticleJsonLd({ article }: { article: Article }) {
     },
     mainEntityOfPage: url,
   };
+  // BreadcrumbList — מציג בתוצאות החיפוש נתיב (בית › מידע מקצועי › מאמר) במקום URL גולמי.
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: `${siteBaseUrl}/` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "מידע מקצועי",
+        item: `${siteBaseUrl}/professional-info/`,
+      },
+      { "@type": "ListItem", position: 3, name: article.title },
+    ],
+  };
   const serialized = JSON.stringify(data).replace(/</g, "\\u003c");
+  const serializedBreadcrumbs = JSON.stringify(breadcrumbs).replace(/</g, "\\u003c");
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: serialized }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serialized }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializedBreadcrumbs }}
+      />
+    </>
   );
 }
