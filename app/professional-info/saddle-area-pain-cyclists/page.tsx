@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 import { asset } from "../../basePath";
@@ -30,6 +31,22 @@ export const metadata: Metadata = {
 const pClass = "mt-4 leading-8 text-black";
 const h2Class = "mt-7 text-2xl font-bold text-slate-900";
 const ulClass = "mt-4 list-disc space-y-1 pr-6 leading-8 text-black";
+
+// שאלות נפוצות לעמוד — מוצגות לפני המקורות וגם כ-FAQPage schema.
+const faqItems = [
+  {
+    q: "האם נימול באיבר המין במהלך רכיבה גורם לנזק קבוע?",
+    a: "נימול חד פעמי שחולף זמן קצר לאחר הרכיבה בדרך כלל אינו מעיד על נזק קבוע, שהוא ממצא נדיר וקשור בדרך כלל ללחץ ממושך שחוזר לאורך זמן. כדאי לפנות לבדיקה אם הנימול חוזר, מופיע מוקדם יותר מרכיבה לרכיבה, נמשך לאחר הירידה מהאופניים או מלווה בכאב או בשינוי בתפקוד.",
+  },
+  {
+    q: "האם החלפת אוכף תפתור את הבעיה?",
+    a: "התאמת אוכף או שינוי בתנוחת הרכיבה עשויים להפחית את הלחץ ולהקל על הנימול. עם זאת, החלפת אוכפים ללא בירור של מקור התסמין לא תמיד עוזרת. כאשר הנימול חוזר או נמשך, מומלץ לבדוק גם את מנח הרכיבה, העומס והגורמים הגופניים האפשריים.",
+  },
+  {
+    q: "מתי כדאי לפנות לבדיקה בגלל נימול או כאב באזור האוכף?",
+    a: "מומלץ לפנות להערכה כאשר הנימול או הכאב חוזרים, מתחילים מוקדם ברכיבה, נמשכים לאחר סיומה או מלווים בכאב באגן ובפרינאום, בשינוי במתן שתן או בפגיעה בתפקוד המיני.",
+  },
+];
 
 function Ref({ n }: { n: number }) {
   return (
@@ -177,6 +194,8 @@ export default function SaddleAreaPainCyclistsArticle() {
             נוספים, כדאי לבצע{" "}
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               הערכה מקצועית
@@ -206,6 +225,7 @@ export default function SaddleAreaPainCyclistsArticle() {
             מהרכיבה. המטרה היא להבין מדוע הוא מופיע אצל הרוכב המסוים, אילו גורמים ניתנים לשינוי
             והאם קיימת מעורבות של רצפת האגן או של מערכות נוספות.
           </p>
+          <ArticleFaq items={faqItems} />
           <h2 id="references" className={`${h2Class} scroll-mt-24`}>
             מקורות
           </h2>

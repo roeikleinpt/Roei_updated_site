@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 import { asset } from "../../basePath";
@@ -30,6 +31,22 @@ export const metadata: Metadata = {
 const pClass = "mt-4 leading-8 text-black";
 const h2Class = "mt-7 text-2xl font-bold text-slate-900";
 const ulClass = "mt-4 list-disc space-y-1 pr-6 leading-8 text-black";
+
+// שאלות נפוצות לעמוד — מוצגות לפני המקורות וגם כ-FAQPage schema.
+const faqItems = [
+  {
+    q: "כאב במפשעה בזמן רכיבה, האם הוא מגיע מהירך או מרצפת האגן?",
+    a: "כאב במפשעה יכול לנבוע ממפרק הירך, מהשרירים המקרבים, מאזור עצם החיק, מהגב התחתון או מרצפת האגן. לעיתים מעורבים כמה גורמים יחד. כדי לזהות את המקור יש לבדוק את מיקום הכאב, התנועות והעומסים שמעוררים אותו ואת תגובתו לבדיקה.",
+  },
+  {
+    q: "כמה זמן לוקח לטפל בכאב ירך או מפשעה אצל רוכב?",
+    a: "טיפול מבוסס תרגול בכאב הקשור לירך נמשך בדרך כלל לפחות כשלושה חודשים. משך הטיפול משתנה בהתאם לממצאי הבדיקה, לחומרת התסמינים, לעומס הרכיבה ולמטרות הרוכב.",
+  },
+  {
+    q: "האם צריך להפסיק לרכב עד שהכאב יעבור?",
+    a: "ברוב המקרים אין צורך להפסיק לרכב לחלוטין. לרוב ניתן להפחית זמנית את נפח הרכיבה או את העצימות ולשלב תרגול הדרגתי. כאב שמופיע גם מחוץ לרכיבה, ירידה בטווח התנועה או שינוי בהליכה מצדיקים הערכה מסודרת.",
+  },
+];
 
 function Ref({ n }: { n: number }) {
   return (
@@ -193,6 +210,8 @@ export default function HipGroinPainCyclistsArticle() {
             לאחר חבלה משמעותית בירך. טיפולים קודמים הביאו להקלה חלקית בלבד. לאחר{" "}
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               הערכה של שרירי ורקמות החיבור של רצפת האגן
@@ -226,6 +245,7 @@ export default function HipGroinPainCyclistsArticle() {
             עומס מצדיקים הערכה מסודרת. ברוב המקרים, הטיפול השמרני צריך לכלול ניהול עומס ותרגול
             אקטיבי, תוך בחינה רחבה של הירך, האגן, הגב ולעיתים גם רצפת האגן.
           </p>
+          <ArticleFaq items={faqItems} />
           <h2 id="references" className={`${h2Class} scroll-mt-24`}>
             מקורות
           </h2>

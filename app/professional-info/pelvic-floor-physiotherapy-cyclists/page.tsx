@@ -4,6 +4,7 @@ import Container from "../../components/Container";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 import { asset } from "../../basePath";
@@ -30,6 +31,22 @@ export const metadata: Metadata = {
 const pClass = "mt-4 leading-8 text-black";
 const h2Class = "mt-7 text-2xl font-bold text-slate-900";
 const ulClass = "mt-4 list-disc space-y-1 pr-6 leading-8 text-black";
+
+// שאלות נפוצות לעמוד — מוצגות לפני המקורות וגם כ-FAQPage schema.
+const faqItems = [
+  {
+    q: "האם תרגילי קיגל יעזרו לכאב או לנימול שקשורים לרכיבה?",
+    a: "לא תמיד. כאשר שרירי רצפת האגן מתוחים, רגישים או מתקשים להרפות, תרגילי קיגל עלולים להחמיר את התסמינים. בהתאם לממצאי הבדיקה, הטיפול עשוי לכלול חיזוק או דווקא נשימה, הרפיה, מודעות ושיפור הקואורדינציה.",
+  },
+  {
+    q: "האם בדיקה של רצפת האגן תמיד כוללת בדיקה פנימית?",
+    a: "לא. ההערכה כוללת תשאול ובדיקה של הנשימה, הבטן, הגב, הירכיים והאגן. בדיקה פנימית נשקלת רק כאשר היא עשויה לתרום לאבחון, לאחר הסבר ובהסכמת המטופל.",
+  },
+  {
+    q: "יש לי כאב במפשעה או בירך ללא תסמיני שתן או תפקוד מיני. האם רצפת האגן יכולה להיות קשורה?",
+    a: "כן, לעיתים רצפת האגן מעורבת גם ללא תסמינים במתן שתן או בתפקוד המיני. אין משמעות הדבר שכל כאב במפשעה או בירך מקורו ברצפת האגן, אך כאשר הכאב אינו משתפר כמצופה, כדאי לשקול בדיקה רחבה יותר.",
+  },
+];
 
 function Ref({ n }: { n: number }) {
   return (
@@ -72,6 +89,8 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           <p className="mt-6 text-lg leading-8 text-black">
             <Link
               href="/professional-info/saddle-area-pain-cyclists"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               כאב או נימול באזור האוכף
@@ -154,6 +173,8 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
               האם קיימים{" "}
               <Link
                 href="/professional-info/hip-groin-pain-cyclists"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-semibold text-teal-700 hover:underline"
               >
                 כאבי גב, ירך או מפשעה
@@ -249,6 +270,7 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
             המטרה היא לזהות אם רצפת האגן אכן מעורבת, להבין מה הבעיה, ולהתאים את הטיפול לממצאים
             ולמטרות הרוכב.
           </p>
+          <ArticleFaq items={faqItems} />
           <h2 id="references" className={`${h2Class} scroll-mt-24`}>
             מקורות
           </h2>

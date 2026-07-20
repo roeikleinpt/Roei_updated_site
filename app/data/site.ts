@@ -9,11 +9,27 @@ export const site = {
   phoneHref: "tel:+972526171312",
   whatsappHref: "https://wa.me/972526171312",
   email: "RoeiKleinPT@gmail.com",
-  // הקליניקות עם קישורי ניווט Waze — מקור יחיד לתצוגת המיקומים ב-TopBar וב-Footer.
+  // הקליניקות עם כתובת וקישורי ניווט Waze — מקור יחיד לתצוגת המיקומים (TopBar/Footer)
+  // ולסכמת העסק (JSON-LD). street ריק = יישוב ללא שם רחוב (קיבוץ).
   clinics: [
-    { name: "מרכז רפואי קולוני", city: "חיפה", wazeHref: "https://waze.com/ul/hsvbfsr1yx" },
-    { name: "מדיקס", city: "חיפה", wazeHref: "https://waze.com/ul/hsvbfe859y" },
-    { name: "סינרגיה פיזיותרפיה", city: "קיבוץ גבת", wazeHref: "https://waze.com/ul/hsvc1chxzv" },
+    {
+      name: "מרכז רפואי קולוני",
+      city: "חיפה",
+      street: "דרך העצמאות 134",
+      wazeHref: "https://waze.com/ul/hsvbfsr1yx",
+    },
+    {
+      name: "מדיקס",
+      city: "חיפה",
+      street: "פנחס ואברהם רוטנברג 2 (אצטדיון סמי עופר)",
+      wazeHref: "https://waze.com/ul/hsvbfe859y",
+    },
+    {
+      name: "סינרגיה פיזיותרפיה",
+      city: "קיבוץ גבת",
+      street: "",
+      wazeHref: "https://waze.com/ul/hsvc1chxzv",
+    },
   ],
   stats: [
     { value: "2,000+", label: "מטופלים בתחום האורתופדיה" },

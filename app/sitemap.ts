@@ -8,17 +8,18 @@ export const dynamic = "force-static";
 // נוצר סטטית בזמן build (תואם output: export) → out/sitemap.xml.
 // הכתובות מבוססות על siteConfig.siteUrl — יתעדכנו אוטומטית עם החלפת הדומיין.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  // תאריכי עדכון אמיתיים לעמודים הסטטיים — לעדכן ידנית כשעמוד משתנה מהותית.
+  // עמודי המאמרים מקבלים תאריך אוטומטית מ-dateISO שלהם.
   return [
     {
       url: `${siteBaseUrl}/`,
-      lastModified: now,
+      lastModified: new Date("2026-07-20"),
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: `${siteBaseUrl}/professional-info/`,
-      lastModified: now,
+      lastModified: new Date("2026-07-20"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
@@ -31,19 +32,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     {
       url: `${siteBaseUrl}/terms/`,
-      lastModified: now,
+      lastModified: new Date("2026-07-20"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${siteBaseUrl}/privacy/`,
-      lastModified: now,
+      lastModified: new Date("2026-07-20"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${siteBaseUrl}/accessibility/`,
-      lastModified: now,
+      lastModified: new Date("2026-07-16"),
       changeFrequency: "yearly",
       priority: 0.3,
     },

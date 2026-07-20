@@ -7,6 +7,7 @@ import ContactForm from "./components/ContactForm";
 import Treatments from "./components/Treatments";
 import Testimonials from "./components/Testimonials";
 import JsonLd from "./components/JsonLd";
+import HomeFaqJsonLd from "./components/HomeFaqJsonLd";
 import { site } from "./data/site";
 import { asset } from "./basePath";
 import { symptoms, approachSteps, aboutParagraphs } from "./data/content";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <JsonLd />
+      <HomeFaqJsonLd />
       {/* ===== Hero ===== */}
       <section id="hero" className="scroll-mt-4 pt-4 pb-16 sm:pt-6 sm:pb-24">
         <Container className="relative">
