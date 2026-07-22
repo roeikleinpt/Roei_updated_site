@@ -7,7 +7,7 @@ import AuthorBox from "../../components/AuthorBox";
 import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
-import { asset } from "../../basePath";
+import ArticleFigure from "../../components/ArticleFigure";
 
 const article = getArticle("hip-groin-pain-cyclists");
 
@@ -131,14 +131,10 @@ export default function HipGroinPainCyclistsArticle() {
             קליני חשוב: כאב באזור המפשעה יכול להיות רב־גורמי, ולעיתים קיימת מעורבות של יותר
             ממערכת אחת.
           </p>
-          <figure className="mt-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/professional-info/groin-pain-cycling-biomechanics.webp")}
-              alt="ביומכניקה של האגן ורצפת האגן ברכיבה על אופניים והקשר לכאב מפשעה — שקופית קלינית"
-              className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
-            />
-          </figure>
+          <ArticleFigure
+            src="/professional-info/groin-pain-cycling-biomechanics.webp"
+            alt="ביומכניקה של האגן ורצפת האגן ברכיבה על אופניים והקשר לכאב מפשעה — שקופית קלינית"
+          />
           <h2 className={h2Class}>מה תפקידו של עומס האימונים?</h2>
           <p className={pClass}>
             רכיבה כוללת אלפי חזרות על תנועה דומה של הירך. הרקמות נדרשות להתמודד לא רק עם עצימות

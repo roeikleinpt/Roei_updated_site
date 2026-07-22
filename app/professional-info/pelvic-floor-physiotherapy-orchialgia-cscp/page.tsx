@@ -7,7 +7,7 @@ import AuthorBox from "../../components/AuthorBox";
 import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
-import { asset } from "../../basePath";
+import ArticleFigure from "../../components/ArticleFigure";
 
 const article = getArticle("pelvic-floor-physiotherapy-orchialgia-cscp");
 
@@ -221,14 +221,10 @@ export default function PelvicFloorPhysiotherapyOrchialgiaArticle() {
             <li>תרגול ביתי ומתיחות.</li>
           </ul>
           <p className={pClass}>מתן תרגילי כיווץ אחידים ללא בדיקה אינו מתאים לכל מטופל.</p>
-          <figure className="mt-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/professional-info/cscp-pelvic-floor-physiotherapy.webp")}
-              alt="אינפוגרפיקה: פיזיותרפיה של רצפת האגן בכאב אשכים כרוני — טיפול מנואלי, ביופידבק ועבודה על הרפיה ושליטה שרירית"
-              className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
-            />
-          </figure>
+          <ArticleFigure
+            src="/professional-info/cscp-pelvic-floor-physiotherapy.webp"
+            alt="אינפוגרפיקה: פיזיותרפיה של רצפת האגן בכאב אשכים כרוני — טיפול מנואלי, ביופידבק ועבודה על הרפיה ושליטה שרירית"
+          />
           <h2 className={h2Class}>טיפול מנואלי פנימי וחיצוני</h2>
           <p className={pClass}>
             הטיפול המנואלי עשוי להתמקד בשרירי רצפת האגן וברקמות נוספות באזור:

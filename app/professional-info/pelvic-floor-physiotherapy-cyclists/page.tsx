@@ -7,7 +7,7 @@ import AuthorBox from "../../components/AuthorBox";
 import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
-import { asset } from "../../basePath";
+import ArticleFigure from "../../components/ArticleFigure";
 
 const article = getArticle("pelvic-floor-physiotherapy-cyclists");
 
@@ -151,14 +151,10 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
             כרוני בשק האשכים או תסמינים אורולוגיים אחרים. לכן הטיפול אינו צריך להתמקד רק באיבר
             שבו מורגש הכאב, אלא במערכת כולה.
           </p>
-          <figure className="mt-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/professional-info/pelvic-floor-myalgia-muscles.webp")}
-              alt="שרירי רצפת האגן ומיאלגיה של רצפת האגן (pelvic floor myalgia) — שקופית קלינית"
-              className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
-            />
-          </figure>
+          <ArticleFigure
+            src="/professional-info/pelvic-floor-myalgia-muscles.webp"
+            alt="שרירי רצפת האגן ומיאלגיה של רצפת האגן (pelvic floor myalgia) — שקופית קלינית"
+          />
           <h2 className={h2Class}>כיצד מתבצעת הערכה פיזיותרפית?</h2>
           <p className={pClass}>הבדיקה מתחילה בשיחה על דפוס התסמינים:</p>
           <ul className={ulClass}>
@@ -242,14 +238,10 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
             זאת, כאשר בבדיקה נמצאים רגישות, מתח מוגבר, קושי בהרפיה או חוסר קואורדינציה של רצפת
             האגן, ניתן להשתמש בעקרונות הטיפול הקיימים תוך התאמה לדרישות הרכיבה.
           </p>
-          <figure className="mt-8">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={asset("/professional-info/cycling-pelvic-clinical-care.webp")}
-              alt="ביומכניקה של האגן ורצפת האגן ורצף הטיפול הקליני ברוכבי אופניים — שקופית קלינית"
-              className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
-            />
-          </figure>
+          <ArticleFigure
+            src="/professional-info/cycling-pelvic-clinical-care.webp"
+            alt="ביומכניקה של האגן ורצפת האגן ורצף הטיפול הקליני ברוכבי אופניים — שקופית קלינית"
+          />
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
               אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
