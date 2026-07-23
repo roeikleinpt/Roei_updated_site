@@ -240,7 +240,7 @@ export default function CoccydyniaTailbonePainArticle() {
             אם הטיפול אינו מביא לשיפור מספק, או כאשר קיימים תסמינים שמרמזים על מעורבות נוספת,
             ניתן לשקול{" "}
             <Link
-              href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              href="/professional-info/mens-pelvic-floor-physiotherapy"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
