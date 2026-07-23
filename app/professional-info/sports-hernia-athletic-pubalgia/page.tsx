@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../../components/Container";
+import ArticleBreadcrumb from "../../components/ArticleBreadcrumb";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
@@ -70,24 +71,7 @@ export default function SportsHerniaArticle() {
       <ArticleJsonLd article={article} />
       <Container>
         <div className="mx-auto max-w-3xl">
-          <Link
-            href="/professional-info"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:underline"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-              className="h-4 w-4"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-            חזרה למידע מקצועי
-          </Link>
+          <ArticleBreadcrumb title={article.title} />
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
             בקע ספורטאים (Sports Hernia, Athletic Pubalgia): מה עומד מאחורי המונח ואיך מטפלים?
           </h1>
