@@ -19,12 +19,6 @@ export const site = {
       wazeHref: "https://waze.com/ul/hsvbfsr1yx",
     },
     {
-      name: "מדיקס",
-      city: "חיפה",
-      street: "פנחס ואברהם רוטנברג 2 (אצטדיון סמי עופר)",
-      wazeHref: "https://waze.com/ul/hsvbfe859y",
-    },
-    {
       name: "סינרגיה פיזיותרפיה",
       city: "קיבוץ גבת",
       street: "",
