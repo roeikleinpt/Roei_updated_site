@@ -9,6 +9,8 @@ export const site = {
   phoneHref: "tel:+972526171312",
   whatsappHref: "https://wa.me/972526171312",
   email: "RoeiKleinPT@gmail.com",
+  // קישור לפרופיל Google Business (משמש ל-sameAs בסכמת העסק).
+  googleBusinessUrl: "https://share.google/F97ofdr71eOTLvaeC",
   // הקליניקות עם כתובת וקישורי ניווט Waze — מקור יחיד לתצוגת המיקומים (TopBar/Footer)
   // ולסכמת העסק (JSON-LD). street ריק = יישוב ללא שם רחוב (קיבוץ).
   clinics: [

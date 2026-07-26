@@ -5,7 +5,7 @@ import { medReviewsUrl } from "../data/testimonials";
 // Structured Data (JSON-LD) לדף הבית — עוזר למנועי חיפוש להבין שמדובר בקליניקת
 // פיזיותרפיה מקומית. כולל רק פרטים אמיתיים: מיקומי הקליניקות (כתובת + ניווט),
 // התמחות ופרופיל MedReviews (sameAs). לא כולל שעות פעילות (בהחלטת בעל האתר)
-// ולא דירוגים. TODO: להוסיף ל-sameAs את פרופיל Google Business כשייפתח.
+// ולא דירוגים. ה-sameAs מקשר ל-MedReviews ולפרופיל Google Business.
 export default function JsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -19,7 +19,7 @@ export default function JsonLd() {
     email: site.email,
     areaServed: ["חיפה", "קיבוץ גבת"],
     medicalSpecialty: "Physiotherapy",
-    sameAs: [medReviewsUrl],
+    sameAs: [medReviewsUrl, site.googleBusinessUrl],
     location: site.clinics.map((clinic) => ({
       "@type": "Place",
       name: clinic.name,
