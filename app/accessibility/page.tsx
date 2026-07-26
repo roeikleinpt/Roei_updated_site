@@ -95,6 +95,27 @@ export default function AccessibilityPage() {
             </p>
           </section>
 
+          <section aria-labelledby="ongoing-commitment" className="mt-10">
+            <h2 id="ongoing-commitment" className="text-2xl font-bold text-slate-900">
+              המשך שיפור הנגישות
+            </h2>
+            <p className="mt-4 leading-7 text-slate-600">
+              אנו ממשיכים בכל עת במאמצים לשפר את נגישות האתר, כחלק ממחויבותנו ורצוננו לאפשר
+              שימוש עבור כלל האוכלוסייה. נשמח לעמוד לרשותכם בכל שאלה, בקשה לקבלת מידע ו/או
+              הצעות לשיפור, באמצעות רכז הנגישות.
+            </p>
+            <p className="mt-4 leading-7 text-slate-600">
+              לפניות בנושא נגישות ניתן לפנות לרכז הנגישות רועי קליין בדוא״ל{" "}
+              <a
+                className="font-semibold text-teal-600 underline"
+                href={`mailto:${site.email}`}
+              >
+                <span dir="ltr">{site.email}</span>
+              </a>
+              .
+            </p>
+          </section>
+
           <p className="mt-10 border-t border-slate-200 pt-6 text-sm text-slate-600">
             הצהרת הנגישות עודכנה לאחרונה ביום {updatedAt}.
           </p>
