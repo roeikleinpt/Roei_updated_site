@@ -72,15 +72,10 @@ export default function MensPelvicFloorArticle() {
           <p className="mt-6 text-lg leading-8 text-black">
             רצפת האגן היא אחד האזורים הפחות מוכרים והפחות מדוברים בגוף הגבר, למרות שהיא בעלת
             השפעה אדירה. היא עובדת מאחורי הקלעים בכל ישיבה, בכל פעילות ספורטיבית, ובתפקודים
-            היומיומיים הבסיסיים ביותר: שליטה על שתן ויציאות, ותפקוד מיני.
-          </p>
-          <p className={pClass}>
-            כשמשהו שם לא עובד כמו שצריך, זה יכול להתבטא בכאב או בתסמינים שקשה לחבר אליה, ורבים
-            אפילו לא יודעים שקיים לכך מענה פיזיותרפי מותאם.
-          </p>
-          <p className={pClass}>
-            בדף הזה אפשר להבין מהי רצפת האגן, באילו תסמינים היא עשויה להיות מעורבת, מה כוללת
-            ההערכה והאם נדרשת בדיקה פנימית.
+            היומיומיים הבסיסיים ביותר: שליטה על שתן ויציאות, ותפקוד מיני. כשמשהו שם לא עובד כמו
+            שצריך, זה יכול להתבטא בכאב או בתסמינים שקשה לחבר אליה, ורבים אפילו לא יודעים שקיים לכך
+            מענה פיזיותרפי מותאם. בדף הזה אפשר להבין מהי רצפת האגן, באילו תסמינים היא עשויה להיות
+            מעורבת, מה כוללת ההערכה והאם נדרשת בדיקה פנימית.
           </p>
 
           <h2 className={h2Class}>מהי רצפת האגן?</h2>
@@ -147,6 +142,18 @@ export default function MensPelvicFloorArticle() {
                 כאבים בעצם הזנב
               </Link>{" "}
               שאינם משתפרים בטיפול הממוקד באזור.
+            </li>
+            <li>
+              <Link
+                href="/professional-info/hard-flaccid-syndrome"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                Hard Flaccid Syndrome
+              </Link>
+              &rlm;, מצב שבו הפין נשאר נוקשה או קשיח חלקית במנוחה, לעיתים בשילוב כיווץ יתר של
+              רצפת האגן.
             </li>
             <li>תסמינים מתמשכים לאחר ניתוחי ערמונית.</li>
             <li>מצבים לאחר ניתוח באזור האגן, המפשעה והבטן.</li>
@@ -249,12 +256,19 @@ export default function MensPelvicFloorArticle() {
             >
               רצפת האגן אצל רוכבי אופניים
             </Link>{" "}
-            ו
+            ,{" "}
             <Link
               href="/professional-info/coccydynia-tailbone-pain"
               className="font-semibold text-teal-700 hover:underline"
             >
               כאבים בעצם הזנב
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/hard-flaccid-syndrome"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              Hard Flaccid Syndrome
             </Link>
             .
           </p>

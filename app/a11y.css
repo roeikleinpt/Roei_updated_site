@@ -113,9 +113,9 @@ html[data-a11y-noanim] #a11y-root *::after {
 
 /* ── ניווט מקלדת מודגש (התאמה לקוראי מסך) ── */
 html[data-a11y-kbd] #a11y-root :focus {
-  outline: 3px solid #d97706 !important;
+  outline: 3px solid #0f766e !important;
   outline-offset: 3px !important;
-  box-shadow: 0 0 0 6px rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 0 0 6px rgba(15, 118, 110, 0.3) !important;
   border-radius: 4px;
 }
 
