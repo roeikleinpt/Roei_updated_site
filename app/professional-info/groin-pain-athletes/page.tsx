@@ -106,8 +106,16 @@ export default function GroinPainAthletesArticle() {
           </p>
           <p className={pClass}>
             הכאב יכול להופיע בבעיטה, בריצה מהירה, בשינויי כיוון, בהחלקה לצדדים או בתנועה שבה
-            הרגל מתרחקת מהגוף. לא כל כאב כזה מעיד על קרע, ובמקרים רבים מדובר בתגובה לעומס
-            מצטבר.
+            הרגל מתרחקת מהגוף. לא כל כאב כזה מעיד על{" "}
+            <Link
+              href="/professional-info/adductor-strain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              מתיחה או קרע חד
+            </Link>
+            , ובמקרים רבים מדובר בתגובה לעומס מצטבר.
           </p>
 
           <h3 className={h3Class}>כאב הקשור למכופפי הירך</h3>

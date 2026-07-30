@@ -159,8 +159,16 @@ export default function SportsHerniaArticle() {
             מפרק הירך והאגן.
           </p>
           <p className={pClass}>
-            חשוב לשלול מצבים אחרים שיכולים להרגיש דומים, כגון בקע מפשעתי אמיתי, כאב הקשור
-            למקרבים, בעיה במפרק הירך, כאב הקשור לעצם החיק, פגיעת עצם, מקור עצבי או מצב אורולוגי.
+            חשוב לשלול מצבים אחרים שיכולים להרגיש דומים, כגון בקע מפשעתי אמיתי,{" "}
+            <Link
+              href="/professional-info/adductor-strain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב הקשור למקרבים
+            </Link>
+            , בעיה במפרק הירך, כאב הקשור לעצם החיק, פגיעת עצם, מקור עצבי או מצב אורולוגי.
             <Ref n={1} />
             <Ref n={3} />
             <Ref n={7} />
