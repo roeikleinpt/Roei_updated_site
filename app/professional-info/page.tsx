@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
+import ArticleSearch from "./ArticleSearch";
 import { articles } from "../data/articles";
 import { siteConfig } from "../config/site";
 
@@ -33,39 +34,7 @@ export default function ProfessionalInfoPage() {
               הסברים מקצועיים בנושאי פיזיותרפיה בספורט, בריאות הגבר, רצפת האגן, כאב ושיקום.
             </p>
           </Reveal>
-          <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {articles.map((article, i) => (
-              <Reveal key={article.slug} delay={i * 70}>
-                <Link
-                  href={`/professional-info/${article.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg hover:shadow-teal-100/50"
-                >
-                  <span className="text-xs font-semibold text-teal-600">{article.date}</span>
-                  <h2 className="mt-2 text-lg font-bold leading-7 text-slate-900">
-                    {article.title}
-                  </h2>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-slate-600">
-                    {article.excerpt}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700">
-                    להסבר המלא
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                      className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-                    >
-                      <path d="M19 12H5M12 19l-7-7 7-7" />
-                    </svg>
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+          <ArticleSearch articles={articles} />
         </Container>
       </section>
       {/* CTA — רלוונטי גם בזמן שהתוכן עדיין מתרחב */}
