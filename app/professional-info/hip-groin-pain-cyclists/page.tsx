@@ -206,7 +206,9 @@ export default function HipGroinPainCyclistsArticle() {
           </p>
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              כאב שנמשך מצדיק הערכה מסודרת. אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
+              אם הכאב מגביל את הרכיבה, מופיע גם לאחר הירידה מהאופניים או מפריע בפעולות היומיום,
+              בדיקה פיזיותרפית יכולה לעזור להבין מה מעורר אותו, לזהות את הגורמים המעורבים ולבנות
+              תוכנית טיפול הדרגתית לחזרה לרכיבה ולתפקוד.
             </p>
             <Link
               href="/#contact"

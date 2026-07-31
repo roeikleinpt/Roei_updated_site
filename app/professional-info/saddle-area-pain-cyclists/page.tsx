@@ -184,8 +184,8 @@ export default function SaddleAreaPainCyclistsArticle() {
           </p>
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              נימול שחוזר מרכיבה לרכיבה הוא סיבה טובה לבדיקה מסודרת. אם חלק מהתיאור מוכר לכם,
-              מומלץ לפנות לבירור.
+              לא צריך לקבל כאב או נימול חוזרים כחלק בלתי נמנע מהרכיבה. בדיקה מסודרת יכולה לעזור
+              לזהות את הגורמים שניתן לשנות, במקום להסתפק בניסוי אקראי של אוכפים ותנוחות.
             </p>
             <Link
               href="/#contact"

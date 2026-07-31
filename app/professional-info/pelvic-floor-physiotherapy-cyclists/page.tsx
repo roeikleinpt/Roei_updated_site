@@ -228,7 +228,9 @@ export default function PelvicFloorPhysiotherapyCyclistsArticle() {
           />
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
+              אם הכאב, הנימול או הקושי בישיבה חוזרים ומפריעים לרכיבה או לחיי היומיום, בדיקה
+              פיזיותרפית יכולה לעזור להבין האם רצפת האגן מעורבת ולהתאים טיפול לפי הממצאים, שלא
+              בהכרח כולל חיזוק או טיפול פנימי.
             </p>
             <Link
               href="/#contact"

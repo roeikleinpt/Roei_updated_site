@@ -257,7 +257,8 @@ export default function CoccydyniaTailbonePainArticle() {
 
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
-              אם חלק מהתיאור מוכר לכם, מומלץ לפנות לבירור.
+              אם הכאב מפריע בחיי היומיום או בפעולות מסוימות, בדיקה פיזיותרפית יכולה לעזור להבין
+              מה מעורר אותו, להעניק כלים לניהול המצב ולבנות תוכנית טיפול הדרגתית לחזרה לתפקוד.
             </p>
             <Link
               href="/#contact"
