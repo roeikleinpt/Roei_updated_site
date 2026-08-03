@@ -155,6 +155,17 @@ export default function MensPelvicFloorArticle() {
               &rlm;, מצב שבו הפין נשאר נוקשה או קשיח חלקית במנוחה, לעיתים בשילוב כיווץ יתר של
               רצפת האגן.
             </li>
+            <li>
+              <Link
+                href="/professional-info/premature-ejaculation-pelvic-floor-physiotherapy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                שפיכה מוקדמת
+              </Link>
+              , כאשר יש מקום לבדוק את המודעות, התזמון והשליטה בשרירים המשתתפים בשפיכה.
+            </li>
             <li>תסמינים מתמשכים לאחר ניתוחי ערמונית.</li>
             <li>מצבים לאחר ניתוח באזור האגן, המפשעה והבטן.</li>
           </ul>
@@ -262,13 +273,20 @@ export default function MensPelvicFloorArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               כאבים בעצם הזנב
-            </Link>{" "}
-            ו־
+            </Link>
+            ,{" "}
             <Link
               href="/professional-info/hard-flaccid-syndrome"
               className="font-semibold text-teal-700 hover:underline"
             >
               Hard Flaccid Syndrome
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/premature-ejaculation-pelvic-floor-physiotherapy"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              שפיכה מוקדמת ופיזיותרפיה של רצפת האגן
             </Link>
             .
           </p>

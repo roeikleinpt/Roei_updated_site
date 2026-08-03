@@ -134,7 +134,17 @@ export default function CoccydyniaTailbonePainArticle() {
           </p>
           <p className={pClass}>
             כאשר הכאב מתפשט לישבן, לאגן או לגב התחתון, או כאשר אין רגישות ברורה בעצם הזנב,
-            חשוב לבדוק גם מקורות אפשריים אחרים ולא להניח שכל כאב באזור נובע מעצם הזנב.
+            חשוב לבדוק גם מקורות אפשריים אחרים ולא להניח שכל כאב באזור נובע מעצם הזנב. בין השאר
+            ניתן לשקול{" "}
+            <Link
+              href="/professional-info/sacroiliac-joint-pain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב במפרק העצה והכסל
+            </Link>
+            , המופיע לרוב בצד אחד ומעט גבוה יותר.
             <Ref n={1} />
             <Ref n={3} />
           </p>
