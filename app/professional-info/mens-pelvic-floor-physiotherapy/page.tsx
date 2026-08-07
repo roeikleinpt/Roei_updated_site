@@ -107,8 +107,16 @@ export default function MensPelvicFloorArticle() {
             <li>תסמינים במתן שתן, כגון תכיפות, דחיפות, דליפה או קושי בהתרוקנות.</li>
             <li>תסמינים ביציאות, כגון עצירות או תחושת התרוקנות לא מלאה.</li>
             <li>
-              כאב אגן כרוני, המכונה באנגלית Chronic Pelvic Pain Syndrome (CPPS)&rlm;, ולעיתים
-              מוכר בשם פרוסטטיטיס כרוני.
+              <Link
+                href="/professional-info/chronic-prostatitis-pelvic-pain-syndrome"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                כאב אגן כרוני
+              </Link>
+              , המכונה באנגלית Chronic Pelvic Pain Syndrome (CPPS)&rlm;, ולעיתים מוכר בשם
+              פרוסטטיטיס כרוני.
             </li>
             <li>
               <Link
@@ -280,13 +288,20 @@ export default function MensPelvicFloorArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               Hard Flaccid Syndrome
-            </Link>{" "}
-            ו־
+            </Link>
+            ,{" "}
             <Link
               href="/professional-info/premature-ejaculation-pelvic-floor-physiotherapy"
               className="font-semibold text-teal-700 hover:underline"
             >
               שפיכה מוקדמת ופיזיותרפיה של רצפת האגן
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/pelvic-floor-physiotherapy-cpps"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              פיזיותרפיה של רצפת האגן ב־CP/CPPS
             </Link>
             .
           </p>

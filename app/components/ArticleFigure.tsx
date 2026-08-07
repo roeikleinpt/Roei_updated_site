@@ -5,16 +5,20 @@ import { asset } from "../basePath";
 // קטנים בלבד; בדסקטופ אין שינוי ויזואלי.
 // caption — כיתוב הסבר קבוע מתחת לתמונה (מוצג בכל המסכים).
 // credit — שורת ייחוס/רישיון (למשל לתמונות מורשות מצד שלישי).
+// maxWidth — מחלקת רוחב מרבי (למשל "max-w-md"). נדרש רק לתמונות לאורך: ברוחב
+// מלא הן מתפרסות לגובה כפול מאינפוגרפיקה לרוחב ומשתלטות על העמוד.
 export default function ArticleFigure({
   src,
   alt,
   caption,
   credit,
+  maxWidth,
 }: {
   src: string;
   alt: string;
   caption?: string;
   credit?: string;
+  maxWidth?: string;
 }) {
   const url = asset(src);
 
@@ -30,7 +34,9 @@ export default function ArticleFigure({
         <img
           src={url}
           alt={alt}
-          className="mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200"
+          className={`mx-auto h-auto w-full rounded-2xl ring-1 ring-slate-200${
+            maxWidth ? ` ${maxWidth}` : ""
+          }`}
         />
       </a>
       {caption && (
