@@ -253,6 +253,28 @@ export default function StressFracturesArticle() {
             תזונה, התאוששות ומצב רפואי. בבדיקה מעריכים את מיקום הרגישות, ההליכה, טווחי התנועה, כוח
             השרירים ותגובה לעומס, בהתאם למיקום ולרמת החשד.
           </p>
+          <p className={pClass}>
+            כאשר הכאב ממוקם בשוק ומופיע בעיקר בזמן מאמץ, יש לשקול גם אבחנות אחרות מאותה קבוצה.
+            לקריאה נוספת:{" "}
+            <Link
+              href="/professional-info/exercise-induced-leg-pain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב בשוק במאמץ
+            </Link>{" "}
+            ·{" "}
+            <Link
+              href="/professional-info/medial-tibial-stress-syndrome"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              תסמונת עומס השוקה הפנימית
+            </Link>
+            .
+          </p>
 
           <div className="mt-6 rounded-2xl border border-slate-200 border-r-4 border-r-teal-600 bg-slate-50 p-6">
             <p className="text-sm font-bold text-teal-700">מהניסיון האישי</p>
