@@ -255,19 +255,6 @@ export default function PelvicFloorPhysiotherapyCppsArticle() {
             &rdquo;פרוסטטיטיס&ldquo; בלבד.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם הבירור האורולוגי כבר נעשה והתסמינים נמשכים, שווה לבדוק אם שרירי רצפת האגן מעורבים
-              בתמונה. ההערכה מתחילה בתשאול ובבדיקה חיצונית, ומתקדמת רק לפי מה שנמצא.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
-
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>
             ב־CP/CPPS&rlm; אין זיהום חיידקי שמסביר את התסמינים, ובחלק מהמטופלים קיימים כאב, רגישות
@@ -281,6 +268,19 @@ export default function PelvicFloorPhysiotherapyCppsArticle() {
           <p className={pClass}>
             הטיפול אינו מחייב בדיקה פנימית ואינו מבוסס באופן אוטומטי על חיזוק שרירי רצפת האגן.
           </p>
+
+          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
+            <p className="text-base font-semibold text-slate-900">
+              אם הבירור האורולוגי כבר נעשה והתסמינים נמשכים, שווה לבדוק אם שרירי רצפת האגן מעורבים
+              בתמונה. ההערכה מתחילה בתשאול ובבדיקה חיצונית, ומתקדמת רק לפי מה שנמצא.
+            </p>
+            <Link
+              href="/#contact"
+              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
+            >
+              לקביעת פגישת אבחון
+            </Link>
+          </div>
 
           <ArticleFaq items={faqItems} />
 
