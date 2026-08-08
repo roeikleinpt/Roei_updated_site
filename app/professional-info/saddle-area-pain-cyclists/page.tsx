@@ -114,7 +114,7 @@ export default function SaddleAreaPainCyclistsArticle() {
             מחקר רב־לאומי אחר, שכלל 2,774 רוכבים גברים, מצא תמונה מרגיעה יותר. לאחר התאמה
             לגיל, BMI והיקף הרכיבה המצטבר, לא נמצא הבדל בציון התפקוד המיני הממוצע בין רוכבים עם
             נימול גניטלי לבין רוכבים שלא דיווחו על נימול.
-            <Ref n={2} /> ממצא חריג באותו מחקר היה שרוכבים שדיווחו דווקא על נימול בישבן קיבלו
+            <Ref n={2} />{" "}ממצא חריג באותו מחקר היה שרוכבים שדיווחו דווקא על נימול בישבן קיבלו
             ציוני תפקוד מיני נמוכים יותר. קשר כזה לא נמצא בקרב מי שדיווחו על נימול בפין, בשק
             האשכים או בפרינאום.
           </p>
@@ -181,6 +181,20 @@ export default function SaddleAreaPainCyclistsArticle() {
               הערכה מקצועית
             </Link>{" "}
             ולא להסתפק בהחלפת אוכף באופן אקראי.
+          </p>
+          <p className={pClass}>
+            במיעוט מהמקרים, כאב שורף או עצבי באזור הפרינאום שמוחמר מאוד בישיבה ונמשך מעבר לרכיבה
+            עשוי להעלות גם חשד למעורבות של עצב הפודנדל. כאשר התמונה מתאימה, יש מקום לבירור מסודר
+            ולא רק לשינוי ציוד או תנוחה. לקריאה נוספת:{" "}
+            <Link
+              href="/professional-info/pudendal-neuralgia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              נוירלגיה של עצב הפודנדל
+            </Link>
+            .
           </p>
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">

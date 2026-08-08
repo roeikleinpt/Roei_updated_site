@@ -174,6 +174,17 @@ export default function MensPelvicFloorArticle() {
               </Link>
               , כאשר יש מקום לבדוק את המודעות, התזמון והשליטה בשרירים המשתתפים בשפיכה.
             </li>
+            <li>
+              <Link
+                href="/professional-info/pudendal-neuralgia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                נוירלגיה של עצב הפודנדל
+              </Link>
+              , כאב עצבי באזור האגן והפרינאום שמחמיר בדרך כלל בישיבה.
+            </li>
             <li>תסמינים מתמשכים לאחר ניתוחי ערמונית.</li>
             <li>מצבים לאחר ניתוח באזור האגן, המפשעה והבטן.</li>
           </ul>
@@ -302,6 +313,13 @@ export default function MensPelvicFloorArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               פיזיותרפיה של רצפת האגן ב־CP/CPPS
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/pudendal-neuralgia"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              נוירלגיה של עצב הפודנדל
             </Link>
             .
           </p>

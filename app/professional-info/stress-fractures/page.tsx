@@ -142,7 +142,7 @@ export default function StressFracturesArticle() {
             <span className="font-bold">
               כ־40% משברי המאמץ הופיעו בשוק, כ־35% בכף הרגל וכ־15% בגב התחתון או באגן
             </span>
-            .<Ref n={6} /> בקרב ספורטאי מכללות במחקר מוקדם יותר,{" "}
+            .<Ref n={6} />{" "}בקרב ספורטאי מכללות במחקר מוקדם יותר,{" "}
             <span className="font-bold">
               עצמות המסרק היוו 37.9% מהמקרים, השוקה 21.9% והגב התחתון, עמוד השדרה המותני או האגן
               12.1%
@@ -189,7 +189,7 @@ export default function StressFracturesArticle() {
             <span className="font-bold">
               שיעור שברי המאמץ אצל נשים היה מעט יותר מכפול מזה שנמצא אצל גברים
             </span>
-            .<Ref n={5} /> בקרב ספורטאי תיכון,{" "}
+            .<Ref n={5} />{" "}בקרב ספורטאי תיכון,{" "}
             <span className="font-bold">השיעור בקרב נערות היה גבוה פי 1.75 מזה שבקרב נערים</span>.
             <Ref n={6} />
           </p>

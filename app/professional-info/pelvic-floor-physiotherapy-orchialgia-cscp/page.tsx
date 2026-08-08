@@ -121,7 +121,7 @@ export default function PelvicFloorPhysiotherapyOrchialgiaArticle() {
           <p className={pClass}>
             בהנחיות האגודה האמריקאית לאורולוגיה (AUA) משנת 2025 מצוין שניתן להציע פיזיותרפיה
             של רצפת האגן למטופלים עם CSCP&rlm;.
-            <Ref n={1} /> אצל גברים שנמצאו אצלם{" "}
+            <Ref n={1} />{" "}אצל גברים שנמצאו אצלם{" "}
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-cyclists"
               target="_blank"
