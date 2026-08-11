@@ -66,7 +66,7 @@ export default function SacroiliacJointPainArticle() {
         <div className="mx-auto max-w-3xl">
           <ArticleBreadcrumb title={article.title} />
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
-            כאב במפרק העצה והכסל
+            כאב במפרק העצה והכסל: אבחון וטיפול פיזיותרפי
           </h1>
           <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
@@ -180,6 +180,15 @@ export default function SacroiliacJointPainArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               כאבים בעצם הזנב
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/low-back-pain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאבי גב תחתון
             </Link>
             .
           </p>
