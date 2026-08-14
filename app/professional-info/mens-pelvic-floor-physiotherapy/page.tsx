@@ -176,6 +176,17 @@ export default function MensPelvicFloorArticle() {
             </li>
             <li>
               <Link
+                href="/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                הפרעת זקפה
+              </Link>
+              , כאשר בהערכה נמצא מרכיב שרירי שעשוי להשפיע על שלב הקשיחות, לצד הבירור הרפואי.
+            </li>
+            <li>
+              <Link
                 href="/professional-info/pudendal-neuralgia"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -306,6 +317,13 @@ export default function MensPelvicFloorArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               שפיכה מוקדמת ופיזיותרפיה של רצפת האגן
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              הפרעת זקפה ופיזיותרפיה של רצפת האגן
             </Link>{" "}
             ו־
             <Link
