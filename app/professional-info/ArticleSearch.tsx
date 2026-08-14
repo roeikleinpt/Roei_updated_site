@@ -2,22 +2,55 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import type { Article } from "../data/articles";
+import { articleCategories, type Article, type ArticleCategory } from "../data/articles";
 
 // חיפוש/סינון מאמרים בצד הלקוח לעמוד "מידע מקצועי". מסנן את הכרטיסים בזמן אמת
-// לפי התאמה של מילת המפתח לכותרת ולתקציר (ללא תלות בשרת — מתאים לייצוא סטטי).
+// לפי קטגוריה ולפי התאמה של מילת המפתח לכותרת, לתקציר ולמילות המפתח הנסתרות.
+// הכל בצד הלקוח וללא כתובות חדשות — עמוד תגית נפרד היה מוסיף לאתר עמודים שכל
+// תוכנם רשימת קישורים.
 export default function ArticleSearch({ articles }: { articles: Article[] }) {
   const [query, setQuery] = useState("");
+  const [category, setCategory] = useState<ArticleCategory | null>(null);
   const q = query.trim().toLowerCase();
-  const results = q
-    ? articles.filter((a) =>
+  const results = articles
+    .filter((a) => !category || a.categories.includes(category))
+    .filter(
+      (a) =>
+        !q ||
         `${a.title} ${a.excerpt} ${(a.keywords ?? []).join(" ")}`.toLowerCase().includes(q),
-      )
-    : articles;
+    );
+
+  const chip = (active: boolean) =>
+    `btn-press rounded-full px-4 py-2 text-sm font-semibold ring-1 transition-colors ${
+      active
+        ? "bg-teal-700 text-white ring-teal-700"
+        : "bg-white text-slate-700 ring-slate-300 hover:text-teal-700 hover:ring-teal-600"
+    }`;
 
   return (
-    <div className="mx-auto mt-10 max-w-5xl">
-      <div className="relative mx-auto max-w-xl">
+    <div className="mx-auto mt-8 max-w-5xl">
+      <div
+        role="group"
+        aria-label="סינון מאמרים לפי תחום"
+        className="flex flex-wrap justify-center gap-2"
+      >
+        <button type="button" onClick={() => setCategory(null)} className={chip(!category)}>
+          הכל
+        </button>
+        {articleCategories.map((c) => (
+          <button
+            key={c}
+            type="button"
+            aria-pressed={category === c}
+            onClick={() => setCategory(category === c ? null : c)}
+            className={chip(category === c)}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      <div className="relative mx-auto mt-6 max-w-xl">
         <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-slate-400">
           <svg
             viewBox="0 0 24 24"
@@ -77,8 +110,8 @@ export default function ArticleSearch({ articles }: { articles: Article[] }) {
         </div>
       ) : (
         <p className="mt-10 text-center leading-8 text-slate-500">
-          לא נמצאו מאמרים התואמים לחיפוש. אפשר לנסות מילת מפתח אחרת, למשל שם של אזור בגוף או
-          תסמין.
+          לא נמצאו מאמרים התואמים לסינון. אפשר לנסות מילת מפתח אחרת, למשל שם של אזור בגוף או
+          תסמין, או לבחור &rdquo;הכל&rdquo;.
         </p>
       )}
     </div>
