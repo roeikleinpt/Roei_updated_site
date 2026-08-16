@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "../components/Container";
 import Reveal from "../components/Reveal";
 import ArticleSearch from "./ArticleSearch";
+import CollectionJsonLd from "./CollectionJsonLd";
 import { articles } from "../data/articles";
 import { siteConfig } from "../config/site";
 
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 export default function ProfessionalInfoPage() {
   return (
     <>
+      <CollectionJsonLd articles={articles} />
       <section className="scroll-mt-4 py-16 sm:py-20">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
