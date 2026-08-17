@@ -71,8 +71,8 @@ export default function ChronicTesticularPainArticle() {
           </h1>
           <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
-            כאב מתמשך באשך או בשק האשכים יכול להשפיע על ישיבה, הליכה, פעילות גופנית, עבודה,
-            שינה ותפקוד מיני.
+            כאב מתמשך באשך או בשק האשכים, המכונה גם אורכיאלגיה (Orchialgia)&rlm;, יכול להשפיע
+            על ישיבה, הליכה, פעילות גופנית, עבודה, שינה ותפקוד מיני.
           </p>
           <p className={pClass}>
             לעיתים קיימת סיבה רפואית ברורה. במקרים אחרים הכאב נמשך גם לאחר שלא נמצאה בעיה

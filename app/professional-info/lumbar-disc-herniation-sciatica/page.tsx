@@ -72,7 +72,8 @@ export default function LumbarDiscHerniationSciaticaArticle() {
           <p className="mt-6 text-lg leading-8 text-black">
             פריצת דיסק מותנית היא מצב שבו חומר מתוך הדיסק בולט מעבר לגבולותיו הרגילים. כאשר השינוי
             בדיסק מגרה או לוחץ על שורש עצב, הוא עשוי להיות מלווה בכאב שמקרין לרגל ובתסמינים
-            נוירולוגיים, מצב המכונה לעיתים סיאטיקה (Sciatica)&rlm;.
+            נוירולוגיים כמו נימול, עקצוצים או חולשה, מצב המכונה לעיתים סיאטיקה או שיאטיקה
+            (Sciatica)&rlm;.
             <Ref n={1} />
           </p>
           <p className={pClass}>
