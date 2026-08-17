@@ -76,8 +76,8 @@ export default function TennisElbowArticle() {
           </h1>
           <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
-            כאב בצד החיצוני של המרפק מכונה לעיתים קרובות &rdquo;מרפק טניס&ldquo;, גם אצל אנשים
-            שמעולם לא שיחקו טניס. הכאב עשוי להופיע בזמן אחיזה, הרמת חפצים, עבודה עם כלי עבודה,
+            כאב בצד החיצוני של המרפק מכונה לעיתים קרובות &rdquo;מרפק טניס&ldquo; או &rdquo;טניס
+            אלבו&ldquo;, גם אצל אנשים שמעולם לא שיחקו טניס. הכאב עשוי להופיע בזמן אחיזה, הרמת חפצים, עבודה עם כלי עבודה,
             אימוני כוח או שימוש ממושך ביד.
           </p>
           <p className={pClass}>

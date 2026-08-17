@@ -74,7 +74,8 @@ export default function LowBackPainArticle() {
           </h1>
           <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
-            כאבי גב תחתון הם אחת הבעיות השכיחות ביותר במערכת השריר והשלד. במקרים רבים אי אפשר
+            כאבי גב תחתון, שנקראים לעיתים גם לומבגו, הם אחת הבעיות השכיחות ביותר במערכת השריר
+            והשלד. במקרים רבים אי אפשר
             להצביע על מבנה יחיד שאחראי לכאב, ולכן משתמשים לעיתים במונח &rdquo;כאב גב תחתון
             לא־ספציפי&rdquo; (Non-Specific Low Back Pain)&rlm;.
             <Ref n={1} />
