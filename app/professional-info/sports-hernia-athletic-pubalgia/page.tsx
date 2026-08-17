@@ -250,6 +250,19 @@ export default function SportsHerniaArticle() {
             <Ref n={10} />
           </p>
 
+          <p className={pClass}>
+            לקריאה נוספת:{" "}
+            <Link
+              href="/professional-info/inguinal-hernia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              בקע מפשעתי
+            </Link>
+            .
+          </p>
+
           <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
             <p className="text-base font-semibold text-slate-900">
               מוזמן ליצור קשר לבירור התאמה להערכה פיזיותרפית.
