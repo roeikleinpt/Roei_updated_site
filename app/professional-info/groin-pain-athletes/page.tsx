@@ -267,6 +267,15 @@ export default function GroinPainAthletesArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               בקע מפשעתי
+            </Link>{" "}
+            ו־
+            <Link
+              href="/professional-info/femoroacetabular-impingement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              תסמונת צביטה בירך
             </Link>
             .
           </p>

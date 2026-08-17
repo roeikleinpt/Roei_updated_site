@@ -168,7 +168,16 @@ export default function SportsHerniaArticle() {
             >
               כאב הקשור למקרבים
             </Link>
-            , בעיה במפרק הירך, כאב הקשור לעצם החיק, פגיעת עצם, מקור עצבי או מצב אורולוגי.
+            ,{" "}
+            <Link
+              href="/professional-info/femoroacetabular-impingement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              בעיה במפרק הירך
+            </Link>, כאב הקשור לעצם החיק, פגיעת עצם, מקור עצבי או
+            מצב אורולוגי.
             <Ref n={1} />
             <Ref n={3} />
             <Ref n={7} />

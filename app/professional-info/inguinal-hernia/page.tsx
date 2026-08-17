@@ -250,7 +250,16 @@ export default function InguinalHerniaArticle() {
                 פגיעה במפרק הירך או בלברום
               </Link>
             </li>
-            <li>Femoroacetabular Impingement</li>
+            <li>
+              <Link
+                href="/professional-info/femoroacetabular-impingement"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                תסמונת צביטה בירך (Femoroacetabular Impingement)
+              </Link>
+            </li>
             <li>Osteitis Pubis</li>
             <li>גירוי או לחץ על עצבים באזור המפשעה</li>
             <li>

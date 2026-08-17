@@ -76,8 +76,16 @@ export default function HipGroinPainCyclistsArticle() {
             בישיבה, בהליכה או בפעולות יום־יומיות.
           </p>
           <p className={pClass}>
-            האתגר הוא שהמונח ״כאב בירך״ אינו מתאר אבחנה אחת. הכאב עשוי להיות קשור למפרק הירך,
-            לשרירים ולגידים שסביבו, לאזור המקרבים ועצם החיק, לגב התחתון או לרצפת האגן.
+            האתגר הוא שהמונח ״כאב בירך״ אינו מתאר אבחנה אחת. הכאב עשוי להיות קשור{" "}
+            <Link
+              href="/professional-info/femoroacetabular-impingement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              למפרק הירך עצמו
+            </Link>, לשרירים ולגידים שסביבו, לאזור המקרבים ועצם החיק, לגב
+            התחתון או לרצפת האגן.
           </p>
           <p className={pClass}>
             לכן הערכה טובה מתחילה בתפקוד ובהתנהגות של התסמין, ולא רק בשם של ממצא בהדמיה.

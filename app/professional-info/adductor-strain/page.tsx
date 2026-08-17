@@ -195,7 +195,15 @@ export default function AdductorStrainArticle() {
           <p className={pClass}>
             בדיקה קלינית המתאימה לפציעת המקרב הארוך כוללת בדרך כלל כאב מוכר בעת הפעלת המקרבים כנגד
             התנגדות יחד עם רגישות לאורך השריר או הגיד. עם זאת, יש להביא בחשבון גם פגיעה בשרירים
-            אחרים, פציעה במפרק הירך,{" "}
+            אחרים,{" "}
+            <Link
+              href="/professional-info/femoroacetabular-impingement"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              פציעה או צביטה במפרק הירך
+            </Link>,{" "}
             <Link
               href="/professional-info/stress-fractures"
               target="_blank"
