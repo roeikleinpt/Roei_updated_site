@@ -1,11 +1,19 @@
 import { siteConfig, siteBaseUrl } from "../config/site";
-import { medReviewsUrl } from "../data/testimonials";
+import { personEntity, personRef } from "../data/person";
 import type { Article } from "../data/articles";
 
 // Structured Data (JSON-LD) לעמוד מאמר — מסווג את התוכן כ-MedicalWebPage ומקשר את
-// הכותב לישות מקצועית מאומתת (sameAs → פרופיל MedReviews). חלק מאותות E-E-A-T.
+// הכותב לישות הקנונית (app/data/person.ts), אותה ישות שמופיעה כ-founder בסכמת
+// העסק. חלק מאותות E-E-A-T.
+//
+// reviewedBy הוא הפניה ב-@id בלבד ולא שכפול של הישות: היא כבר מופיעה במלואה
+// תחת author באותו מסמך, ו-JSON-LD פותר את ההפניה בתוך המסמך.
+//
+// dateModified נלקח מ-dateModifiedISO אם הוא קיים, אחרת שווה לתאריך הפרסום.
+// לפי החלטת בעל האתר כל עריכה בתוכן הדף נספרת כעדכון, כולל תיקון ניסוח.
 export default function ArticleJsonLd({ article }: { article: Article }) {
   const url = `${siteBaseUrl}/professional-info/${article.slug}/`;
+  const dateModified = article.dateModifiedISO ?? article.dateISO;
   const data = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
@@ -13,18 +21,15 @@ export default function ArticleJsonLd({ article }: { article: Article }) {
     description: article.excerpt,
     url,
     inLanguage: "he",
+    image: article.image ? `${siteBaseUrl}${article.image}` : `${siteBaseUrl}/opengraph-image.png`,
     datePublished: article.dateISO,
-    dateModified: article.dateISO,
-    author: {
-      "@type": "Person",
-      name: "רועי קליין",
-      jobTitle: "פיזיותרפיסט מוסמך",
-      honorificSuffix: "M.Sc.PT",
-      url: `${siteBaseUrl}/#about`,
-      sameAs: [medReviewsUrl],
-    },
+    dateModified,
+    lastReviewed: dateModified,
+    author: personEntity,
+    reviewedBy: personRef,
     publisher: {
       "@type": "MedicalBusiness",
+      "@id": `${siteBaseUrl}/#business`,
       name: siteConfig.name,
       url: siteBaseUrl,
     },

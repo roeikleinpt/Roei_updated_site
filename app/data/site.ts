@@ -18,6 +18,9 @@ export const site = {
   // קישור לפרופיל Google Business (משמש ל-sameAs בסכמת העסק).
   googleBusinessUrl: "https://share.google/F97ofdr71eOTLvaeC",
   // הקליניקות עם כתובת וקישורי ניווט Waze — מקור יחיד לתצוגת המיקומים (TopBar/Footer)
+  // ולסכמת העסק. geo הן קואורדינטות אמיתיות של כל סניף, ומוזנות ל-GeoCoordinates
+  // בסכמה. הקליניקה הראשונה במערך היא הראשית (קולוני), וה-NAP שלה מופיע גם
+  // ברמת-העסק. מיקוד לא נשמר כאן בכוונה: עדיף חסר מאשר שגוי, לשמירת עקביות NAP.
   // ולסכמת העסק (JSON-LD). street ריק = יישוב ללא שם רחוב (קיבוץ).
   clinics: [
     {
@@ -25,18 +28,21 @@ export const site = {
       city: "חיפה",
       street: "דרך העצמאות 134",
       wazeHref: "https://waze.com/ul/hsvbfsr1yx",
+      geo: { lat: 32.82292634535634, lng: 34.994096762172525 },
     },
     {
       name: "מדיקס",
       city: "חיפה",
       street: "פנחס ואברהם רוטנברג 2 (אצטדיון סמי עופר)",
       wazeHref: "https://waze.com/ul/hsvbfe859y",
+      geo: { lat: 32.78354572971325, lng: 34.963932713492845 },
     },
     {
       name: "סינרגיה פיזיותרפיה",
       city: "קיבוץ גבת",
       street: "",
       wazeHref: "https://waze.com/ul/hsvc1chxzv",
+      geo: { lat: 32.677353980971375, lng: 35.21130926217898 },
     },
   ],
   stats: [
