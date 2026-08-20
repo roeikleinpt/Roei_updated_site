@@ -216,7 +216,7 @@ export default function AdductorStrainArticle() {
             , שבר תלישה ומקורות נוספים לכאב במפשעה.
             <Ref n={2} />
             <Ref n={3} />
-            <Ref n={5} />
+            <Ref n={4} />
           </p>
 
           <h2 className={h2Class}>מה עושים בימים הראשונים?</h2>
@@ -276,7 +276,7 @@ export default function AdductorStrainArticle() {
             מהסתמכות על טיפולים פסיביים בלבד. טיפולים ידניים או אמצעים להפחתת כאב יכולים להשתלב
             לפי הצורך, אך אינם מחליפים את תהליך ההעמסה והתרגול.
             <Ref n={2} />
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
 
           <h2 className={h2Class}>מתי אפשר לחזור לספורט?</h2>
@@ -305,13 +305,13 @@ export default function AdductorStrainArticle() {
               שבועות. בפציעות מדרגה שלוש זמן החזרה החציוני היה כ־11 שבועות
             </span>
             . עם זאת, טווחי ההחלמה היו רחבים ואין להשתמש בנתונים האלה כהבטחה או כתאריך יעד אישי.
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
           <p className={pClass}>
             באותו מחקר, שיעור הפציעה החוזרת במהלך שנה היה נמוך יותר בקרב מי שהשלימו את הקריטריונים
             הקליניים ללא כאב לפני החזרה. ממצא זה מחזק את החשיבות של חזרה המבוססת על תפקוד ולא רק
             על זמן.
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
 
           <h2 className={h2Class}>כיצד מפחיתים את הסיכון לפציעה חוזרת?</h2>
@@ -343,7 +343,7 @@ export default function AdductorStrainArticle() {
             כאשר הכאב התפתח בהדרגה, נמשך לאורך זמן, חוזר שוב ושוב או אינו מתאים למנגנון של פציעת
             שריר אקוטית, יש לבחון אפשרויות נוספות. כאב במפשעה ובאשכים עשוי להיות קשור למקרבים,
             לאזור המפשעתי, לעצם החיק, למכופפי הירך, למפרק הירך או למקורות אחרים.
-            <Ref n={5} />
+            <Ref n={4} />
           </p>
           <p className={pClass}>
             לקריאה נוספת:{" "}
@@ -456,6 +456,19 @@ export default function AdductorStrainArticle() {
               .
             </li>
             <li id="ref-4" className="scroll-mt-24">
+              Weir A, Brukner P, Delahunt E, et al. Doha Agreement Meeting on Terminology and
+              Definitions in Groin Pain in Athletes. Br J Sports Med. 2015;49(12):768-774. doi:
+              <a
+                href="https://doi.org/10.1136/bjsports-2015-094869"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1136/bjsports-2015-094869
+              </a>
+              .
+            </li>
+            <li id="ref-5" className="scroll-mt-24">
               Serner A, Weir A, Tol JL, et al. Return to Sport After Criteria-Based Rehabilitation
               of Acute Adductor Injuries in Male Athletes: A Prospective Cohort Study. Orthop J
               Sports Med. 2020;8(1):2325967119897247. doi:
@@ -466,19 +479,6 @@ export default function AdductorStrainArticle() {
                 className="text-teal-600 underline"
               >
                 10.1177/2325967119897247
-              </a>
-              .
-            </li>
-            <li id="ref-5" className="scroll-mt-24">
-              Weir A, Brukner P, Delahunt E, et al. Doha Agreement Meeting on Terminology and
-              Definitions in Groin Pain in Athletes. Br J Sports Med. 2015;49(12):768-774. doi:
-              <a
-                href="https://doi.org/10.1136/bjsports-2015-094869"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.1136/bjsports-2015-094869
               </a>
               .
             </li>

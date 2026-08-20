@@ -214,10 +214,10 @@ export default function CervicogenicHeadacheArticle() {
           <p className={pClass}>
             מחקרים מוקדמים מצאו יותר נקודות רגישות בצד שבו הופיע כאב הראש, ולעיתים הלחיצה עליהן
             שחזרה את דפוס הכאב.
-            <Ref n={13} />{" "}עם זאת, רגישות שרירית מופיעה גם במיגרנה, בכאב ראש מתחי ובכאבי צוואר
+            <Ref n={8} />{" "}עם זאת, רגישות שרירית מופיעה גם במיגרנה, בכאב ראש מתחי ובכאבי צוואר
             אחרים. לכן מציאת “טריגר פוינט” אינה מספיקה כדי לקבוע שכאב הראש נובע מהצוואר.
             <Ref n={6} />
-            <Ref n={13} />
+            <Ref n={8} />
           </p>
           <p className={pClass}>
             השריר עשוי להיות מקור אפשרי לכאב, אך לעיתים הוא מגיב לכאב או לעומס ממבנה אחר. ההערכה
@@ -250,9 +250,9 @@ export default function CervicogenicHeadacheArticle() {
           <p className={pClass}>
             מתיחות בלבד אינן תמיד מספיקות. מחקרים מצביעים על כך ששילוב של תרגילי סבולת, כוח
             ושליטה עשוי להיות יעיל יותר מתוכנית שמבוססת רק על מתיחות.
-            <Ref n={8} />
             <Ref n={9} />
             <Ref n={10} />
+            <Ref n={11} />
           </p>
 
           <h3 className={h3Class}>טיפול מנואלי</h3>
@@ -269,9 +269,9 @@ export default function CervicogenicHeadacheArticle() {
             סקירות שיטתיות מצאו שטיפול מנואלי עשוי להפחית את תדירות ועוצמת כאבי הראש בטווח הקצר.
             התוצאות לטווח הארוך פחות עקביות, ולכן טיפול מנואלי אינו אמור להיות המרכיב היחיד
             בתוכנית.
-            <Ref n={9} />
             <Ref n={10} />
             <Ref n={11} />
+            <Ref n={12} />
           </p>
           <p className={pClass}>
             מניפולציה צווארית אינה הכרחית לטיפול בכאב ראש ממקור צווארי. ניתן לבחור במוביליזציה,
@@ -283,7 +283,7 @@ export default function CervicogenicHeadacheArticle() {
             במקרים מסוימים ניתן ללמד תרגיל עצמי המשלב תנועה עם תמיכה באזור הצוואר העליון, המכונה
             לעיתים Self-SNAG&rlm;. התרגיל עשוי להתאים כאשר תנועה מסוימת מוגבלת או קשורה לכאב, אך
             יש להתאים את הכיוון והמינון באופן אישי.
-            <Ref n={8} />
+            <Ref n={9} />
           </p>
 
           <h3 className={h3Class}>דיקור יבש</h3>
@@ -291,8 +291,8 @@ export default function CervicogenicHeadacheArticle() {
             דיקור יבש עשוי להפחית כאב או מוגבלות בטווח הקצר אצל חלק מהמטופלים, בעיקר כאשר קיימת
             רגישות שרירית בולטת. עם זאת, איכות הראיות מוגבלת והתוצאות אינן מוכיחות שהטיפול נחוץ או
             עדיף על כל חלופה אחרת.
-            <Ref n={11} />
-            <Ref n={12} />{" "}לכן דיקור יבש הוא אפשרות טיפולית ולא תנאי להצלחת הטיפול. אפשר לבנות
+            <Ref n={12} />
+            <Ref n={13} />{" "}לכן דיקור יבש הוא אפשרות טיפולית ולא תנאי להצלחת הטיפול. אפשר לבנות
             תוכנית יעילה גם ללא דיקור.
           </p>
 
@@ -308,17 +308,17 @@ export default function CervicogenicHeadacheArticle() {
             הראיות תומכות בעיקר בגישה המשלבת תרגול וטיפול מנואלי, ולא בהישענות על טכניקה יחידה.
             טיפול מנואלי עשוי להועיל במיוחד בטווח הקצר, בעוד שתרגול צווארי עשוי לתרום יותר לשיפור
             מתמשך.
-            <Ref n={8} />
             <Ref n={9} />
             <Ref n={10} />
             <Ref n={11} />
+            <Ref n={12} />
           </p>
           <p className={pClass}>
             סקירת רשת משנת 2024 מצאה שכמה שילובים שכללו טיפול מנואלי, תרגול, טכניקות שריריות או
             דיקור יבש דורגו גבוה בהפחתת כאב ותדירות כאבי הראש. עם זאת, המחקרים היו שונים מאוד זה
             מזה וחלק גדול מההשוואות התבסס על ראיות עקיפות. לכן לא ניתן לקבוע שטכניקה אחת היא “הטיפול
             הטוב ביותר” לכל מטופל.
-            <Ref n={11} />
+            <Ref n={12} />
           </p>
 
           <h2 className={h2Class}>מתי חשוב לפנות לבדיקה רפואית?</h2>
@@ -452,6 +452,19 @@ export default function CervicogenicHeadacheArticle() {
               .
             </li>
             <li id="ref-8" className="scroll-mt-24">
+              Jaeger B. Are &quot;cervicogenic&quot; headaches due to myofascial pain and cervical
+              spine dysfunction? Cephalalgia. 1989;9(3):157-164. doi:
+              <a
+                href="https://doi.org/10.1046/j.1468-2982.1989.0903157.x"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1046/j.1468-2982.1989.0903157.x
+              </a>
+              .
+            </li>
+            <li id="ref-9" className="scroll-mt-24">
               Blanpied PR, Gross AR, Elliott JM, et al. Neck pain: revision 2017. J Orthop Sports
               Phys Ther. 2017;47(7):A1-A83. doi:
               <a
@@ -464,7 +477,7 @@ export default function CervicogenicHeadacheArticle() {
               </a>
               .
             </li>
-            <li id="ref-9" className="scroll-mt-24">
+            <li id="ref-10" className="scroll-mt-24">
               Demont A, Lafrance S, Gaska C, et al. Efficacy of physiotherapy interventions for the
               management of adults with cervicogenic headache: a systematic review and
               meta-analyses. PM R. 2023;15(5):613-628. doi:
@@ -478,7 +491,7 @@ export default function CervicogenicHeadacheArticle() {
               </a>
               .
             </li>
-            <li id="ref-10" className="scroll-mt-24">
+            <li id="ref-11" className="scroll-mt-24">
               Bini P, Hohenschurz-Schmidt D, Masullo V, Pitt D, Draper-Rodi J. The effectiveness of
               manual and exercise therapy on headache intensity and frequency among patients with
               cervicogenic headache: a systematic review and meta-analysis. Chiropr Man Therap.
@@ -493,7 +506,7 @@ export default function CervicogenicHeadacheArticle() {
               </a>
               .
             </li>
-            <li id="ref-11" className="scroll-mt-24">
+            <li id="ref-12" className="scroll-mt-24">
               Jung A, Carvalho GF, Szikszay TM, Pawlowsky V, Gabler T, Luedtke K. Physical therapist
               interventions to reduce headache intensity, frequency, and duration in patients with
               cervicogenic headache: a systematic review and network meta-analysis. Phys Ther.
@@ -508,7 +521,7 @@ export default function CervicogenicHeadacheArticle() {
               </a>
               .
             </li>
-            <li id="ref-12" className="scroll-mt-24">
+            <li id="ref-13" className="scroll-mt-24">
               Pourahmadi M, Dommerholt J, Fernández-de-Las-Peñas C, et al. Dry needling for the
               treatment of tension-type, cervicogenic, or migraine headaches: a systematic review
               and meta-analysis. Phys Ther. 2021;101(5):pzab068. doi:
@@ -519,19 +532,6 @@ export default function CervicogenicHeadacheArticle() {
                 className="text-teal-600 underline"
               >
                 10.1093/ptj/pzab068
-              </a>
-              .
-            </li>
-            <li id="ref-13" className="scroll-mt-24">
-              Jaeger B. Are &quot;cervicogenic&quot; headaches due to myofascial pain and cervical
-              spine dysfunction? Cephalalgia. 1989;9(3):157-164. doi:
-              <a
-                href="https://doi.org/10.1046/j.1468-2982.1989.0903157.x"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.1046/j.1468-2982.1989.0903157.x
               </a>
               .
             </li>

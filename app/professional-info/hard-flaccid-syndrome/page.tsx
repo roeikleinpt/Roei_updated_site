@@ -104,7 +104,7 @@ export default function HardFlaccidSyndromeArticle() {
             חשוב גם להכיר בכך שעדיין אין הגדרה רפואית אחידה, בדיקה אבחנתית ייעודית או מנגנון אחד
             שהוכח כמסביר את כל המקרים.
             <Ref n={1} />
-            <Ref n={5} />
+            <Ref n={4} />
           </p>
 
           <h2 className={h2Class}>מהי Hard Flaccid Syndrome&rlm;?</h2>
@@ -120,7 +120,7 @@ export default function HardFlaccidSyndromeArticle() {
             Hard Flaccid Syndrome היא למעשה שם שניתן לצבר של תסמינים. לא כל אדם יחווה את כל
             התסמינים, והאופן שבו הם מתבטאים עשוי להשתנות מאוד מאדם לאדם.
             <Ref n={1} />
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
 
           <h2 className={h2Class}>אילו תסמינים עשויים להופיע?</h2>
@@ -130,7 +130,7 @@ export default function HardFlaccidSyndromeArticle() {
             <Ref n={1} />
             <Ref n={2} />
             <Ref n={3} />
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
 
           <ArticleFigure
@@ -143,7 +143,7 @@ export default function HardFlaccidSyndromeArticle() {
             משתתפי הסקר גויסו דרך רשתות חברתיות, הגדירו את האבחנה בעצמם ולא עברו תהליך אבחון
             אחיד. לכן אין להסיק מהנתונים מהי שכיחות התסמונת באוכלוסייה, והם אינם בהכרח מייצגים את
             כל האנשים שחווים תסמינים דומים.
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
 
           <h2 className={h2Class}>ממה התסמונת נגרמת?</h2>
@@ -152,7 +152,7 @@ export default function HardFlaccidSyndromeArticle() {
             התסמינים מתחילים לאחר פעילות מינית אינטנסיבית, אוננות אגרסיבית, חבלה במהלך יחסי מין
             או תרגילי מתיחה ועיסוי של הפין כגון Jelqing&rlm;. עם זאת, בסקר הגדול ביותר שפורסם רק
             58% מהמשתתפים זכרו אירוע מסוים שקדם להופעת התסמינים.
-            <Ref n={4} />
+            <Ref n={5} />
           </p>
           <p className={pClass}>
             הוצעו מנגנונים המערבים את מערכת העצבים, רצפת האגן, ויסות זרימת הדם, הגב והאגן והתגובה
@@ -230,7 +230,7 @@ export default function HardFlaccidSyndromeArticle() {
             פעילים מדי. בסקר של אנשי מקצוע בתחום הרפואה המינית דווחו בין הממצאים האפשריים שרירי
             פרינאום מכווצים ונקודות רגישות באזור, אך אצל חלק גדול מהמטופלים הבדיקה הגופנית הייתה
             תקינה.
-            <Ref n={5} />
+            <Ref n={4} />
           </p>
 
           <h2 className={h2Class}>מה כולל טיפול פיזיותרפיה ברצפת האגן ב־Hard Flaccid Syndrome&rlm;?</h2>
@@ -412,20 +412,6 @@ export default function HardFlaccidSyndromeArticle() {
               .
             </li>
             <li id="ref-4" className="scroll-mt-24">
-              Niedenfuehr J, Stevens DM. Hard flaccid syndrome symptoms, comorbidities, and
-              self-reported efficacy and satisfaction of treatments: a cross-sectional survey.
-              Int J Impot Res. 2025;37(4):458-464. doi:
-              <a
-                href="https://doi.org/10.1038/s41443-024-00853-2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.1038/s41443-024-00853-2
-              </a>
-              .
-            </li>
-            <li id="ref-5" className="scroll-mt-24">
               Gryzinski GM, Hammad MAM, Alzweri L, et al. Hard-Flaccid syndrome: a survey of
               sexual medicine practitioners&apos; knowledge and experience. Int J Impot Res.
               2025;37(4):446-447. doi:
@@ -436,6 +422,20 @@ export default function HardFlaccidSyndromeArticle() {
                 className="text-teal-600 underline"
               >
                 10.1038/s41443-024-00917-3
+              </a>
+              .
+            </li>
+            <li id="ref-5" className="scroll-mt-24">
+              Niedenfuehr J, Stevens DM. Hard flaccid syndrome symptoms, comorbidities, and
+              self-reported efficacy and satisfaction of treatments: a cross-sectional survey.
+              Int J Impot Res. 2025;37(4):458-464. doi:
+              <a
+                href="https://doi.org/10.1038/s41443-024-00853-2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1038/s41443-024-00853-2
               </a>
               .
             </li>

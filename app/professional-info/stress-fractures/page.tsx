@@ -143,7 +143,7 @@ export default function StressFracturesArticle() {
             <span className="font-bold">
               כ־40% משברי המאמץ הופיעו בשוק, כ־35% בכף הרגל וכ־15% בגב התחתון או באגן
             </span>
-            .<Ref n={6} />{" "}בקרב ספורטאי מכללות במחקר מוקדם יותר,{" "}
+            .<Ref n={4} />{" "}בקרב ספורטאי מכללות במחקר מוקדם יותר,{" "}
             <span className="font-bold">
               עצמות המסרק היוו 37.9% מהמקרים, השוקה 21.9% והגב התחתון, עמוד השדרה המותני או האגן
               12.1%
@@ -154,7 +154,7 @@ export default function StressFracturesArticle() {
             בענפי ריצה וקפיצה נפוצות בעיקר פציעות בגפיים התחתונות. לעומת זאת, בענפים כמו חתירה,
             שחייה, קפיצה למים וחלק מענפי ההטלה עשויות להופיע גם פציעות באגן, בצלעות או בעמוד
             השדרה.
-            <Ref n={4} />
+            <Ref n={6} />
           </p>
 
           <h2 className={h2Class}>מי נמצא בסיכון מוגבר?</h2>
@@ -175,15 +175,15 @@ export default function StressFracturesArticle() {
             להחלים, אלא גם לבחון את התקדמות האימונים, ההתאוששות, זמינות האנרגיה וגורמים רפואיים או
             הורמונליים רלוונטיים.
             <Ref n={1} />
-            <Ref n={10} />
-            <Ref n={11} />
+            <Ref n={7} />
+            <Ref n={8} />
           </p>
 
           <h2 className={h2Class}>האם שברי מאמץ שכיחים יותר אצל נשים?</h2>
           <p className={pClass}>
             במחקרים רבים שיעור הפציעות גבוה יותר אצל נשים, אך המין כשלעצמו אינו מסביר את כל
             ההבדל.
-            <Ref n={8} />
+            <Ref n={9} />
           </p>
           <p className={pClass}>
             במחקר ספורטאי מכללות בענפים שבהם השתתפו נשים וגברים,{" "}
@@ -192,7 +192,7 @@ export default function StressFracturesArticle() {
             </span>
             .<Ref n={5} />{" "}בקרב ספורטאי תיכון,{" "}
             <span className="font-bold">השיעור בקרב נערות היה גבוה פי 1.75 מזה שבקרב נערים</span>.
-            <Ref n={6} />
+            <Ref n={4} />
           </p>
           <p className={pClass}>
             סקירה שכללה אוכלוסיות ספורטיביות וצבאיות העריכה שכיחות של{" "}
@@ -200,7 +200,7 @@ export default function StressFracturesArticle() {
             <span className="font-bold">9.2% אצל נשים באוכלוסיות צבאיות לעומת כ־3% אצל גברים</span>
             . מדובר במחקרים הטרוגניים מתקופות וממסגרות שונות, ולכן המספרים הם אומדן ולא שיעור אחיד
             שמתאים לכל אוכלוסייה.
-            <Ref n={7} />
+            <Ref n={10} />
           </p>
 
           <h2 className={h2Class}>מהם התסמינים האפשריים?</h2>
@@ -240,7 +240,7 @@ export default function StressFracturesArticle() {
             משקל, קיבוע או טיפול ניתוחי.
             <Ref n={1} />
             <Ref n={2} />
-            <Ref n={9} />
+            <Ref n={11} />
           </p>
           <p className={pClass}>
             חשוב במיוחד להבחין בין אזורים שונים באותה עצם: לדוגמה, חלק מהפציעות בשוקה נחשבות
@@ -337,7 +337,7 @@ export default function StressFracturesArticle() {
             ההתקדמות אינה נקבעת לפי לוח זמנים בלבד, אלא לפי מיקום הפציעה, חומרתה, תגובת האזור
             לעומס והיעדר החמרה במהלך הפעילות או ביום שאחריה.
             <Ref n={2} />
-            <Ref n={9} />
+            <Ref n={11} />
           </p>
 
           <h2 className={h2Class}>כמה זמן נמשכת ההחלמה?</h2>
@@ -348,7 +348,7 @@ export default function StressFracturesArticle() {
             עשויות לדרוש כמה חודשים ולעיתים טיפול ניתוחי.
             <Ref n={1} />
             <Ref n={2} />
-            <Ref n={9} />
+            <Ref n={11} />
           </p>
 
           <ArticleCta
@@ -406,16 +406,16 @@ export default function StressFracturesArticle() {
               .
             </li>
             <li id="ref-4" className="scroll-mt-24">
-              Wainwright KF, Whelan BM, Fahy KE, Harmon KG. Epidemiology of bone stress injury in
-              Division I National Collegiate Athletic Association athletes from 2016 to 2022. Br J
-              Sports Med. 2026;60(11):780-787. doi:
+              Changstrom BG, Brou L, Khodaee M, Braund C, Comstock RD. Epidemiology of stress
+              fracture injuries among US high school athletes, 2005-2006 through 2012-2013. Am J
+              Sports Med. 2015;43(1):26-33. doi:
               <a
-                href="https://doi.org/10.1136/bjsports-2025-110888"
+                href="https://doi.org/10.1177/0363546514562739"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-teal-600 underline"
               >
-                10.1136/bjsports-2025-110888
+                10.1177/0363546514562739
               </a>
               .
             </li>
@@ -434,62 +434,20 @@ export default function StressFracturesArticle() {
               .
             </li>
             <li id="ref-6" className="scroll-mt-24">
-              Changstrom BG, Brou L, Khodaee M, Braund C, Comstock RD. Epidemiology of stress
-              fracture injuries among US high school athletes, 2005-2006 through 2012-2013. Am J
-              Sports Med. 2015;43(1):26-33. doi:
+              Wainwright KF, Whelan BM, Fahy KE, Harmon KG. Epidemiology of bone stress injury in
+              Division I National Collegiate Athletic Association athletes from 2016 to 2022. Br J
+              Sports Med. 2026;60(11):780-787. doi:
               <a
-                href="https://doi.org/10.1177/0363546514562739"
+                href="https://doi.org/10.1136/bjsports-2025-110888"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-teal-600 underline"
               >
-                10.1177/0363546514562739
+                10.1136/bjsports-2025-110888
               </a>
               .
             </li>
             <li id="ref-7" className="scroll-mt-24">
-              Wentz L, Liu PY, Haymes E, Ilich JZ. Females have a greater incidence of stress
-              fractures than males in both military and athletic populations: a systematic review.
-              Mil Med. 2011;176(4):420-430. doi:
-              <a
-                href="https://doi.org/10.7205/MILMED-D-10-00322"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.7205/MILMED-D-10-00322
-              </a>
-              .
-            </li>
-            <li id="ref-8" className="scroll-mt-24">
-              Kale NN, Wang CX, Wu VJ, Miskimin C, Mulcahey MK. Age and female sex are important
-              risk factors for stress fractures: a nationwide database analysis. Sports Health.
-              2022;14(6):805-811. doi:
-              <a
-                href="https://doi.org/10.1177/19417381221080440"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.1177/19417381221080440
-              </a>
-              .
-            </li>
-            <li id="ref-9" className="scroll-mt-24">
-              Hoenig T, Eissele J, Strahl A, et al. Return to sport following low-risk and
-              high-risk bone stress injuries: a systematic review and meta-analysis. Br J Sports
-              Med. 2023;57(7):427-432. doi:
-              <a
-                href="https://doi.org/10.1136/bjsports-2022-106328"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-600 underline"
-              >
-                10.1136/bjsports-2022-106328
-              </a>
-              .
-            </li>
-            <li id="ref-10" className="scroll-mt-24">
               Mountjoy M, Ackerman KE, Bailey DM, et al. 2023 International Olympic Committee&apos;s
               consensus statement on Relative Energy Deficiency in Sport (REDs). Br J Sports Med.
               2023;57(17):1073-1097. doi:
@@ -503,7 +461,7 @@ export default function StressFracturesArticle() {
               </a>
               .
             </li>
-            <li id="ref-11" className="scroll-mt-24">
+            <li id="ref-8" className="scroll-mt-24">
               Campbell PG, Pope R, Simas V, et al. Incidence and risk factors for the development
               of stress fractures in military recruits and qualified personnel: a systematic
               review. Int J Environ Res Public Health. 2025;22(11):1760. doi:
@@ -514,6 +472,48 @@ export default function StressFracturesArticle() {
                 className="text-teal-600 underline"
               >
                 10.3390/ijerph22111760
+              </a>
+              .
+            </li>
+            <li id="ref-9" className="scroll-mt-24">
+              Kale NN, Wang CX, Wu VJ, Miskimin C, Mulcahey MK. Age and female sex are important
+              risk factors for stress fractures: a nationwide database analysis. Sports Health.
+              2022;14(6):805-811. doi:
+              <a
+                href="https://doi.org/10.1177/19417381221080440"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1177/19417381221080440
+              </a>
+              .
+            </li>
+            <li id="ref-10" className="scroll-mt-24">
+              Wentz L, Liu PY, Haymes E, Ilich JZ. Females have a greater incidence of stress
+              fractures than males in both military and athletic populations: a systematic review.
+              Mil Med. 2011;176(4):420-430. doi:
+              <a
+                href="https://doi.org/10.7205/MILMED-D-10-00322"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.7205/MILMED-D-10-00322
+              </a>
+              .
+            </li>
+            <li id="ref-11" className="scroll-mt-24">
+              Hoenig T, Eissele J, Strahl A, et al. Return to sport following low-risk and
+              high-risk bone stress injuries: a systematic review and meta-analysis. Br J Sports
+              Med. 2023;57(7):427-432. doi:
+              <a
+                href="https://doi.org/10.1136/bjsports-2022-106328"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1136/bjsports-2022-106328
               </a>
               .
             </li>
