@@ -101,17 +101,21 @@ export const treatments: Treatment[] = [
   },
 ];
 
+// מונחי סימפטומים לדף הבית — כל מונח מקושר למאמר הרלוונטי (שער מדף הבית אל התוכן).
+// 6 בריאות הגבר / רצפת אגן (מיצוב הנישה) + 6 אורתופדיה / ספורט (ביקוש אמיתי מ-GSC).
 export const symptoms = [
-  "כאבים באגן",
-  "כאבים במפשעה",
-  "כאב בזמן ישיבה",
-  "תכיפות במתן שתן",
-  "דחיפות במתן שתן",
-  "בריחת שתן",
-  "קושי בהתרוקנות",
-  "כאבים בזמן פעילות גופנית",
-  "כאבים בזמן או אחרי יחסי מין",
-  "כאב כרוני ללא הסבר ברור",
+  { label: "כאבים באגן", href: "/professional-info/mens-pelvic-floor-physiotherapy" },
+  { label: "כאב באשכים", href: "/professional-info/chronic-testicular-pain-orchialgia-cscp" },
+  { label: "בריחת שתן", href: "/professional-info/mens-pelvic-floor-physiotherapy" },
+  { label: "כאב בזמן או אחרי יחסי מין", href: "/professional-info/painful-ejaculation-dysejaculation" },
+  { label: "שפיכה מוקדמת", href: "/professional-info/premature-ejaculation-pelvic-floor-physiotherapy" },
+  { label: "קושי בזקפה", href: "/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy" },
+  { label: "כאב גב תחתון", href: "/professional-info/low-back-pain" },
+  { label: "כאב ראש צווארי", href: "/professional-info/cervicogenic-headache" },
+  { label: "כאב בעצם הזנב", href: "/professional-info/coccydynia-tailbone-pain" },
+  { label: "שברי מאמץ", href: "/professional-info/stress-fractures" },
+  { label: "כאב במרפק", href: "/professional-info/golfers-elbow-medial-elbow-pain" },
+  { label: "כאב מפשעה בספורט", href: "/professional-info/groin-pain-athletes" },
 ];
 
 export const approachSteps = [

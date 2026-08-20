@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -176,6 +177,28 @@ export default function MensPelvicFloorArticle() {
             </li>
             <li>
               <Link
+                href="/professional-info/painful-ejaculation-dysejaculation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                כאב בזמן או אחרי שפיכה
+              </Link>
+              , כאשר בבדיקה נמצאת רגישות או קושי בהרפיה של שרירי רצפת האגן, לצד הבירור הרפואי.
+            </li>
+            <li>
+              <Link
+                href="/professional-info/anhedonic-ejaculation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                שפיכה או אורגזמה ללא תחושת הנאה
+              </Link>
+              , מצב שבו השפיכה מתרחשת אך תחושת ההנאה חלשה מאוד או חסרה.
+            </li>
+            <li>
+              <Link
                 href="/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -257,18 +280,10 @@ export default function MensPelvicFloorArticle() {
             חברת הביטוח אם קיימת זכאות ואילו מסמכים נדרשים.
           </p>
 
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם אחד מהתסמינים שתוארו כאן מוכר לך, אפשר ליצור קשר בשיחה דיסקרטית ולברר אם הערכה
-              פיזיותרפית עשויה להתאים.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="אם אחד מהתסמינים שתוארו כאן מוכר לך, אפשר ליצור קשר בשיחה דיסקרטית ולברר אם הערכה פיזיותרפית עשויה להתאים."
+            whatsappText="היי רועי, קראתי אצלך הסבר על רצפת אגן — גברים, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>

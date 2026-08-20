@@ -6,6 +6,7 @@ import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -224,18 +225,10 @@ export default function LowBackPainArticle() {
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              כאב גב שחוזר או שאינו משתפר מצדיק בירור מסודר. בהערכה בודקים אילו תנועות ועומסים
-              מעוררים את הכאב, מה מקל עליו וכיצד לבנות חזרה הדרגתית לתנועה, לעבודה ולספורט.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאב גב שחוזר או שאינו משתפר מצדיק בירור מסודר. בהערכה בודקים אילו תנועות ועומסים מעוררים את הכאב, מה מקל עליו וכיצד לבנות חזרה הדרגתית לתנועה, לעבודה ולספורט."
+            whatsappText="היי רועי, קראתי אצלך הסבר על LBP, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

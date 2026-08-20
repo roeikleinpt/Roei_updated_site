@@ -73,12 +73,19 @@ export default function PerinealMuscleFigure({
   alt,
   caption,
   credit,
+  leads,
   children,
 }: {
   src: string;
   alt: string;
   caption: string;
   credit: string;
+  /**
+   * משפט הפתיחה בכרטיס הצף, לפי מזהה השריר. אותו איור משמש יותר מעמוד אחד,
+   * ולכן העמוד יכול להחליף את המשפט כדי שיתאים להקשר שלו (זקפה מול שפיכה).
+   * שרירים שלא הועברו עבורם מקבלים את משפט ברירת המחדל.
+   */
+  leads?: Partial<Record<string, string>>;
   /** תיבות ה-details המלאות — נמסרות מהעמוד כדי שהטקסט הרפואי יישאר שם */
   children: React.ReactNode;
 }) {
@@ -146,7 +153,9 @@ export default function PerinealMuscleFigure({
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="text-sm font-bold text-slate-900 sm:text-base">{m.name}</p>
-                  <p className="mt-1 text-xs leading-6 text-black sm:text-sm sm:leading-7">{m.lead}</p>
+                  <p className="mt-1 text-xs leading-6 text-black sm:text-sm sm:leading-7">
+                    {leads?.[m.id] ?? m.lead}
+                  </p>
                   <a
                     href={`#${m.id}-detail`}
                     className="mt-1.5 inline-block text-xs font-semibold text-teal-700 hover:underline sm:mt-2 sm:text-sm"

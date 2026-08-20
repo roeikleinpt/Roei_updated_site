@@ -5,6 +5,7 @@ import ArticleBreadcrumb from "../../components/ArticleBreadcrumb";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
@@ -196,18 +197,10 @@ export default function SaddleAreaPainCyclistsArticle() {
             </Link>
             .
           </p>
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              לא צריך לקבל כאב או נימול חוזרים כחלק בלתי נמנע מהרכיבה. בדיקה מסודרת יכולה לעזור
-              לזהות את הגורמים שניתן לשנות, במקום להסתפק בניסוי אקראי של אוכפים ותנוחות.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="לא צריך לקבל כאב או נימול חוזרים כחלק בלתי נמנע מהרכיבה. בדיקה מסודרת יכולה לעזור לזהות את הגורמים שניתן לשנות, במקום להסתפק בניסוי אקראי של אוכפים ותנוחות."
+            whatsappText="היי רועי, קראתי אצלך הסבר על אזור האוכף (רכיבה), ואשמח לבדוק אם הטיפול מתאים לי."
+          />
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>
             נימול וכאב באזור האוכף נפוצים בקרב רוכבים, בעיקר באוכלוסיות שרוכבות בהיקפים גבוהים.

@@ -9,6 +9,7 @@ import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 import ArticleFigure from "../../components/ArticleFigure";
+import ArticleCta from "../../components/ArticleCta";
 
 const article = getArticle("pelvic-floor-physiotherapy-orchialgia-cscp");
 
@@ -296,19 +297,10 @@ export default function PelvicFloorPhysiotherapyOrchialgiaArticle() {
           <p className={pClass}>
             ההתאמה נקבעת לפי מכלול התסמינים וממצאי הבדיקה, ולא לפי מיקום הכאב בלבד.
           </p>
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              כאשר הכאב מתמשך, לאחר שנשללו גורמים רפואיים אחרים, ובמיוחד כאשר קיימים גם
-              תסמינים במתן שתן, ביציאות, בתפקוד המיני או באזור האגן, מוזמן ליצור קשר לבירור
-              התאמה להערכה פיזיותרפית.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאשר הכאב מתמשך, לאחר שנשללו גורמים רפואיים אחרים, ובמיוחד כאשר קיימים גם תסמינים במתן שתן, ביציאות, בתפקוד המיני או באזור האגן, אפשר לבדוק יחד אם הערכה פיזיותרפית מתאימה עבורך."
+            whatsappText="היי רועי, קראתי אצלך הסבר על CSCP, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>
             פיזיותרפיה של רצפת האגן היא אפשרות טיפול שמרנית מוכרת במקרים נבחרים של כאב אשכים

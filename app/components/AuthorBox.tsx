@@ -11,12 +11,12 @@ export default function AuthorBox() {
         פציעות ספורט, שיקום אורתופדי ורצפת האגן, והוא ממשיך להעמיק בהכשרות מקצועיות בארץ,
         באירופה ובארה״ב בתחומי בריאות הגבר, רצפת האגן, כאב ושיקום.
       </p>
-      <Link
-        href="/#contact"
-        className="btn-press mt-5 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-      >
-        לקביעת פגישת אבחון
-      </Link>
+      <p className="mt-2 text-sm text-slate-500">פיזיותרפיסט מוסמך · תעודה מס׳ 10-163650</p>
+      <p className="mt-4 text-center text-base text-slate-600">
+        <Link href="/#contact" className="font-semibold text-teal-700 hover:underline">
+          ליצירת קשר עם רועי
+        </Link>
+      </p>
     </aside>
   );
 }

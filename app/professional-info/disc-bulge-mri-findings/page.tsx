@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ComparisonTable from "../../components/ComparisonTable";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -214,18 +215,10 @@ export default function DiscBulgeMriFindingsArticle() {
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              פענוח הדמיה אינו מספר את כל הסיפור. בהערכה בודקים האם הממצא מתאים לתסמינים ולבדיקה,
-              אילו תנועות ועומסים משפיעים על הכאב וכיצד לבנות חזרה הדרגתית לתנועה ולתפקוד.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="פענוח הדמיה אינו מספר את כל הסיפור. בהערכה בודקים האם הממצא מתאים לתסמינים ולבדיקה, אילו תנועות ועומסים משפיעים על הכאב וכיצד לבנות חזרה הדרגתית לתנועה ולתפקוד."
+            whatsappText="היי רועי, קראתי אצלך הסבר על בלט דיסק, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

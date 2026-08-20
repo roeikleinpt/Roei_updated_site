@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -153,6 +154,17 @@ export default function ChronicProstatitisArticle() {
             <Ref n={1} />
             <Ref n={2} />
           </p>
+          <p className={pClass}>
+            להרחבה:{" "}
+            <Link
+              href="/professional-info/painful-ejaculation-dysejaculation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב בזמן או אחרי שפיכה
+            </Link>
+          </p>
 
           <ArticleFigure
             src="/professional-info/cpps-anatomy-and-symptoms.webp"
@@ -294,19 +306,10 @@ export default function ChronicProstatitisArticle() {
             הכוללת.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              כאב אגני שנמשך חודשים, אחרי שהתרביות חזרו נקיות ומספר סבבי אנטיביוטיקה לא עזרו, מצדיק
-              הערכה מסוג אחר. בבדיקה בוחנים אם שרירי רצפת האגן מעורבים בתמונה ומה יכול להשתלב
-              בתוכנית הטיפול.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאב אגני שנמשך חודשים, אחרי שהתרביות חזרו נקיות ומספר סבבי אנטיביוטיקה לא עזרו, מצדיק הערכה מסוג אחר. בבדיקה בוחנים אם שרירי רצפת האגן מעורבים בתמונה ומה יכול להשתלב בתוכנית הטיפול."
+            whatsappText="היי רועי, קראתי אצלך הסבר על CPPS, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

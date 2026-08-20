@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -356,22 +357,22 @@ export default function PrematureEjaculationArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               הפרעת זקפה ופיזיותרפיה של רצפת האגן
+            </Link>{" "}
+            ו־<Link
+              href="/professional-info/pelvic-floor-and-ejaculation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              רצפת האגן והשפיכה: מה תפקיד השרירים?
             </Link>
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              זה נושא שקשה להעלות, וגם נושא שאפשר לברר. בהערכה בודקים אם תפקוד רצפת האגן רלוונטי
-              למקרה שלך, ומה יכול להשתלב בתוכנית הטיפול.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="זה נושא שקשה להעלות, וגם נושא שאפשר לברר. בהערכה בודקים אם תפקוד רצפת האגן רלוונטי למקרה שלך, ומה יכול להשתלב בתוכנית הטיפול."
+            whatsappText="היי רועי, קראתי אצלך הסבר על PE, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

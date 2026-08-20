@@ -5,6 +5,7 @@ import ArticleBreadcrumb from "../../components/ArticleBreadcrumb";
 import ArticleByline from "../../components/ArticleByline";
 import ArticleJsonLd from "../../components/ArticleJsonLd";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import ArticleFaq from "../../components/ArticleFaq";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
@@ -212,19 +213,10 @@ export default function HipGroinPainCyclistsArticle() {
             שלעיתים כדאי להרחיב את הבדיקה מעבר למפרק הירך עצמו, במיוחד כאשר התסמינים אינם
             משתפרים כמצופה.
           </p>
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם הכאב מגביל את הרכיבה, מופיע גם לאחר הירידה מהאופניים או מפריע בפעולות היומיום,
-              בדיקה פיזיותרפית יכולה לעזור להבין מה מעורר אותו, לזהות את הגורמים המעורבים ולבנות
-              תוכנית טיפול הדרגתית לחזרה לרכיבה ולתפקוד.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="אם הכאב מגביל את הרכיבה, מופיע גם לאחר הירידה מהאופניים או מפריע בפעולות היומיום, בדיקה פיזיותרפית יכולה לעזור להבין מה מעורר אותו, לזהות את הגורמים המעורבים ולבנות תוכנית טיפול הדרגתית לחזרה לרכיבה ולתפקוד."
+            whatsappText="היי רועי, קראתי אצלך הסבר על ירך/מפשעה (רכיבה), ואשמח לבדוק אם הטיפול מתאים לי."
+          />
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>
             כאב ירך או מפשעה אצל רוכב אינו אבחנה בפני עצמה. גם כאשר קיימים ממצאים בהדמיה,

@@ -18,6 +18,13 @@ export type FigureMarker = {
   rx: number;
   ry: number;
   rot?: number;
+  /**
+   * חלופה לאליפסה עבור מבנה מוארך: נתיב שמודגש לאורכו במקום להיות מוקף.
+   * כשהוא קיים, cx ו-cy משמשים רק כעוגן לקו ההובלה.
+   */
+  d?: string;
+  /** צבע ההדגשה של הנתיב. ברירת המחדל היא הנייבי של שאר הסימונים */
+  stroke?: string;
   /** מיקום העיגול הממוספר */
   bx: number;
   by: number;
@@ -28,6 +35,11 @@ export type FigureMarker = {
 };
 
 const NAVY = "#0c2438";
+
+// מידות הסימונים ביחידות viewBox. הערכים כוילו לאיור הבקע (1718 רוחב, מוצג
+// ב-max-w-lg). תמונה עם viewBox צר יותר או שמוצגת רחבה יותר צריכה chrome נמוך
+// יותר, אחרת אותו מספר יוצא גדול בהרבה על המסך.
+const BASE = { badge: 80, hit: 150, font: 100, ellipse: 9, line: 6, baseline: 34, path: 19 };
 
 // הנקודה שבה קו ההובלה פוגש את שפת האליפסה, כדי שלא ייכנס לתוכה
 function edgePoint(m: FigureMarker) {
@@ -48,6 +60,7 @@ export default function AnnotatedFigure({
   caption,
   credit,
   maxWidth = "max-w-lg",
+  chrome = 1,
 }: {
   src: string;
   alt: string;
@@ -58,7 +71,10 @@ export default function AnnotatedFigure({
   caption?: string;
   credit?: string;
   maxWidth?: string;
+  /** מכפיל לגודל התגים, הגופן ועובי הקווים. ראו BASE למעלה */
+  chrome?: number;
 }) {
+  const S = (v: number) => +(v * chrome).toFixed(1);
   return (
     <figure className="mt-8">
       <div className={`relative mx-auto ${maxWidth}`}>
@@ -71,37 +87,59 @@ export default function AnnotatedFigure({
           aria-label="סימון המבנים באיור"
         >
           {markers.map((m) => {
-            const [ex, ey] = edgePoint(m);
+            const [ex, ey] = m.d ? [m.cx, m.cy] : edgePoint(m);
             return (
               <a key={m.n} href={`#${m.href}`} aria-label={`מעבר להסבר על ${m.label}`}>
-                <ellipse
-                  cx={m.cx}
-                  cy={m.cy}
-                  rx={m.rx}
-                  ry={m.ry}
-                  transform={`rotate(${m.rot ?? 0} ${m.cx} ${m.cy})`}
-                  fill="transparent"
-                  stroke={NAVY}
-                  strokeWidth="9"
-                  strokeOpacity="0.95"
-                />
+                {m.d ? (
+                  <>
+                    {/* יעד מגע רחב ושקוף לאורך הנתיב */}
+                    <path
+                      d={m.d}
+                      fill="none"
+                      stroke="transparent"
+                      strokeWidth={S(BASE.path * 2.4)}
+                      strokeLinecap="round"
+                    />
+                    <path
+                      d={m.d}
+                      fill="none"
+                      stroke={m.stroke ?? NAVY}
+                      strokeWidth={S(BASE.path)}
+                      strokeOpacity="0.85"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </>
+                ) : (
+                  <ellipse
+                    cx={m.cx}
+                    cy={m.cy}
+                    rx={m.rx}
+                    ry={m.ry}
+                    transform={`rotate(${m.rot ?? 0} ${m.cx} ${m.cy})`}
+                    fill="transparent"
+                    stroke={NAVY}
+                    strokeWidth={S(BASE.ellipse)}
+                    strokeOpacity="0.95"
+                  />
+                )}
                 <line
                   x1={m.bx}
                   y1={m.by}
                   x2={ex.toFixed(0)}
                   y2={ey.toFixed(0)}
                   stroke={NAVY}
-                  strokeWidth="6"
+                  strokeWidth={S(BASE.line)}
                   strokeOpacity="0.95"
                 />
                 {/* יעד מגע מוגדל, שקוף */}
-                <circle cx={m.bx} cy={m.by} r="150" fill="transparent" />
-                <circle cx={m.bx} cy={m.by} r="80" fill={NAVY} />
+                <circle cx={m.bx} cy={m.by} r={S(BASE.hit)} fill="transparent" />
+                <circle cx={m.bx} cy={m.by} r={S(BASE.badge)} fill={NAVY} />
                 <text
                   x={m.bx}
-                  y={m.by + 34}
+                  y={m.by + S(BASE.baseline)}
                   textAnchor="middle"
-                  fontSize="100"
+                  fontSize={S(BASE.font)}
                   fontWeight="bold"
                   fill="#ffffff"
                 >

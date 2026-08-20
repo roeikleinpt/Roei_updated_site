@@ -9,6 +9,7 @@ import ArticleFigure from "../../components/ArticleFigure";
 import FigurePair from "../../components/FigurePair";
 import PerinealMuscleFigure, { MuscleDetails } from "../../components/PerinealMuscleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -350,22 +351,22 @@ export default function ErectileDysfunctionPelvicFloorArticle() {
               className="font-semibold text-teal-700 hover:underline"
             >
               שפיכה מוקדמת ופיזיותרפיה של רצפת האגן
+            </Link>{" "}
+            ו־<Link
+              href="/professional-info/orgasm-vs-ejaculation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              אורגזמה ושפיכה: מה ההבדל?
             </Link>
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם קיים קושי בזקפה ורוצים לבדוק האם גם לתפקוד רצפת האגן יש חלק בתמונה, הערכה
-              פיזיותרפית יכולה לעזור להבין האם קיים מרכיב שניתן לטפל בו.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="אם קיים קושי בזקפה ורוצים לבדוק האם גם לתפקוד רצפת האגן יש חלק בתמונה, הערכה פיזיותרפית יכולה לעזור להבין האם קיים מרכיב שניתן לטפל בו."
+            whatsappText="היי רועי, קראתי אצלך הסבר על ED, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

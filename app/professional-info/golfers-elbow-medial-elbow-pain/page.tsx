@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -381,18 +382,10 @@ export default function GolfersElbowArticle() {
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              כאב בצד הפנימי של המרפק שמפריע לאחיזה, לאימון או לזריקה? הערכה מסודרת יכולה לברר האם
-              מדובר בגיד, בעצב או במבנה אחר ולכוון את הטיפול בהתאם.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאב בצד הפנימי של המרפק שמפריע לאחיזה, לאימון או לזריקה? הערכה מסודרת יכולה לברר האם מדובר בגיד, בעצב או במבנה אחר ולכוון את הטיפול בהתאם."
+            whatsappText="היי רועי, קראתי אצלך הסבר על מרפק גולף, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

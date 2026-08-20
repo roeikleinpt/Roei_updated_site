@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -329,19 +330,10 @@ export default function FemoroacetabularImpingementArticle() {
             .
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              כאב מתמשך בירך או במפשעה מצדיק בירור מסודר. בהערכה בודקים אילו תנועות ועומסים מעוררים
-              את הכאב, מה מצב הכוח והשליטה סביב הירך והאגן, וכיצד לבנות חזרה הדרגתית לפעילות
-              ולספורט.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאב מתמשך בירך או במפשעה מצדיק בירור מסודר. בהערכה בודקים אילו תנועות ועומסים מעוררים את הכאב, מה מצב הכוח והשליטה סביב הירך והאגן, וכיצד לבנות חזרה הדרגתית לפעילות ולספורט."
+            whatsappText="היי רועי, קראתי אצלך הסבר על FAI, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

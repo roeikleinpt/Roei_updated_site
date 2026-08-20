@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -265,18 +266,10 @@ export default function CoccydyniaTailbonePainArticle() {
             <Ref n={7} />
           </p>
 
-          <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם הכאב מפריע בחיי היומיום או בפעולות מסוימות, בדיקה פיזיותרפית יכולה לעזור להבין
-              מה מעורר אותו, להעניק כלים לניהול המצב ולבנות תוכנית טיפול הדרגתית לחזרה לתפקוד.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="אם הכאב מפריע בחיי היומיום או בפעולות מסוימות, בדיקה פיזיותרפית יכולה לעזור להבין מה מעורר אותו, להעניק כלים לניהול המצב ולבנות תוכנית טיפול הדרגתית לחזרה לתפקוד."
+            whatsappText="היי רועי, קראתי אצלך הסבר על עצם הזנב, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <h2 className={h2Class}>שורה תחתונה</h2>
           <p className={pClass}>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Container from "./components/Container";
 import { Icon } from "./components/Icon";
 import Reveal from "./components/Reveal";
@@ -66,8 +67,8 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* רצועת נתונים — מוסתר לעת עתה */}
-          <div className="mt-20 hidden grid-cols-2 gap-6 border-t border-slate-200 pt-10 lg:grid-cols-4">
+          {/* רצועת נתונים — אות אמון מתחת ל-Hero */}
+          <div className="mt-16 grid grid-cols-2 gap-6 border-t border-slate-200 pt-10 lg:grid-cols-4">
             {site.stats.map((stat, i) => (
               <Reveal key={stat.label} delay={i * 80} className="text-center">
                 <div className="text-2xl font-extrabold text-teal-600 sm:text-3xl">{stat.value}</div>
@@ -88,8 +89,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ===== סימפטומים — מוסתר לעת עתה (התסמינים עברו לפופ-אפ של הכרטיסים). נשמר בקוד. ===== */}
-      {false && (
+      {/* ===== סימפטומים — מונחים סטטיים ל-SEO ולנראות למבקר ===== */}
       <section id="symptoms" className="scroll-mt-4 bg-slate-50/80 py-20 sm:py-24">
         <Container>
           <Reveal className="mx-auto max-w-2xl text-center">
@@ -103,20 +103,20 @@ export default function Home() {
 
           <Reveal className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-3">
             {symptoms.map((s) => (
-              <span
-                key={s}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700"
+              <Link
+                key={s.label}
+                href={s.href}
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-800"
               >
                 <Icon name="arrowUpLeft" className="h-4 w-4 text-teal-500" />
-                {s}
-              </span>
+                {s.label}
+              </Link>
             ))}
           </Reveal>
 
       
         </Container>
       </section>
-      )}
 
       {/* ===== הגישה שלי ===== */}
       <section id="approach" className="scroll-mt-4 py-20 sm:py-24">

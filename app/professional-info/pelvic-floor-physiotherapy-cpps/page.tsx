@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -116,6 +117,17 @@ export default function PelvicFloorPhysiotherapyCppsArticle() {
             באזור האגן או תסמינים שמושפעים מישיבה ממושכת.
             <Ref n={2} />{" "}התסמינים עצמם אינם מוכיחים שהבעיה נובעת מרצפת האגן. ההחלטה מתקבלת לפי
             התמונה הכוללת וממצאי הבדיקה.
+          </p>
+          <p className={pClass}>
+            להרחבה:{" "}
+            <Link
+              href="/professional-info/painful-ejaculation-dysejaculation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              כאב בזמן או אחרי שפיכה
+            </Link>
           </p>
 
           <h2 className={h2Class}>רצפת האגן כחלק ממערכת רחבה יותר</h2>
@@ -269,18 +281,10 @@ export default function PelvicFloorPhysiotherapyCppsArticle() {
             הטיפול אינו מחייב בדיקה פנימית ואינו מבוסס באופן אוטומטי על חיזוק שרירי רצפת האגן.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-base font-semibold text-slate-900">
-              אם הבירור האורולוגי כבר נעשה והתסמינים נמשכים, שווה לבדוק אם שרירי רצפת האגן מעורבים
-              בתמונה. ההערכה מתחילה בתשאול ובבדיקה חיצונית, ומתקדמת רק לפי מה שנמצא.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-4 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="אם הבירור האורולוגי כבר נעשה והתסמינים נמשכים, שווה לבדוק אם שרירי רצפת האגן מעורבים בתמונה. ההערכה מתחילה בתשאול ובבדיקה חיצונית, ומתקדמת רק לפי מה שנמצא."
+            whatsappText="היי רועי, קראתי אצלך הסבר על CPPS, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

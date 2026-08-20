@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Container from "../../components/Container";
 import ArticleBreadcrumb from "../../components/ArticleBreadcrumb";
 import ArticleByline from "../../components/ArticleByline";
@@ -7,6 +6,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -345,20 +345,10 @@ export default function CervicogenicHeadacheArticle() {
             אין להניח שכאב ראש נובע מהצוואר לפני שנשללו מצבים אחרים כאשר קיימים סימני אזהרה.
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-xl font-bold text-slate-900">בואו נבין מה קורה</p>
-            <p className="mt-3 leading-8 text-black">
-              כאבי ראש חוזרים אינם תמיד נובעים מהצוואר, וגם נוכחות כאב או נוקשות בצוואר אינה
-              מספיקה כדי לקבוע את המקור. הערכה מסודרת יכולה לסייע לזהות האם קיימים ממצאים צוואריים
-              משמעותיים, אילו פעילויות משפיעות על הכאב ואיזו תוכנית טיפול עשויה להתאים.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-5 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאבי ראש חוזרים אינם תמיד נובעים מהצוואר, וגם נוכחות כאב או נוקשות בצוואר אינה מספיקה כדי לקבוע את המקור. הערכה מסודרת יכולה לסייע לזהות האם קיימים ממצאים צוואריים משמעותיים, אילו פעילויות משפיעות על הכאב ואיזו תוכנית טיפול עשויה להתאים."
+            whatsappText="היי רועי, קראתי אצלך הסבר על כאב ראש צווארי, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 

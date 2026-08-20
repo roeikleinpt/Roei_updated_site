@@ -7,6 +7,7 @@ import ArticleJsonLd from "../../components/ArticleJsonLd";
 import ArticleFaq from "../../components/ArticleFaq";
 import ArticleFigure from "../../components/ArticleFigure";
 import AuthorBox from "../../components/AuthorBox";
+import ArticleCta from "../../components/ArticleCta";
 import { getArticle } from "../../data/articles";
 import { siteConfig } from "../../config/site";
 
@@ -350,21 +351,10 @@ export default function StressFracturesArticle() {
             <Ref n={9} />
           </p>
 
-          <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-            <p className="text-xl font-bold text-slate-900">בואו נבין מה קורה</p>
-            <p className="mt-3 leading-8 text-black">
-              כאב מקומי שמופיע שוב ושוב בזמן ריצה, הליכה או פעילות נושאת משקל אינו בהכרח שבר מאמץ,
-              אך לא כדאי להמשיך להעמיס עליו בלי להבין את המקור. הערכה מסודרת יכולה לסייע לזהות את
-              רמת החשד, להחליט האם נדרש בירור רפואי או הדמיה, ולבנות תוכנית הדרגתית שתאפשר לעצם
-              להחלים ולגוף לחזור לפעילות.
-            </p>
-            <Link
-              href="/#contact"
-              className="btn-press mt-5 inline-block rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
-            >
-              לקביעת פגישת אבחון
-            </Link>
-          </div>
+          <ArticleCta
+            intro="כאב מקומי שמופיע שוב ושוב בזמן ריצה, הליכה או פעילות נושאת משקל אינו בהכרח שבר מאמץ, אך לא כדאי להמשיך להעמיס עליו בלי להבין את המקור. הערכה מסודרת יכולה לסייע לזהות את רמת החשד, להחליט האם נדרש בירור רפואי או הדמיה, ולבנות תוכנית הדרגתית שתאפשר לעצם להחלים ולגוף לחזור לפעילות."
+            whatsappText="היי רועי, קראתי אצלך הסבר על שברי מאמץ, ואשמח לבדוק אם הטיפול מתאים לי."
+          />
 
           <ArticleFaq items={faqItems} />
 
