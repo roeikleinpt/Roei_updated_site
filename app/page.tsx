@@ -106,6 +106,8 @@ export default function Home() {
               <Link
                 key={s.label}
                 href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-800"
               >
                 <Icon name="arrowUpLeft" className="h-4 w-4 text-teal-500" />
