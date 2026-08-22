@@ -75,6 +75,15 @@ export default function Footer() {
               <Icon name="whatsapp" className="h-4 w-4" />
               וואטסאפ
             </a>
+            <a
+              href={site.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-11 items-center gap-2 hover:text-white"
+            >
+              <Icon name="instagram" className="h-4 w-4" />
+              אינסטגרם
+            </a>
             {/* מיקומי הקליניקות — כל מיקום הוא קישור ניווט מלא ב-Waze */}
             {site.clinics.map((clinic) => (
               <a

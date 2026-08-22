@@ -17,6 +17,8 @@ export const site = {
   email: "RoeiKleinPT@gmail.com",
   // קישור לפרופיל Google Business (משמש ל-sameAs בסכמת העסק).
   googleBusinessUrl: "https://share.google/F97ofdr71eOTLvaeC",
+  // קישור לפרופיל האינסטגרם — קישור גלוי בפוטר + sameAs בסכמת העסק.
+  instagramUrl: "https://www.instagram.com/roeiklein.physio/",
   // הקליניקות עם כתובת וקישורי ניווט Waze — מקור יחיד לתצוגת המיקומים (TopBar/Footer)
   // ולסכמת העסק. geo הן קואורדינטות אמיתיות של כל סניף, ומוזנות ל-GeoCoordinates
   // בסכמה. הקליניקה הראשונה במערך היא הראשית (קולוני), וה-NAP שלה מופיע גם

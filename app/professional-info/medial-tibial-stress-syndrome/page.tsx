@@ -70,7 +70,7 @@ export default function MtssArticle() {
         <div className="mx-auto max-w-3xl">
           <ArticleBreadcrumb title={article.title} />
           <h1 className="mt-5 text-3xl font-bold leading-snug text-slate-900 sm:text-4xl">
-            תסמונת עומס השוקה הפנימית
+            תסמונת עומס השוקה הפנימית (שין ספלינט)
           </h1>
           <ArticleByline date={article.date} />
           <p className="mt-6 text-lg leading-8 text-black">
@@ -196,8 +196,13 @@ export default function MtssArticle() {
             </p>
             <p className="mt-4 leading-8 text-black">
               במסגרת העבודה עסקתי בתרגום ובהתאמה לעברית של שני שאלוני הערכה לכאבי שוק, וביצעתי מחקר
-              קליני שעסק באבחנה הקלינית של MTSS&rlm;. אחד מהשאלונים המתורגמים כבר פורסם בספרות
-              המקצועית; השאלון השני והמחקר הקליני נמצאים כיום בתהליך הערכת עמיתים בכתבי עת.
+              קליני שעסק באבחנה הקלינית של MTSS&rlm;. אחד מהשאלונים המתורגמים, שאלון ה-MTSS&rlm;, כבר פורסם בספרות
+              המקצועית<Ref n={10} />, ולצידו זמין הסבר בעברית ב<a
+                href="https://www.jipts.com/_Uploads/dbsAttachedFiles/40-43medida(1).pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >כתב העת הישראלי לפיזיותרפיה</a>.
             </p>
           </div>
 
@@ -357,6 +362,20 @@ export default function MtssArticle() {
                 className="text-teal-600 underline"
               >
                 10.1007/s40279-013-0087-0
+              </a>
+              .
+            </li>
+            <li id="ref-10" className="scroll-mt-24">
+              Klein R, Elboim-Gabyzon M, Rozenfeld E, Kalichman L. Cross-cultural adaptation and
+              validation of the Hebrew version of the medial tibial stress syndrome score among
+              active-duty servicemembers. Physiother Theory Pract. 2025;42(6):807-815. doi:
+              <a
+                href="https://doi.org/10.1080/09593985.2025.2600084"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1080/09593985.2025.2600084
               </a>
               .
             </li>

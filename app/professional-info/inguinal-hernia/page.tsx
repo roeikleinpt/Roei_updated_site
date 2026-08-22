@@ -243,25 +243,24 @@ export default function InguinalHerniaArticle() {
             </li>
             <li>
               <Link
-                href="/professional-info/groin-pain-athletes"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-teal-700 hover:underline"
-              >
-                פגיעה במפרק הירך או בלברום
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/professional-info/femoroacetabular-impingement"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-teal-700 hover:underline"
               >
-                תסמונת צביטה בירך (Femoroacetabular Impingement)
+                פגיעה במפרק הירך, כולל תסמונת צביטה (Femoroacetabular Impingement)
               </Link>
             </li>
-            <li>Osteitis Pubis</li>
+            <li>
+              <Link
+                href="/professional-info/groin-pain-athletes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                כאב הקשור לעצם החיק (Osteitis Pubis)
+              </Link>
+            </li>
             <li>גירוי או לחץ על עצבים באזור המפשעה</li>
             <li>
               בעיות אורולוגיות או{" "}

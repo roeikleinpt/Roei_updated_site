@@ -41,7 +41,7 @@ export default function JsonLd() {
       latitude: primary.geo.lat,
       longitude: primary.geo.lng,
     },
-    sameAs: [medReviewsUrl, site.googleBusinessUrl],
+    sameAs: [medReviewsUrl, site.googleBusinessUrl, site.instagramUrl],
     location: site.clinics.map((clinic) => ({
       "@type": "Place",
       name: clinic.name,

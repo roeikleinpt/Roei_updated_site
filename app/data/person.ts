@@ -14,7 +14,11 @@ export const personEntity = {
   jobTitle: "פיזיותרפיסט מוסמך",
   honorificSuffix: "M.Sc.PT",
   url: `${siteBaseUrl}/#about`,
-  sameAs: [medReviewsUrl],
+  sameAs: [
+    medReviewsUrl,
+    "https://orcid.org/0000-0003-1313-0384",
+    "https://scholar.google.com/citations?user=2XK1EB4AAAAJ",
+  ],
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
     credentialCategory: "license",

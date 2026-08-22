@@ -12,6 +12,26 @@ export default function AuthorBox() {
         באירופה ובארה״ב בתחומי בריאות הגבר, רצפת האגן, כאב ושיקום.
       </p>
       <p className="mt-2 text-sm text-slate-500">פיזיותרפיסט מוסמך · תעודה מס׳ 10-163650</p>
+      <p className="mt-1 text-sm text-slate-500">
+        פרסומים ומחקר:{" "}
+        <a
+          href="https://scholar.google.com/citations?user=2XK1EB4AAAAJ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-teal-700 hover:underline"
+        >
+          Google Scholar
+        </a>
+        {" · "}
+        <a
+          href="https://orcid.org/0000-0003-1313-0384"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-teal-700 hover:underline"
+        >
+          ORCID
+        </a>
+      </p>
       <p className="mt-4 text-center text-base text-slate-600">
         <Link href="/#contact" className="font-semibold text-teal-700 hover:underline">
           ליצירת קשר עם רועי
