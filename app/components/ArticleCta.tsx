@@ -8,12 +8,18 @@ import { site } from "../data/site";
 //
 // whatsappText = ההודעה שתיכנס אוטומטית לוואטסאפ ("היי רועי, קראתי אצלך על ...").
 // intro        = משפט מקדים אחראי (למשל "אם הכאב נמשך לאחר שנשללו גורמים אחרים").
+// heading      = הכותרת. ברירת המחדל מתאימה למאמר על מצב שרועי מטפל בו. במאמר שאומר
+//                במפורש שאין לו מה להציע למצב עצמו, "חווה חלק מהתסמינים שתוארו?" סותר
+//                את הטקסט שמעליו — ולכן אפשר להעביר null ולוותר עליה. במקרה כזה ה-intro
+//                עצמו נושא את המשקל ומקבל את העיצוב של הכותרת.
 export default function ArticleCta({
   whatsappText,
   intro,
+  heading = "חווה חלק מהתסמינים שתוארו?",
 }: {
   whatsappText: string;
   intro?: string;
+  heading?: string | null;
 }) {
   // site.whatsappHref כבר כולל ?text= גנרי — חותכים אותו ומוסיפים טקסט מותאם למאמר.
   const base = site.whatsappHref.split("?")[0];
@@ -21,8 +27,18 @@ export default function ArticleCta({
 
   return (
     <div className="mt-8 rounded-2xl border border-teal-200 bg-teal-50 p-6 text-center">
-      <p className="text-lg font-bold text-slate-900">חווה חלק מהתסמינים שתוארו?</p>
-      {intro ? <p className="mt-2 leading-7 text-slate-600">{intro}</p> : null}
+      {heading ? <p className="text-lg font-bold text-slate-900">{heading}</p> : null}
+      {intro ? (
+        <p
+          className={
+            heading
+              ? "mt-2 leading-7 text-slate-600"
+              : "text-lg font-semibold leading-8 text-slate-900"
+          }
+        >
+          {intro}
+        </p>
+      ) : null}
       <a
         href={href}
         target="_blank"

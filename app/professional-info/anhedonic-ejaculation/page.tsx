@@ -138,8 +138,16 @@ export default function AnhedonicEjaculationArticle() {
           <h3 className={h3Class}>ניתוחים וטיפולים באזור האגן</h3>
           <p className={pClass}>
             ניתוחים בערמונית, בצוואר שלפוחית השתן או באזור האגן יכולים לשנות את מנגנון השפיכה. בחלק
-            מהמקרים נפח נוזל הזרע פוחת או נעלם, ובחלקם מתרחשת שפיכה אחורית, גם כאשר תחושת האורגזמה
-            עצמה נשמרת.
+            מהמקרים נפח נוזל הזרע פוחת או נעלם, ובחלקם מתרחשת{" "}
+            <Link
+              href="/professional-info/retrograde-ejaculation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              שפיכה אחורית
+            </Link>
+            , גם כאשר תחושת האורגזמה עצמה נשמרת.
             <Ref n={2} />
             <Ref n={4} />
           </p>
