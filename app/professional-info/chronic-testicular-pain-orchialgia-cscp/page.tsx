@@ -177,6 +177,15 @@ export default function ChronicTesticularPainArticle() {
             לא זוהתה סיבה מסוימת.
             <Ref n={4} />
           </p>
+          <p className={pClass}>
+            עם זאת, וריקוצלה שכיחה גם בקרב גברים ללא תסמינים. סקירות מעריכות שכיחות של כ־15%
+            באוכלוסייה הכללית, ובבדיקות דימות השיעור גבוה יותר: במחקר על גברים בריאים ופוריים
+            נמצאה וריקוצלה בבדיקת דופלר אצל כ־37%.
+            <Ref n={8} />
+            <Ref n={9} />{" "}רוב הגברים עם וריקוצלה אינם סובלים מכאב.
+            <Ref n={10} />{" "}לכן מציאת וריקוצלה, ובמיוחד בדימות, אינה מוכיחה כשלעצמה שהיא
+            מקור הכאב.
+          </p>
           <p className={`${pClass} font-bold`}>
             כל מטופל פנה לרופא בממוצע 5.3 פעמים בשל התלונה, בטווח של פנייה אחת עד 37 פניות.
             <Ref n={4} />
@@ -200,7 +209,8 @@ export default function ChronicTesticularPainArticle() {
           <p className={pClass}>לא בהכרח.</p>
           <p className={pClass}>
             כאב המורגש באשך יכול להיות כאב מוקרן שמקורו באזור אחר. בספרות תוארו מקורות
-            אפשריים בעמוד השדרה, בבטן, במערכת השתן, במפשעה וברקמות האגן.
+            אפשריים בעמוד השדרה, בבטן, במערכת השתן, במפשעה, ברקמות האגן ובמבנים סביב עצם
+            החיק, ובהם שרירי המקרבים.
             <Ref n={1} />
             <Ref n={3} />
             <Ref n={7} />{" "}גם השרירים והעצבים באזור רצפת האגן עשויים להיות מעורבים אצל חלק
@@ -208,6 +218,18 @@ export default function ChronicTesticularPainArticle() {
             חשיבות לבחינת הגב, הירכיים, הבטן, האגן ורצפת האגן.
             <Ref n={1} />
             <Ref n={7} />
+          </p>
+          <p className={pClass}>
+            לקריאה נוספת:{" "}
+            <Link
+              href="/professional-info/adductor-strain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              מתיחה או קרע בשרירי המקרבים
+            </Link>
+            .
           </p>
           <p className={pClass}>
             במצבים מסוימים יש לשקול גם מעורבות עצבית. כאב עצבי המורגש באשך, בשק האשכים או בפין
@@ -375,6 +397,47 @@ export default function ChronicTesticularPainArticle() {
                 className="text-teal-600 underline"
               >
                 PMC6864917
+              </a>
+              .
+            </li>
+            <li id="ref-8" className="scroll-mt-24">
+              Alsaikhan B, Alrabeeah K, Delouya G, Zini A. Epidemiology of varicocele. Asian J
+              Androl. 2016;18(2):179-181. doi:
+              <a
+                href="https://doi.org/10.4103/1008-682X.172640"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.4103/1008-682X.172640
+              </a>
+              .
+            </li>
+            <li id="ref-9" className="scroll-mt-24">
+              Lotti F, Frizza F, Balercia G, et al. The European Academy of Andrology (EAA)
+              ultrasound study on healthy, fertile men: Scrotal ultrasound reference ranges and
+              associations with clinical, seminal and biochemical characteristics. Andrology.
+              2021;9(2):559-576. doi:
+              <a
+                href="https://doi.org/10.1111/andr.12951"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1111/andr.12951
+              </a>
+              .
+            </li>
+            <li id="ref-10" className="scroll-mt-24">
+              Owen RC, McCormick BJ, Figler BD, Coward RM. A review of varicocele repair for
+              pain. Transl Androl Urol. 2017;6(Suppl 1):S20-S29. doi:
+              <a
+                href="https://doi.org/10.21037/tau.2017.03.36"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.21037/tau.2017.03.36
               </a>
               .
             </li>
