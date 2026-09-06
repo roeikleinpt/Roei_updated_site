@@ -102,12 +102,13 @@ export const treatments: Treatment[] = [
 ];
 
 // מונחי סימפטומים לדף הבית — כל מונח מקושר למאמר הרלוונטי (שער מדף הבית אל התוכן).
-// 6 בריאות הגבר / רצפת אגן (מיצוב הנישה) + 6 אורתופדיה / ספורט (ביקוש אמיתי מ-GSC).
+// 7 בריאות הגבר / רצפת אגן (מיצוב הנישה) + 6 אורתופדיה / ספורט (ביקוש אמיתי מ-GSC).
 export const symptoms = [
-  { label: "כאבים באגן", href: "/professional-info/mens-pelvic-floor-physiotherapy" },
+  { label: "כאבים כרוניים באגן (CPPS)", href: "/professional-info/chronic-prostatitis-pelvic-pain-syndrome" },
   { label: "כאב באשכים", href: "/professional-info/chronic-testicular-pain-orchialgia-cscp" },
   { label: "בריחת שתן", href: "/professional-info/mens-pelvic-floor-physiotherapy" },
-  { label: "כאב בזמן או אחרי יחסי מין", href: "/professional-info/painful-ejaculation-dysejaculation" },
+  { label: "כאב בשפיכה", href: "/professional-info/painful-ejaculation-dysejaculation" },
+  { label: "כאב בחדירה אנאלית", href: "/professional-info/anal-penetration-pain" },
   { label: "שפיכה מוקדמת", href: "/professional-info/premature-ejaculation-pelvic-floor-physiotherapy" },
   { label: "קושי בזקפה", href: "/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy" },
   { label: "כאב גב תחתון", href: "/professional-info/low-back-pain" },

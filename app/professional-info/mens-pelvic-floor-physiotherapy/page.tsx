@@ -188,6 +188,18 @@ export default function MensPelvicFloorArticle() {
             </li>
             <li>
               <Link
+                href="/professional-info/anal-penetration-pain"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-teal-700 hover:underline"
+              >
+                כאב בחדירה אנאלית
+              </Link>
+              , כאשר בהערכה נמצא קושי בהרפיה או פעילות יתר של שרירי רצפת האגן והסוגרים, לצד
+              הבירור הרפואי.
+            </li>
+            <li>
+              <Link
                 href="/professional-info/anhedonic-ejaculation"
                 target="_blank"
                 rel="noopener noreferrer"
