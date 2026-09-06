@@ -153,7 +153,7 @@ export default function AnnotatedFigure({
       {caption && (
         <figcaption className="mt-2 text-center text-sm text-slate-500">{caption}</figcaption>
       )}
-      {credit && <p className="mt-1 text-center text-xs text-slate-400">{credit}</p>}
+      {credit && <p className="mt-1 text-center text-xs text-slate-500">{credit}</p>}
     </figure>
   );
 }

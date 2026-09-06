@@ -31,7 +31,7 @@ export default function FigurePair({
         ))}
       </div>
       <figcaption className="mt-2 text-center text-sm text-slate-500">{caption}</figcaption>
-      <p className="mt-1 text-center text-xs text-slate-400">{credit}</p>
+      <p className="mt-1 text-center text-xs text-slate-500">{credit}</p>
     </figure>
   );
 }
