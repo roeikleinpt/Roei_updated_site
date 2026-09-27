@@ -157,6 +157,17 @@ export default function OveractiveBladderMenArticle() {
             שלפוחית רגיזה.
           </p>
           <p className={pClass}>
+            להרחבה על הקימה בלילה ועל הגורמים לה:{" "}
+            <Link
+              href="/professional-info/nocturia-men"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              קימה בלילה להשתין בגברים (Nocturia): גורמים ובירור
+            </Link>
+          </p>
+          <p className={pClass}>
             אצל גבר שמתאר בעיקר זרם חלש, קושי להתחיל להשתין, צורך ללחוץ בזמן ההשתנה או תחושת
             התרוקנות לא מלאה, יש מקום לשקול גם בעיית התרוקנות או חסימה ולא לייחס את התסמינים
             אוטומטית לשלפוחית רגיזה.
