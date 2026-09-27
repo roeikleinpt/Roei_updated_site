@@ -13,6 +13,8 @@ import ArticleFigure from "../../components/ArticleFigure";
 
 const article = getArticle("saddle-area-pain-cyclists");
 
+const CREDIT = "Image used with permission from Pelvic Guru®, LLC as a Pelvic Global Member";
+
 export const metadata: Metadata = {
   title: "כאב באזור האוכף ונימול באיבר המין אצל רוכבי אופניים",
   description:
@@ -122,6 +124,7 @@ export default function SaddleAreaPainCyclistsArticle() {
           <ArticleFigure
             src="/professional-info/nerve-innervation-saddle.webp"
             alt="מיפוי עצבי של אזור העצבוב העורי (Cutaneous Innervation) באגן ובאזור האוכף — אבחון סימפטומים לפי אזורי עצבוב"
+            credit={CREDIT}
           />
           <h2 className={h2Class}>האם כמות הרכיבה משנה?</h2>
           <p className={pClass}>
