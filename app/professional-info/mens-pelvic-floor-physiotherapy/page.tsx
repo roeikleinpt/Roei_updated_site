@@ -313,6 +313,8 @@ export default function MensPelvicFloorArticle() {
             הסברים מפורטים ומבוססי מקורות על מצבים ספציפיים מופיעים במאמרים הייעודיים:{" "}
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-orchialgia-cscp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               פיזיותרפיה לרצפת האגן בכאב אשכים כרוני
@@ -320,6 +322,8 @@ export default function MensPelvicFloorArticle() {
             ,{" "}
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-cyclists"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               רצפת האגן אצל רוכבי אופניים
@@ -327,6 +331,8 @@ export default function MensPelvicFloorArticle() {
             ,{" "}
             <Link
               href="/professional-info/coccydynia-tailbone-pain"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               כאבים בעצם הזנב
@@ -334,6 +340,8 @@ export default function MensPelvicFloorArticle() {
             ,{" "}
             <Link
               href="/professional-info/hard-flaccid-syndrome"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               Hard Flaccid Syndrome
@@ -341,6 +349,8 @@ export default function MensPelvicFloorArticle() {
             ,{" "}
             <Link
               href="/professional-info/premature-ejaculation-pelvic-floor-physiotherapy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               שפיכה מוקדמת ופיזיותרפיה של רצפת האגן
@@ -348,6 +358,8 @@ export default function MensPelvicFloorArticle() {
             ו־
             <Link
               href="/professional-info/erectile-dysfunction-pelvic-floor-physiotherapy"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               הפרעת זקפה ופיזיותרפיה של רצפת האגן
@@ -355,6 +367,8 @@ export default function MensPelvicFloorArticle() {
             ו־
             <Link
               href="/professional-info/pelvic-floor-physiotherapy-cpps"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               פיזיותרפיה של רצפת האגן ב־CP/CPPS
@@ -362,6 +376,8 @@ export default function MensPelvicFloorArticle() {
             ו־
             <Link
               href="/professional-info/pudendal-neuralgia"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-semibold text-teal-700 hover:underline"
             >
               נוירלגיה של עצב הפודנדל

@@ -85,6 +85,8 @@ export default function ArticleSearch({ articles }: { articles: Article[] }) {
             <Link
               key={article.slug}
               href={`/professional-info/${article.slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-teal-200 hover:shadow-lg hover:shadow-teal-100/50"
             >
               <span className="text-xs font-semibold text-teal-600">{article.date}</span>
