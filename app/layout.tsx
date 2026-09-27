@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import HexBackground from "./components/HexBackground";
 import BackToTop from "./components/BackToTop";
 import AccessibilityWidget from "./components/AccessibilityWidget";
+import MobileSameTabLinks from "./components/MobileSameTabLinks";
 import { siteConfig } from "./config/site";
 
 const heebo = Heebo({
@@ -74,6 +75,7 @@ export default function RootLayout({
         </div>
         <BackToTop />
         <AccessibilityWidget />
+        <MobileSameTabLinks />
       </body>
     </html>
   );

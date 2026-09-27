@@ -241,8 +241,16 @@ export default function GroinPainAthletesArticle() {
           </p>
           <p className={pClass}>
             במחקר שנערך בקרב 325 ספורטאי עילית צעירים, 29.3% מהגברים דיווחו על לפחות תסמין אחד
-            הקשור לרצפת האגן. פעילות יתר של שלפוחית השתן (Overactive Bladder) וכאב אגני היו בין
-            התלונות הנפוצות במדגם. המחקר לא התמקד בספורטאים עם כאבי מפשעה ולכן אינו מוכיח קשר
+            הקשור לרצפת האגן.{" "}
+            <Link
+              href="/professional-info/overactive-bladder-men"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              פעילות יתר של שלפוחית השתן (Overactive Bladder)
+            </Link>{" "}
+            וכאב אגני היו בין התלונות הנפוצות במדגם. המחקר לא התמקד בספורטאים עם כאבי מפשעה ולכן אינו מוכיח קשר
             בין התופעות.
             <Ref n={4} />{" "}במחקר נוסף שכלל 299 ספורטאים גברים ברמת עילית, 14.7% דיווחו על דליפת
             שתן. גם מחקר זה לא בדק קשר לכאב במפשעה.

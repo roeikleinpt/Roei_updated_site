@@ -46,7 +46,7 @@ export default function ArticleCta({
         className="btn-press mt-5 inline-flex items-center gap-2 rounded-full bg-teal-700 px-6 py-3 font-semibold text-white ring-2 ring-inset ring-teal-700 hover:bg-white hover:text-teal-700"
       >
         <Icon name="whatsapp" className="h-5 w-5" />
-        בדיקת התאמה לטיפול — בוואטסאפ
+        בדיקת התאמה לטיפול בוואטסאפ
       </a>
       <p className="mt-3 text-sm text-slate-500">
         או{" "}

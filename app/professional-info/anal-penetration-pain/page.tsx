@@ -240,6 +240,14 @@ export default function AnalPenetrationPainArticle() {
             הבדיקה נעשית רק לאחר הסבר והסכמתך. לא חייבים לבצע את הבדיקה בטיפול הראשון, וגם אם
             בהמשך לא תהיה מעוניין, הטיפול מתקיים באזור הנוחות שלך.
           </p>
+          <p className={pClass}>
+            שאלה שלא תמיד נשאלת בקול היא עד כמה ההקשר מוכר למטפל. בשני מחקרים שהייתי שותף בהם,
+            בקרב פיזיותרפיסטים מורשים ובקרב סטודנטים לפיזיותרפיה בישראל, נמצא שהנושא כמעט אינו
+            נכלל בתוכנית ההכשרה.
+            <Ref n={11} />
+            <Ref n={12} /> יש היום מטפלות ומטפלים שבחרו להעמיק בו בעצמם, אבל זה ידע שנרכש אחרי
+            הלימודים ולא במהלכם.
+          </p>
 
           <h2 className={h2Class}>איך פיזיותרפיה יכולה לעזור?</h2>
           <p className={pClass}>
@@ -434,6 +442,33 @@ export default function AnalPenetrationPainArticle() {
                 className="text-teal-600 underline"
               >
                 10.1016/j.jsxm.2021.07.014
+              </a>
+              .
+            </li>
+            <li id="ref-11" className="scroll-mt-24">
+              Klein R, Elboim-Gabyzon M. Attitudes of registered physiotherapists in Israel toward
+              people identifying as lesbian, gay, and bisexual: a cross-sectional survey. BMC Med
+              Educ. 2021;21(1):581. doi:
+              <a
+                href="https://doi.org/10.1186/s12909-021-03018-7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1186/s12909-021-03018-7
+              </a>
+              .
+            </li>
+            <li id="ref-12" className="scroll-mt-24">
+              Elboim-Gabyzon M, Klein R. Lesbian, gay, bisexual, and transgender clinical competence
+              of physiotherapy students in Israel. BMC Med Educ. 2024;24(1):729. doi:
+              <a
+                href="https://doi.org/10.1186/s12909-024-05679-6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-600 underline"
+              >
+                10.1186/s12909-024-05679-6
               </a>
               .
             </li>
