@@ -87,7 +87,8 @@ export default function OveractiveBladderMenArticle() {
           <p className="mt-6 text-lg leading-8 text-black">
             שלפוחית רגיזה, באנגלית Overactive Bladder&rlm; ובקיצור OAB&rlm;, היא תסמונת
             שהמאפיין המרכזי שלה הוא דחיפות: צורך פתאומי וקשה להתאפק להשתין. הדחיפות מלווה
-            בדרך כלל בתכיפות, לעיתים גם בקימה בלילה, ויכולה להופיע עם דליפת שתן או בלעדיה.
+            בדרך כלל בתכיפות, כלומר צורך ללכת לשירותים פעמים רבות במהלך היום, לעיתים גם
+            בקימה בלילה, ויכולה להופיע עם דליפת שתן או בלעדיה.
             <Ref n={1} />
             <Ref n={2} />
           </p>
@@ -155,6 +156,17 @@ export default function OveractiveBladderMenArticle() {
           <p className={pClass}>
             גם קימה בלילה כדי להשתין, נוקטוריה או Nocturia&rlm;, אינה מעידה בפני עצמה על
             שלפוחית רגיזה.
+          </p>
+          <p className={pClass}>
+            להרחבה על הקימה בלילה ועל הגורמים לה:{" "}
+            <Link
+              href="/professional-info/nocturia-men"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-teal-700 hover:underline"
+            >
+              קימה בלילה להשתין בגברים (Nocturia): גורמים ובירור
+            </Link>
           </p>
           <p className={pClass}>
             אצל גבר שמתאר בעיקר זרם חלש, קושי להתחיל להשתין, צורך ללחוץ בזמן ההשתנה או תחושת
