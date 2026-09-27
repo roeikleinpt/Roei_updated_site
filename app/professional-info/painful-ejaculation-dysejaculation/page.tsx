@@ -105,7 +105,7 @@ export default function PainfulEjaculationArticle() {
             src="/professional-info/painful-ejaculation-overview.webp"
             alt="איור אנטומי של אגן הגבר בתצוגה צדית ובו מסומנים ששת האזורים שבהם עשוי להופיע כאב בזמן או אחרי שפיכה: פרינאום, הפין והשופכה, ראש הפין, האזור שמעל עצם החיק, האשכים ואזור פי הטבעת"
             width={1443}
-            height={1091}
+            height={1176}
             maxWidth="max-w-2xl"
             chrome={0.62}
             markers={[

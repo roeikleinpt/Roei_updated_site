@@ -118,7 +118,7 @@ export default function InguinalHerniaArticle() {
             src="/professional-info/inguinal-hernia-types.webp"
             alt="איור של דופן הבטן התחתונה מלפנים, ובו מסומנות שלוש בליטות באזור המפשעה: בקע מפשעתי ישיר, בקע מפשעתי עקיף ובקע פמורלי"
             width={1718}
-            height={2278}
+            height={2456}
             markers={[
               { n: 1, cx: 673, cy: 1482, rx: 80, ry: 42, rot: 74.1, bx: 960, by: 1420, href: "hernia-direct", label: "בקע מפשעתי ישיר" },
               { n: 2, cx: 685, cy: 1680, rx: 81, ry: 50, rot: 48.4, bx: 990, by: 1810, href: "hernia-indirect", label: "בקע מפשעתי עקיף" },

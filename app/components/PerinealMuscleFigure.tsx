@@ -17,6 +17,9 @@ import { asset } from "../basePath";
 // כניסה שאינה תלויה בפגיעה בצורה על התמונה.
 
 const VB = { w: 2211, h: 2682, nc: 24, nr: 30 };
+// גובה ה-viewBox אחרי הוספת רצועת הקרדיט לקובץ. VB.h נשאר כשהיה
+// כי הוא מגדיר את רשת הקואורדינטות שבה סומנו השרירים.
+const VB_RENDER_H = 2892;
 const X = (c: number) => ((c - 0.5) * VB.w) / VB.nc;
 const Y = (r: number) => ((r - 0.5) * VB.h) / VB.nr;
 
@@ -100,7 +103,7 @@ export default function PerinealMuscleFigure({
             className="h-auto w-full rounded-2xl ring-1 ring-slate-200"
           />
           <svg
-            viewBox={`0 0 ${VB.w} ${VB.h}`}
+            viewBox={`0 0 ${VB.w} ${VB_RENDER_H}`}
             className="absolute inset-0 h-full w-full"
             role="group"
             aria-label="הדגשת שני השרירים השטחיים באיור"
