@@ -661,6 +661,23 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: "urinary-incontinence-after-radical-prostatectomy",
+    image: "/professional-info/rp-recovery-timeline.webp",
+    title: "בריחת שתן אחרי כריתת ערמונית: שיקום רצפת האגן לפני ואחרי הניתוח",
+    excerpt:
+      "בריחת שתן שכיחה לאחר כריתה רדיקלית של הערמונית. מה צפוי לאחר הניתוח, מתי מתחילים תרגול רצפת אגן, כיצד פיזיותרפיה יכולה לסייע ומתי כדאי לחזור לאורולוג.",
+    date: "ספטמבר 2026",
+    dateISO: "2026-09-27",
+    categories: ["רצפת אגן ובריאות הגבר", "תלונות מערכת השתן"],
+    keywords: [
+      "בריחת שתן אחרי כריתת ערמונית", "בריחת שתן אחרי ניתוח ערמונית",
+      "פיזיותרפיה לאחר כריתת ערמונית", "תרגילי רצפת אגן אחרי כריתת ערמונית",
+      "post prostatectomy incontinence", "כריתה רדיקלית", "radical prostatectomy",
+      "רצפת אגן לגברים", "קיגל לגברים", "דליפת שתן במאמץ", "קטטר",
+      "PFMT", "ביופידבק", "סוגר שתן מלאכותי", "מתלה לגבר", "AUA",
+    ],
+  },
+  {
     slug: "anal-penetration-pain",
     image: "/professional-info/anal-canal-anatomy.webp",
     title: "כאב בחדירה אנאלית: גורמים, בירור וטיפול פיזיותרפי",
